@@ -1,0 +1,11 @@
+woLSF	integers/bytes.html#woLSF	WordOrder.woLSF	
+woMSF	integers/bytes.html#woMSF	WordOrder.woMSF	
+WordOrder	integers/bytes.html#WordOrder	bytes: WordOrder	
+eLE	integers/bytes.html#eLE	Endianness.eLE	
+eNative	integers/bytes.html#eNative	Endianness.eNative	
+eBE	integers/bytes.html#eBE	Endianness.eBE	
+Endianness	integers/bytes.html#Endianness	bytes: Endianness	
+newInteger	integers/bytes.html#newInteger,openArray[T],WordOrder,Endianness,int	bytes: newInteger[T: SomeUnsignedInt](words: openArray[T]; order: WordOrder = woMSF;\n                               endianness: Endianness = eNative; nails: int = 0): Integer	
+toSeq	integers/bytes.html#toSeq,mpz_struct,typedesc[SomeUnsignedInt],WordOrder,Endianness,int	bytes: toSeq(val: Integer; T: typedesc[SomeUnsignedInt]; order: WordOrder = woMSF;\n      endianness: Endianness = eNative; nails: int = 0): seq[T:type]	
+toBytes	integers/bytes.html#toBytes,mpz_struct,WordOrder	bytes: toBytes(val: Integer; order: WordOrder = woMSF): seq[uint8]	
+Conversion Between Integers and Bytes	integers/bytes.html#conversion-between-integers-and-bytes	 Conversion Between Integers and Bytes	

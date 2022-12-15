@@ -1,0 +1,2 @@
+zero	integers/common.html#zero,typedesc[T]	common: zero[T: AnyInteger](_: typedesc[T]): auto	
+one	integers/common.html#one,typedesc[T]	common: one[T: AnyInteger](_: typedesc[T]): auto	

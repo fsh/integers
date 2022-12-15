@@ -1,0 +1,28 @@
+`&amp;&amp;=`	integers/bitset.html#&&=,mpz_struct,AnyInteger	bitset: `&amp;&amp;=`(x`gensym0: var Integer; y`gensym0: AnyInteger)	
+`&amp;|=`	integers/bitset.html#&|=,mpz_struct,AnyInteger	bitset: `&amp;|=`(x`gensym2: var Integer; y`gensym2: AnyInteger)	
+`&amp;^=`	integers/bitset.html#&^=,mpz_struct,AnyInteger	bitset: `&amp;^=`(x`gensym4: var Integer; y`gensym4: AnyInteger)	
+`&amp;&amp;`	integers/bitset.html#&&,,	bitset: `&amp;&amp;`(x`gensym6, y`gensym6: distinct AnyInteger): Integer	
+`&amp;|`	integers/bitset.html#&|,,	bitset: `&amp;|`(x`gensym9, y`gensym9: distinct AnyInteger): Integer	
+`&amp;^`	integers/bitset.html#&^,,	bitset: `&amp;^`(x`gensym12, y`gensym12: distinct AnyInteger): Integer	
+`and`	integers/bitset.html#and,,	bitset: `and`(x`gensym15, y`gensym15: distinct AnyInteger): Integer	
+`or`	integers/bitset.html#or,,	bitset: `or`(x`gensym18, y`gensym18: distinct AnyInteger): Integer	
+`xor`	integers/bitset.html#xor,,	bitset: `xor`(x`gensym21, y`gensym21: distinct AnyInteger): Integer	
+`shr`	integers/bitset.html#shr,mpz_struct,SomeUnsignedInt	bitset: `shr`(val`gensym24: Integer; n`gensym24: SomeUnsignedInt): Integer	
+`&amp;&gt;&gt;`	integers/bitset.html#&>>,mpz_struct,SomeUnsignedInt	bitset: `&amp;&gt;&gt;`(val`gensym24: Integer; n`gensym24: SomeUnsignedInt): Integer	
+`&amp;&gt;&gt;=`	integers/bitset.html#&>>=,mpz_struct,SomeUnsignedInt	bitset: `&amp;&gt;&gt;=`(val`gensym24: var Integer; n`gensym24: SomeUnsignedInt)	
+`shl`	integers/bitset.html#shl,mpz_struct,SomeUnsignedInt	bitset: `shl`(val`gensym25: Integer; n`gensym25: SomeUnsignedInt): Integer	
+`&amp;&lt;&lt;`	integers/bitset.html#&<<,mpz_struct,SomeUnsignedInt	bitset: `&amp;&lt;&lt;`(val`gensym25: Integer; n`gensym25: SomeUnsignedInt): Integer	
+`&amp;&lt;&lt;=`	integers/bitset.html#&<<=,mpz_struct,SomeUnsignedInt	bitset: `&amp;&lt;&lt;=`(val`gensym25: var Integer; n`gensym25: SomeUnsignedInt)	
+nbits	integers/bitset.html#nbits,mpz_struct	bitset: nbits(val: Integer): int	
+size	integers/bitset.html#size,mpz_struct	bitset: size(val: Integer): int	
+count	integers/bitset.html#count,mpz_struct	bitset: count(val: Integer): int	
+bit	integers/bitset.html#bit,typedesc[mpz_struct],SomeInteger	bitset: bit(_: typedesc[Integer]; idx: SomeInteger): Integer	
+`~`	integers/bitset.html#~,mpz_struct	bitset: `~`(val: Integer): Integer	
+`not`	integers/bitset.html#not,mpz_struct	bitset: `not`(n: Integer): Integer	
+setNot	integers/bitset.html#setNot,mpz_struct	bitset: setNot(n: var Integer)	
+scanOne	integers/bitset.html#scanOne,mpz_struct,int	bitset: scanOne(val: Integer; start: int = 0): int	
+scanZero	integers/bitset.html#scanZero,mpz_struct,int	bitset: scanZero(val: Integer; start: int = 0): int	
+`[]`	integers/bitset.html#[],mpz_struct,int	bitset: `[]`(val: Integer; idx: int): bool	
+`[]=`	integers/bitset.html#[]=,mpz_struct,int,bool	bitset: `[]=`(n: var Integer; idx: int; bit: bool)	
+`[]=`	integers/bitset.html#[]=,mpz_struct,int,static[bool]	bitset: `[]=`(n: var Integer; idx: int; bit: static[bool])	
+items	integers/bitset.html#items.i,mpz_struct	bitset: items(n: Integer): int	

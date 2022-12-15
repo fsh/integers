@@ -1,0 +1,698 @@
+mp_limb_t	integers/gmp.html#mp_limb_t	gmp: mp_limb_t	
+mp_limb_signed_t	integers/gmp.html#mp_limb_signed_t	gmp: mp_limb_signed_t	
+mp_bitcnt_t	integers/gmp.html#mp_bitcnt_t	gmp: mp_bitcnt_t	
+mpz_struct	integers/gmp.html#mpz_struct	gmp: mpz_struct	
+mpz_t	integers/gmp.html#mpz_t	gmp: mpz_t	
+mp_ptr	integers/gmp.html#mp_ptr	gmp: mp_ptr	
+mp_srcptr	integers/gmp.html#mp_srcptr	gmp: mp_srcptr	
+mp_size_t	integers/gmp.html#mp_size_t	gmp: mp_size_t	
+mp_exp_t	integers/gmp.html#mp_exp_t	gmp: mp_exp_t	
+mpq_struct	integers/gmp.html#mpq_struct	gmp: mpq_struct	
+mpq_t	integers/gmp.html#mpq_t	gmp: mpq_t	
+mpf_struct	integers/gmp.html#mpf_struct	gmp: mpf_struct	
+mpf_t	integers/gmp.html#mpf_t	gmp: mpf_t	
+mpz_srcptr	integers/gmp.html#mpz_srcptr	gmp: mpz_srcptr	
+mpz_ptr	integers/gmp.html#mpz_ptr	gmp: mpz_ptr	
+mpf_srcptr	integers/gmp.html#mpf_srcptr	gmp: mpf_srcptr	
+mpf_ptr	integers/gmp.html#mpf_ptr	gmp: mpf_ptr	
+mpq_srcptr	integers/gmp.html#mpq_srcptr	gmp: mpq_srcptr	
+mpq_ptr	integers/gmp.html#mpq_ptr	gmp: mpq_ptr	
+mpq_numref	integers/gmp.html#mpq_numref,mpq_ptr	gmp: mpq_numref(a2: mpq_ptr): mpz_ptr	
+mpq_numref	integers/gmp.html#mpq_numref,mpq_struct	gmp: mpq_numref(a2: var mpq_t): mpz_ptr	
+mpq_denref	integers/gmp.html#mpq_denref,mpq_ptr	gmp: mpq_denref(a2: mpq_ptr): mpz_ptr	
+mpq_denref	integers/gmp.html#mpq_denref,mpq_struct	gmp: mpq_denref(a2: var mpq_t): mpz_ptr	
+mp_set_memory_functions	integers/gmp.html#mp_set_memory_functions,proc(csize_t),proc(pointer,csize_t,csize_t),proc(pointer,csize_t)	gmp: mp_set_memory_functions(a2: proc (a2: csize_t): pointer; a3: proc (a2: pointer;\n    a3: csize_t; a4: csize_t): pointer; a4: proc (a2: pointer; a3: csize_t))	
+mp_get_memory_functions	integers/gmp.html#mp_get_memory_functions,proc(csize_t),proc(pointer,csize_t,csize_t),proc(pointer,csize_t)	gmp: mp_get_memory_functions(a2: proc (a2: csize_t): pointer; a3: proc (a2: pointer;\n    a3: csize_t; a4: csize_t): pointer; a4: proc (a2: pointer; a3: csize_t))	
+mp_bits_per_limb	integers/gmp.html#mp_bits_per_limb	gmp: mp_bits_per_limb	
+gmp_errno	integers/gmp.html#gmp_errno	gmp: gmp_errno	
+gmp_version	integers/gmp.html#gmp_version	gmp: gmp_version	
+gmp_asprintf	integers/gmp.html#gmp_asprintf,cstringArray,cstring	gmp: gmp_asprintf(a2: cstringArray; a3: cstring): cint	
+gmp_fprintf	integers/gmp.html#gmp_fprintf,File,cstring	gmp: gmp_fprintf(a2: File; a3: cstring): cint	
+gmp_printf	integers/gmp.html#gmp_printf,cstring	gmp: gmp_printf(a2: cstring): cint	
+gmp_snprintf	integers/gmp.html#gmp_snprintf,cstring,csize_t,cstring	gmp: gmp_snprintf(a2: cstring; a3: csize_t; a4: cstring): cint	
+gmp_sprintf	integers/gmp.html#gmp_sprintf,cstring,cstring	gmp: gmp_sprintf(a2: cstring; a3: cstring): cint	
+gmp_fscanf	integers/gmp.html#gmp_fscanf,File,cstring	gmp: gmp_fscanf(a2: File; a3: cstring): cint	
+gmp_scanf	integers/gmp.html#gmp_scanf,cstring	gmp: gmp_scanf(a2: cstring): cint	
+gmp_sscanf	integers/gmp.html#gmp_sscanf,cstring,cstring	gmp: gmp_sscanf(a2: cstring; a3: cstring): cint	
+m_mpz_realloc	integers/gmp.html#m_mpz_realloc,mpz_ptr,mp_size_t	gmp: m_mpz_realloc(a2: mpz_ptr; a3: mp_size_t): pointer	
+m_mpz_realloc	integers/gmp.html#m_mpz_realloc,mpz_struct,mp_size_t	gmp: m_mpz_realloc(a2: var mpz_t; a3: mp_size_t): pointer	
+mpz_add	integers/gmp.html#mpz_add,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_add(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_add	integers/gmp.html#mpz_add,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_add(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_add_ui	integers/gmp.html#mpz_add_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_add_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong)	
+mpz_add_ui	integers/gmp.html#mpz_add_ui,mpz_struct,mpz_struct,culong	gmp: mpz_add_ui(a2: var mpz_t; a3: mpz_t; a4: culong)	
+mpz_addmul	integers/gmp.html#mpz_addmul,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_addmul(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_addmul	integers/gmp.html#mpz_addmul,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_addmul(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_addmul_ui	integers/gmp.html#mpz_addmul_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_addmul_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong)	
+mpz_addmul_ui	integers/gmp.html#mpz_addmul_ui,mpz_struct,mpz_struct,culong	gmp: mpz_addmul_ui(a2: var mpz_t; a3: mpz_t; a4: culong)	
+mpz_and	integers/gmp.html#mpz_and,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_and(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_and	integers/gmp.html#mpz_and,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_and(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_array_init	integers/gmp.html#mpz_array_init,mpz_ptr,mp_size_t,mp_size_t	gmp: mpz_array_init(a2: mpz_ptr; a3: mp_size_t; a4: mp_size_t)	
+mpz_array_init	integers/gmp.html#mpz_array_init,mpz_struct,mp_size_t,mp_size_t	gmp: mpz_array_init(a2: var mpz_t; a3: mp_size_t; a4: mp_size_t)	
+mpz_bin_ui	integers/gmp.html#mpz_bin_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_bin_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong)	
+mpz_bin_ui	integers/gmp.html#mpz_bin_ui,mpz_struct,mpz_struct,culong	gmp: mpz_bin_ui(a2: var mpz_t; a3: mpz_t; a4: culong)	
+mpz_bin_uiui	integers/gmp.html#mpz_bin_uiui,mpz_ptr,culong,culong	gmp: mpz_bin_uiui(a2: mpz_ptr; a3: culong; a4: culong)	
+mpz_bin_uiui	integers/gmp.html#mpz_bin_uiui,mpz_struct,culong,culong	gmp: mpz_bin_uiui(a2: var mpz_t; a3: culong; a4: culong)	
+mpz_cdiv_q	integers/gmp.html#mpz_cdiv_q,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_cdiv_q(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_cdiv_q	integers/gmp.html#mpz_cdiv_q,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_cdiv_q(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_cdiv_q_2exp	integers/gmp.html#mpz_cdiv_q_2exp,mpz_ptr,mpz_srcptr,mp_bitcnt_t	gmp: mpz_cdiv_q_2exp(a2: mpz_ptr; a3: mpz_srcptr; a4: mp_bitcnt_t)	
+mpz_cdiv_q_2exp	integers/gmp.html#mpz_cdiv_q_2exp,mpz_struct,mpz_struct,mp_bitcnt_t	gmp: mpz_cdiv_q_2exp(a2: var mpz_t; a3: mpz_t; a4: mp_bitcnt_t)	
+mpz_cdiv_q_ui	integers/gmp.html#mpz_cdiv_q_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_cdiv_q_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong): culong	
+mpz_cdiv_q_ui	integers/gmp.html#mpz_cdiv_q_ui,mpz_struct,mpz_struct,culong	gmp: mpz_cdiv_q_ui(a2: var mpz_t; a3: mpz_t; a4: culong): culong	
+mpz_cdiv_qr	integers/gmp.html#mpz_cdiv_qr,mpz_ptr,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_cdiv_qr(a2: mpz_ptr; a3: mpz_ptr; a4: mpz_srcptr; a5: mpz_srcptr)	
+mpz_cdiv_qr	integers/gmp.html#mpz_cdiv_qr,mpz_struct,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_cdiv_qr(a2: var mpz_t; a3: var mpz_t; a4: mpz_t; a5: mpz_t)	
+mpz_cdiv_qr_ui	integers/gmp.html#mpz_cdiv_qr_ui,mpz_ptr,mpz_ptr,mpz_srcptr,culong	gmp: mpz_cdiv_qr_ui(a2: mpz_ptr; a3: mpz_ptr; a4: mpz_srcptr; a5: culong): culong	
+mpz_cdiv_qr_ui	integers/gmp.html#mpz_cdiv_qr_ui,mpz_struct,mpz_struct,mpz_struct,culong	gmp: mpz_cdiv_qr_ui(a2: var mpz_t; a3: var mpz_t; a4: mpz_t; a5: culong): culong	
+mpz_cdiv_r	integers/gmp.html#mpz_cdiv_r,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_cdiv_r(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_cdiv_r	integers/gmp.html#mpz_cdiv_r,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_cdiv_r(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_cdiv_r_2exp	integers/gmp.html#mpz_cdiv_r_2exp,mpz_ptr,mpz_srcptr,mp_bitcnt_t	gmp: mpz_cdiv_r_2exp(a2: mpz_ptr; a3: mpz_srcptr; a4: mp_bitcnt_t)	
+mpz_cdiv_r_2exp	integers/gmp.html#mpz_cdiv_r_2exp,mpz_struct,mpz_struct,mp_bitcnt_t	gmp: mpz_cdiv_r_2exp(a2: var mpz_t; a3: mpz_t; a4: mp_bitcnt_t)	
+mpz_cdiv_r_ui	integers/gmp.html#mpz_cdiv_r_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_cdiv_r_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong): culong	
+mpz_cdiv_r_ui	integers/gmp.html#mpz_cdiv_r_ui,mpz_struct,mpz_struct,culong	gmp: mpz_cdiv_r_ui(a2: var mpz_t; a3: mpz_t; a4: culong): culong	
+mpz_cdiv_ui	integers/gmp.html#mpz_cdiv_ui,mpz_srcptr,culong	gmp: mpz_cdiv_ui(a2: mpz_srcptr; a3: culong): culong	
+mpz_cdiv_ui	integers/gmp.html#mpz_cdiv_ui,mpz_struct,culong	gmp: mpz_cdiv_ui(a2: mpz_t; a3: culong): culong	
+mpz_clear	integers/gmp.html#mpz_clear,mpz_ptr	gmp: mpz_clear(a2: mpz_ptr)	
+mpz_clear	integers/gmp.html#mpz_clear,mpz_struct	gmp: mpz_clear(a2: var mpz_t)	
+mpz_clears	integers/gmp.html#mpz_clears,mpz_ptr	gmp: mpz_clears(a2: mpz_ptr)	
+mpz_clears	integers/gmp.html#mpz_clears,mpz_struct	gmp: mpz_clears(a2: var mpz_t)	
+mpz_clrbit	integers/gmp.html#mpz_clrbit,mpz_ptr,mp_bitcnt_t	gmp: mpz_clrbit(a2: mpz_ptr; a3: mp_bitcnt_t)	
+mpz_clrbit	integers/gmp.html#mpz_clrbit,mpz_struct,mp_bitcnt_t	gmp: mpz_clrbit(a2: var mpz_t; a3: mp_bitcnt_t)	
+mpz_cmp	integers/gmp.html#mpz_cmp,mpz_srcptr,mpz_srcptr	gmp: mpz_cmp(a2: mpz_srcptr; a3: mpz_srcptr): cint	
+mpz_cmp	integers/gmp.html#mpz_cmp,mpz_struct,mpz_struct	gmp: mpz_cmp(a2: mpz_t; a3: mpz_t): cint	
+mpz_cmp_d	integers/gmp.html#mpz_cmp_d,mpz_srcptr,cdouble	gmp: mpz_cmp_d(a2: mpz_srcptr; a3: cdouble): cint	
+mpz_cmp_d	integers/gmp.html#mpz_cmp_d,mpz_struct,cdouble	gmp: mpz_cmp_d(a2: mpz_t; a3: cdouble): cint	
+mpz_cmp_si	integers/gmp.html#mpz_cmp_si,mpz_srcptr,clong	gmp: mpz_cmp_si(a2: mpz_srcptr; a3: clong): cint	
+mpz_cmp_si	integers/gmp.html#mpz_cmp_si,mpz_struct,clong	gmp: mpz_cmp_si(a2: mpz_t; a3: clong): cint	
+mpz_cmp_ui	integers/gmp.html#mpz_cmp_ui,mpz_srcptr,culong	gmp: mpz_cmp_ui(a2: mpz_srcptr; a3: culong): cint	
+mpz_cmp_ui	integers/gmp.html#mpz_cmp_ui,mpz_struct,culong	gmp: mpz_cmp_ui(a2: mpz_t; a3: culong): cint	
+mpz_cmpabs	integers/gmp.html#mpz_cmpabs,mpz_srcptr,mpz_srcptr	gmp: mpz_cmpabs(a2: mpz_srcptr; a3: mpz_srcptr): cint	
+mpz_cmpabs	integers/gmp.html#mpz_cmpabs,mpz_struct,mpz_struct	gmp: mpz_cmpabs(a2: mpz_t; a3: mpz_t): cint	
+mpz_cmpabs_d	integers/gmp.html#mpz_cmpabs_d,mpz_srcptr,cdouble	gmp: mpz_cmpabs_d(a2: mpz_srcptr; a3: cdouble): cint	
+mpz_cmpabs_d	integers/gmp.html#mpz_cmpabs_d,mpz_struct,cdouble	gmp: mpz_cmpabs_d(a2: mpz_t; a3: cdouble): cint	
+mpz_cmpabs_ui	integers/gmp.html#mpz_cmpabs_ui,mpz_srcptr,culong	gmp: mpz_cmpabs_ui(a2: mpz_srcptr; a3: culong): cint	
+mpz_cmpabs_ui	integers/gmp.html#mpz_cmpabs_ui,mpz_struct,culong	gmp: mpz_cmpabs_ui(a2: mpz_t; a3: culong): cint	
+mpz_com	integers/gmp.html#mpz_com,mpz_ptr,mpz_srcptr	gmp: mpz_com(a2: mpz_ptr; a3: mpz_srcptr)	
+mpz_com	integers/gmp.html#mpz_com,mpz_struct,mpz_struct	gmp: mpz_com(a2: var mpz_t; a3: mpz_t)	
+mpz_combit	integers/gmp.html#mpz_combit,mpz_ptr,mp_bitcnt_t	gmp: mpz_combit(a2: mpz_ptr; a3: mp_bitcnt_t)	
+mpz_combit	integers/gmp.html#mpz_combit,mpz_struct,mp_bitcnt_t	gmp: mpz_combit(a2: var mpz_t; a3: mp_bitcnt_t)	
+mpz_congruent_p	integers/gmp.html#mpz_congruent_p,mpz_srcptr,mpz_srcptr,mpz_srcptr	gmp: mpz_congruent_p(a2: mpz_srcptr; a3: mpz_srcptr; a4: mpz_srcptr): cint	
+mpz_congruent_p	integers/gmp.html#mpz_congruent_p,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_congruent_p(a2: mpz_t; a3: mpz_t; a4: mpz_t): cint	
+mpz_congruent_2exp_p	integers/gmp.html#mpz_congruent_2exp_p,mpz_srcptr,mpz_srcptr,mp_bitcnt_t	gmp: mpz_congruent_2exp_p(a2: mpz_srcptr; a3: mpz_srcptr; a4: mp_bitcnt_t): cint	
+mpz_congruent_2exp_p	integers/gmp.html#mpz_congruent_2exp_p,mpz_struct,mpz_struct,mp_bitcnt_t	gmp: mpz_congruent_2exp_p(a2: mpz_t; a3: mpz_t; a4: mp_bitcnt_t): cint	
+mpz_congruent_ui_p	integers/gmp.html#mpz_congruent_ui_p,mpz_srcptr,culong,culong	gmp: mpz_congruent_ui_p(a2: mpz_srcptr; a3: culong; a4: culong): cint	
+mpz_congruent_ui_p	integers/gmp.html#mpz_congruent_ui_p,mpz_struct,culong,culong	gmp: mpz_congruent_ui_p(a2: mpz_t; a3: culong; a4: culong): cint	
+mpz_divexact	integers/gmp.html#mpz_divexact,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_divexact(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_divexact	integers/gmp.html#mpz_divexact,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_divexact(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_divexact_ui	integers/gmp.html#mpz_divexact_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_divexact_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong)	
+mpz_divexact_ui	integers/gmp.html#mpz_divexact_ui,mpz_struct,mpz_struct,culong	gmp: mpz_divexact_ui(a2: var mpz_t; a3: mpz_t; a4: culong)	
+mpz_divisible_p	integers/gmp.html#mpz_divisible_p,mpz_srcptr,mpz_srcptr	gmp: mpz_divisible_p(a2: mpz_srcptr; a3: mpz_srcptr): cint	
+mpz_divisible_p	integers/gmp.html#mpz_divisible_p,mpz_struct,mpz_struct	gmp: mpz_divisible_p(a2: mpz_t; a3: mpz_t): cint	
+mpz_divisible_ui_p	integers/gmp.html#mpz_divisible_ui_p,mpz_srcptr,culong	gmp: mpz_divisible_ui_p(a2: mpz_srcptr; a3: culong): cint	
+mpz_divisible_ui_p	integers/gmp.html#mpz_divisible_ui_p,mpz_struct,culong	gmp: mpz_divisible_ui_p(a2: mpz_t; a3: culong): cint	
+mpz_divisible_2exp_p	integers/gmp.html#mpz_divisible_2exp_p,mpz_srcptr,mp_bitcnt_t	gmp: mpz_divisible_2exp_p(a2: mpz_srcptr; a3: mp_bitcnt_t): cint	
+mpz_divisible_2exp_p	integers/gmp.html#mpz_divisible_2exp_p,mpz_struct,mp_bitcnt_t	gmp: mpz_divisible_2exp_p(a2: mpz_t; a3: mp_bitcnt_t): cint	
+mpz_dump	integers/gmp.html#mpz_dump,mpz_srcptr	gmp: mpz_dump(a2: mpz_srcptr)	
+mpz_dump	integers/gmp.html#mpz_dump,mpz_struct	gmp: mpz_dump(a2: mpz_t)	
+mpz_export	integers/gmp.html#mpz_export,pointer,ptr.csize_t,cint,csize_t,cint,csize_t,mpz_srcptr	gmp: mpz_export(a2: pointer; a3: ptr csize_t; a4: cint; a5: csize_t; a6: cint;\n           a7: csize_t; a8: mpz_srcptr): pointer	
+mpz_export	integers/gmp.html#mpz_export,pointer,ptr.csize_t,cint,csize_t,cint,csize_t,mpz_struct	gmp: mpz_export(a2: pointer; a3: ptr csize_t; a4: cint; a5: csize_t; a6: cint;\n           a7: csize_t; a8: mpz_t): pointer	
+mpz_fac_ui	integers/gmp.html#mpz_fac_ui,mpz_ptr,culong	gmp: mpz_fac_ui(a2: mpz_ptr; a3: culong)	
+mpz_fac_ui	integers/gmp.html#mpz_fac_ui,mpz_struct,culong	gmp: mpz_fac_ui(a2: var mpz_t; a3: culong)	
+mpz_2fac_ui	integers/gmp.html#mpz_2fac_ui,mpz_ptr,culong	gmp: mpz_2fac_ui(a2: mpz_ptr; a3: culong)	
+mpz_2fac_ui	integers/gmp.html#mpz_2fac_ui,mpz_struct,culong	gmp: mpz_2fac_ui(a2: var mpz_t; a3: culong)	
+mpz_mfac_uiui	integers/gmp.html#mpz_mfac_uiui,mpz_ptr,culong,culong	gmp: mpz_mfac_uiui(a2: mpz_ptr; a3: culong; a4: culong)	
+mpz_mfac_uiui	integers/gmp.html#mpz_mfac_uiui,mpz_struct,culong,culong	gmp: mpz_mfac_uiui(a2: var mpz_t; a3: culong; a4: culong)	
+mpz_primorial_ui	integers/gmp.html#mpz_primorial_ui,mpz_ptr,culong	gmp: mpz_primorial_ui(a2: mpz_ptr; a3: culong)	
+mpz_primorial_ui	integers/gmp.html#mpz_primorial_ui,mpz_struct,culong	gmp: mpz_primorial_ui(a2: var mpz_t; a3: culong)	
+mpz_fdiv_q	integers/gmp.html#mpz_fdiv_q,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_fdiv_q(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_fdiv_q	integers/gmp.html#mpz_fdiv_q,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_fdiv_q(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_fdiv_q_2exp	integers/gmp.html#mpz_fdiv_q_2exp,mpz_ptr,mpz_srcptr,mp_bitcnt_t	gmp: mpz_fdiv_q_2exp(a2: mpz_ptr; a3: mpz_srcptr; a4: mp_bitcnt_t)	
+mpz_fdiv_q_2exp	integers/gmp.html#mpz_fdiv_q_2exp,mpz_struct,mpz_struct,mp_bitcnt_t	gmp: mpz_fdiv_q_2exp(a2: var mpz_t; a3: mpz_t; a4: mp_bitcnt_t)	
+mpz_fdiv_q_ui	integers/gmp.html#mpz_fdiv_q_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_fdiv_q_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong): culong	
+mpz_fdiv_q_ui	integers/gmp.html#mpz_fdiv_q_ui,mpz_struct,mpz_struct,culong	gmp: mpz_fdiv_q_ui(a2: var mpz_t; a3: mpz_t; a4: culong): culong	
+mpz_fdiv_qr	integers/gmp.html#mpz_fdiv_qr,mpz_ptr,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_fdiv_qr(a2: mpz_ptr; a3: mpz_ptr; a4: mpz_srcptr; a5: mpz_srcptr)	
+mpz_fdiv_qr	integers/gmp.html#mpz_fdiv_qr,mpz_struct,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_fdiv_qr(a2: var mpz_t; a3: var mpz_t; a4: mpz_t; a5: mpz_t)	
+mpz_fdiv_qr_ui	integers/gmp.html#mpz_fdiv_qr_ui,mpz_ptr,mpz_ptr,mpz_srcptr,culong	gmp: mpz_fdiv_qr_ui(a2: mpz_ptr; a3: mpz_ptr; a4: mpz_srcptr; a5: culong): culong	
+mpz_fdiv_qr_ui	integers/gmp.html#mpz_fdiv_qr_ui,mpz_struct,mpz_struct,mpz_struct,culong	gmp: mpz_fdiv_qr_ui(a2: var mpz_t; a3: var mpz_t; a4: mpz_t; a5: culong): culong	
+mpz_fdiv_r	integers/gmp.html#mpz_fdiv_r,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_fdiv_r(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_fdiv_r	integers/gmp.html#mpz_fdiv_r,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_fdiv_r(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_fdiv_r_2exp	integers/gmp.html#mpz_fdiv_r_2exp,mpz_ptr,mpz_srcptr,mp_bitcnt_t	gmp: mpz_fdiv_r_2exp(a2: mpz_ptr; a3: mpz_srcptr; a4: mp_bitcnt_t)	
+mpz_fdiv_r_2exp	integers/gmp.html#mpz_fdiv_r_2exp,mpz_struct,mpz_struct,mp_bitcnt_t	gmp: mpz_fdiv_r_2exp(a2: var mpz_t; a3: mpz_t; a4: mp_bitcnt_t)	
+mpz_fdiv_r_ui	integers/gmp.html#mpz_fdiv_r_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_fdiv_r_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong): culong	
+mpz_fdiv_r_ui	integers/gmp.html#mpz_fdiv_r_ui,mpz_struct,mpz_struct,culong	gmp: mpz_fdiv_r_ui(a2: var mpz_t; a3: mpz_t; a4: culong): culong	
+mpz_fdiv_ui	integers/gmp.html#mpz_fdiv_ui,mpz_srcptr,culong	gmp: mpz_fdiv_ui(a2: mpz_srcptr; a3: culong): culong	
+mpz_fdiv_ui	integers/gmp.html#mpz_fdiv_ui,mpz_struct,culong	gmp: mpz_fdiv_ui(a2: mpz_t; a3: culong): culong	
+mpz_fib_ui	integers/gmp.html#mpz_fib_ui,mpz_ptr,culong	gmp: mpz_fib_ui(a2: mpz_ptr; a3: culong)	
+mpz_fib_ui	integers/gmp.html#mpz_fib_ui,mpz_struct,culong	gmp: mpz_fib_ui(a2: var mpz_t; a3: culong)	
+mpz_fib2_ui	integers/gmp.html#mpz_fib2_ui,mpz_ptr,mpz_ptr,culong	gmp: mpz_fib2_ui(a2: mpz_ptr; a3: mpz_ptr; a4: culong)	
+mpz_fib2_ui	integers/gmp.html#mpz_fib2_ui,mpz_struct,mpz_struct,culong	gmp: mpz_fib2_ui(a2: var mpz_t; a3: var mpz_t; a4: culong)	
+mpz_fits_sint_p	integers/gmp.html#mpz_fits_sint_p,mpz_srcptr	gmp: mpz_fits_sint_p(a2: mpz_srcptr): cint	
+mpz_fits_sint_p	integers/gmp.html#mpz_fits_sint_p,mpz_struct	gmp: mpz_fits_sint_p(a2: mpz_t): cint	
+mpz_fits_slong_p	integers/gmp.html#mpz_fits_slong_p,mpz_srcptr	gmp: mpz_fits_slong_p(a2: mpz_srcptr): cint	
+mpz_fits_slong_p	integers/gmp.html#mpz_fits_slong_p,mpz_struct	gmp: mpz_fits_slong_p(a2: mpz_t): cint	
+mpz_fits_sshort_p	integers/gmp.html#mpz_fits_sshort_p,mpz_srcptr	gmp: mpz_fits_sshort_p(a2: mpz_srcptr): cint	
+mpz_fits_sshort_p	integers/gmp.html#mpz_fits_sshort_p,mpz_struct	gmp: mpz_fits_sshort_p(a2: mpz_t): cint	
+mpz_gcd	integers/gmp.html#mpz_gcd,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_gcd(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_gcd	integers/gmp.html#mpz_gcd,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_gcd(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_gcd_ui	integers/gmp.html#mpz_gcd_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_gcd_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong): culong	
+mpz_gcd_ui	integers/gmp.html#mpz_gcd_ui,mpz_struct,mpz_struct,culong	gmp: mpz_gcd_ui(a2: var mpz_t; a3: mpz_t; a4: culong): culong	
+mpz_gcdext	integers/gmp.html#mpz_gcdext,mpz_ptr,mpz_ptr,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_gcdext(a2: mpz_ptr; a3: mpz_ptr; a4: mpz_ptr; a5: mpz_srcptr; a6: mpz_srcptr)	
+mpz_gcdext	integers/gmp.html#mpz_gcdext,mpz_struct,mpz_struct,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_gcdext(a2: var mpz_t; a3: var mpz_t; a4: var mpz_t; a5: mpz_t; a6: mpz_t)	
+mpz_get_d	integers/gmp.html#mpz_get_d,mpz_srcptr	gmp: mpz_get_d(a2: mpz_srcptr): cdouble	
+mpz_get_d	integers/gmp.html#mpz_get_d,mpz_struct	gmp: mpz_get_d(a2: mpz_t): cdouble	
+mpz_get_d_2exp	integers/gmp.html#mpz_get_d_2exp,ptr.clong,mpz_srcptr	gmp: mpz_get_d_2exp(a2: ptr clong; a3: mpz_srcptr): cdouble	
+mpz_get_d_2exp	integers/gmp.html#mpz_get_d_2exp,ptr.clong,mpz_struct	gmp: mpz_get_d_2exp(a2: ptr clong; a3: mpz_t): cdouble	
+mpz_get_si	integers/gmp.html#mpz_get_si,mpz_srcptr	gmp: mpz_get_si(a2: mpz_srcptr): clong	
+mpz_get_si	integers/gmp.html#mpz_get_si,mpz_struct	gmp: mpz_get_si(a2: mpz_t): clong	
+mpz_get_str	integers/gmp.html#mpz_get_str,cstring,cint,mpz_srcptr	gmp: mpz_get_str(a2: cstring; a3: cint; a4: mpz_srcptr): cstring	
+mpz_get_str	integers/gmp.html#mpz_get_str,cstring,cint,mpz_struct	gmp: mpz_get_str(a2: cstring; a3: cint; a4: mpz_t): cstring	
+mpz_hamdist	integers/gmp.html#mpz_hamdist,mpz_srcptr,mpz_srcptr	gmp: mpz_hamdist(a2: mpz_srcptr; a3: mpz_srcptr): mp_bitcnt_t	
+mpz_hamdist	integers/gmp.html#mpz_hamdist,mpz_struct,mpz_struct	gmp: mpz_hamdist(a2: mpz_t; a3: mpz_t): mp_bitcnt_t	
+mpz_import	integers/gmp.html#mpz_import,mpz_ptr,csize_t,cint,csize_t,cint,csize_t,pointer	gmp: mpz_import(a2: mpz_ptr; a3: csize_t; a4: cint; a5: csize_t; a6: cint;\n           a7: csize_t; a8: pointer)	
+mpz_import	integers/gmp.html#mpz_import,mpz_struct,csize_t,cint,csize_t,cint,csize_t,pointer	gmp: mpz_import(a2: var mpz_t; a3: csize_t; a4: cint; a5: csize_t; a6: cint;\n           a7: csize_t; a8: pointer)	
+mpz_init	integers/gmp.html#mpz_init,mpz_ptr	gmp: mpz_init(a2: mpz_ptr)	
+mpz_init	integers/gmp.html#mpz_init,mpz_struct	gmp: mpz_init(a2: var mpz_t)	
+mpz_init2	integers/gmp.html#mpz_init2,mpz_ptr,mp_bitcnt_t	gmp: mpz_init2(a2: mpz_ptr; a3: mp_bitcnt_t)	
+mpz_init2	integers/gmp.html#mpz_init2,mpz_struct,mp_bitcnt_t	gmp: mpz_init2(a2: var mpz_t; a3: mp_bitcnt_t)	
+mpz_inits	integers/gmp.html#mpz_inits,mpz_ptr	gmp: mpz_inits(a2: mpz_ptr)	
+mpz_inits	integers/gmp.html#mpz_inits,mpz_struct	gmp: mpz_inits(a2: var mpz_t)	
+mpz_init_set	integers/gmp.html#mpz_init_set,mpz_ptr,mpz_srcptr	gmp: mpz_init_set(a2: mpz_ptr; a3: mpz_srcptr)	
+mpz_init_set	integers/gmp.html#mpz_init_set,mpz_struct,mpz_struct	gmp: mpz_init_set(a2: var mpz_t; a3: mpz_t)	
+mpz_init_set_d	integers/gmp.html#mpz_init_set_d,mpz_ptr,cdouble	gmp: mpz_init_set_d(a2: mpz_ptr; a3: cdouble)	
+mpz_init_set_d	integers/gmp.html#mpz_init_set_d,mpz_struct,cdouble	gmp: mpz_init_set_d(a2: var mpz_t; a3: cdouble)	
+mpz_init_set_si	integers/gmp.html#mpz_init_set_si,mpz_ptr,clong	gmp: mpz_init_set_si(a2: mpz_ptr; a3: clong)	
+mpz_init_set_si	integers/gmp.html#mpz_init_set_si,mpz_struct,clong	gmp: mpz_init_set_si(a2: var mpz_t; a3: clong)	
+mpz_init_set_str	integers/gmp.html#mpz_init_set_str,mpz_ptr,cstring,cint	gmp: mpz_init_set_str(a2: mpz_ptr; a3: cstring; a4: cint): cint	
+mpz_init_set_str	integers/gmp.html#mpz_init_set_str,mpz_struct,cstring,cint	gmp: mpz_init_set_str(a2: var mpz_t; a3: cstring; a4: cint): cint	
+mpz_init_set_ui	integers/gmp.html#mpz_init_set_ui,mpz_ptr,culong	gmp: mpz_init_set_ui(a2: mpz_ptr; a3: culong)	
+mpz_init_set_ui	integers/gmp.html#mpz_init_set_ui,mpz_struct,culong	gmp: mpz_init_set_ui(a2: var mpz_t; a3: culong)	
+mpz_inp_raw	integers/gmp.html#mpz_inp_raw,mpz_ptr,File	gmp: mpz_inp_raw(a2: mpz_ptr; a3: File): csize_t	
+mpz_inp_raw	integers/gmp.html#mpz_inp_raw,mpz_struct,File	gmp: mpz_inp_raw(a2: var mpz_t; a3: File): csize_t	
+mpz_inp_str	integers/gmp.html#mpz_inp_str,mpz_ptr,File,cint	gmp: mpz_inp_str(a2: mpz_ptr; a3: File; a4: cint): csize_t	
+mpz_inp_str	integers/gmp.html#mpz_inp_str,mpz_struct,File,cint	gmp: mpz_inp_str(a2: var mpz_t; a3: File; a4: cint): csize_t	
+mpz_invert	integers/gmp.html#mpz_invert,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_invert(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr): cint	
+mpz_invert	integers/gmp.html#mpz_invert,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_invert(a2: var mpz_t; a3: mpz_t; a4: mpz_t): cint	
+mpz_ior	integers/gmp.html#mpz_ior,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_ior(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_ior	integers/gmp.html#mpz_ior,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_ior(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_jacobi	integers/gmp.html#mpz_jacobi,mpz_srcptr,mpz_srcptr	gmp: mpz_jacobi(a2: mpz_srcptr; a3: mpz_srcptr): cint	
+mpz_jacobi	integers/gmp.html#mpz_jacobi,mpz_struct,mpz_struct	gmp: mpz_jacobi(a2: mpz_t; a3: mpz_t): cint	
+mpz_kronecker_si	integers/gmp.html#mpz_kronecker_si,mpz_srcptr,clong	gmp: mpz_kronecker_si(a2: mpz_srcptr; a3: clong): cint	
+mpz_kronecker_si	integers/gmp.html#mpz_kronecker_si,mpz_struct,clong	gmp: mpz_kronecker_si(a2: mpz_t; a3: clong): cint	
+mpz_kronecker_ui	integers/gmp.html#mpz_kronecker_ui,mpz_srcptr,culong	gmp: mpz_kronecker_ui(a2: mpz_srcptr; a3: culong): cint	
+mpz_kronecker_ui	integers/gmp.html#mpz_kronecker_ui,mpz_struct,culong	gmp: mpz_kronecker_ui(a2: mpz_t; a3: culong): cint	
+mpz_si_kronecker	integers/gmp.html#mpz_si_kronecker,clong,mpz_srcptr	gmp: mpz_si_kronecker(a2: clong; a3: mpz_srcptr): cint	
+mpz_si_kronecker	integers/gmp.html#mpz_si_kronecker,clong,mpz_struct	gmp: mpz_si_kronecker(a2: clong; a3: mpz_t): cint	
+mpz_ui_kronecker	integers/gmp.html#mpz_ui_kronecker,culong,mpz_srcptr	gmp: mpz_ui_kronecker(a2: culong; a3: mpz_srcptr): cint	
+mpz_ui_kronecker	integers/gmp.html#mpz_ui_kronecker,culong,mpz_struct	gmp: mpz_ui_kronecker(a2: culong; a3: mpz_t): cint	
+mpz_lcm	integers/gmp.html#mpz_lcm,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_lcm(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_lcm	integers/gmp.html#mpz_lcm,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_lcm(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_lcm_ui	integers/gmp.html#mpz_lcm_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_lcm_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong)	
+mpz_lcm_ui	integers/gmp.html#mpz_lcm_ui,mpz_struct,mpz_struct,culong	gmp: mpz_lcm_ui(a2: var mpz_t; a3: mpz_t; a4: culong)	
+mpz_lucnum_ui	integers/gmp.html#mpz_lucnum_ui,mpz_ptr,culong	gmp: mpz_lucnum_ui(a2: mpz_ptr; a3: culong)	
+mpz_lucnum_ui	integers/gmp.html#mpz_lucnum_ui,mpz_struct,culong	gmp: mpz_lucnum_ui(a2: var mpz_t; a3: culong)	
+mpz_lucnum2_ui	integers/gmp.html#mpz_lucnum2_ui,mpz_ptr,mpz_ptr,culong	gmp: mpz_lucnum2_ui(a2: mpz_ptr; a3: mpz_ptr; a4: culong)	
+mpz_lucnum2_ui	integers/gmp.html#mpz_lucnum2_ui,mpz_struct,mpz_struct,culong	gmp: mpz_lucnum2_ui(a2: var mpz_t; a3: var mpz_t; a4: culong)	
+mpz_millerrabin	integers/gmp.html#mpz_millerrabin,mpz_srcptr,cint	gmp: mpz_millerrabin(a2: mpz_srcptr; a3: cint): cint	
+mpz_millerrabin	integers/gmp.html#mpz_millerrabin,mpz_struct,cint	gmp: mpz_millerrabin(a2: mpz_t; a3: cint): cint	
+mpz_mod	integers/gmp.html#mpz_mod,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_mod(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_mod	integers/gmp.html#mpz_mod,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_mod(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_mul	integers/gmp.html#mpz_mul,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_mul(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_mul	integers/gmp.html#mpz_mul,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_mul(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_mul_2exp	integers/gmp.html#mpz_mul_2exp,mpz_ptr,mpz_srcptr,mp_bitcnt_t	gmp: mpz_mul_2exp(a2: mpz_ptr; a3: mpz_srcptr; a4: mp_bitcnt_t)	
+mpz_mul_2exp	integers/gmp.html#mpz_mul_2exp,mpz_struct,mpz_struct,mp_bitcnt_t	gmp: mpz_mul_2exp(a2: var mpz_t; a3: mpz_t; a4: mp_bitcnt_t)	
+mpz_mul_si	integers/gmp.html#mpz_mul_si,mpz_ptr,mpz_srcptr,clong	gmp: mpz_mul_si(a2: mpz_ptr; a3: mpz_srcptr; a4: clong)	
+mpz_mul_si	integers/gmp.html#mpz_mul_si,mpz_struct,mpz_struct,clong	gmp: mpz_mul_si(a2: var mpz_t; a3: mpz_t; a4: clong)	
+mpz_mul_ui	integers/gmp.html#mpz_mul_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_mul_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong)	
+mpz_mul_ui	integers/gmp.html#mpz_mul_ui,mpz_struct,mpz_struct,culong	gmp: mpz_mul_ui(a2: var mpz_t; a3: mpz_t; a4: culong)	
+mpz_nextprime	integers/gmp.html#mpz_nextprime,mpz_ptr,mpz_srcptr	gmp: mpz_nextprime(a2: mpz_ptr; a3: mpz_srcptr)	
+mpz_nextprime	integers/gmp.html#mpz_nextprime,mpz_struct,mpz_struct	gmp: mpz_nextprime(a2: var mpz_t; a3: mpz_t)	
+mpz_out_raw	integers/gmp.html#mpz_out_raw,File,mpz_srcptr	gmp: mpz_out_raw(a2: File; a3: mpz_srcptr): csize_t	
+mpz_out_raw	integers/gmp.html#mpz_out_raw,File,mpz_struct	gmp: mpz_out_raw(a2: File; a3: mpz_t): csize_t	
+mpz_out_str	integers/gmp.html#mpz_out_str,File,cint,mpz_srcptr	gmp: mpz_out_str(a2: File; a3: cint; a4: mpz_srcptr): csize_t	
+mpz_out_str	integers/gmp.html#mpz_out_str,File,cint,mpz_struct	gmp: mpz_out_str(a2: File; a3: cint; a4: mpz_t): csize_t	
+mpz_perfect_power_p	integers/gmp.html#mpz_perfect_power_p,mpz_srcptr	gmp: mpz_perfect_power_p(a2: mpz_srcptr): cint	
+mpz_perfect_power_p	integers/gmp.html#mpz_perfect_power_p,mpz_struct	gmp: mpz_perfect_power_p(a2: mpz_t): cint	
+mpz_pow_ui	integers/gmp.html#mpz_pow_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_pow_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong)	
+mpz_pow_ui	integers/gmp.html#mpz_pow_ui,mpz_struct,mpz_struct,culong	gmp: mpz_pow_ui(a2: var mpz_t; a3: mpz_t; a4: culong)	
+mpz_powm	integers/gmp.html#mpz_powm,mpz_ptr,mpz_srcptr,mpz_srcptr,mpz_srcptr	gmp: mpz_powm(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr; a5: mpz_srcptr)	
+mpz_powm	integers/gmp.html#mpz_powm,mpz_struct,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_powm(a2: var mpz_t; a3: mpz_t; a4: mpz_t; a5: mpz_t)	
+mpz_powm_sec	integers/gmp.html#mpz_powm_sec,mpz_ptr,mpz_srcptr,mpz_srcptr,mpz_srcptr	gmp: mpz_powm_sec(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr; a5: mpz_srcptr)	
+mpz_powm_sec	integers/gmp.html#mpz_powm_sec,mpz_struct,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_powm_sec(a2: var mpz_t; a3: mpz_t; a4: mpz_t; a5: mpz_t)	
+mpz_powm_ui	integers/gmp.html#mpz_powm_ui,mpz_ptr,mpz_srcptr,culong,mpz_srcptr	gmp: mpz_powm_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong; a5: mpz_srcptr)	
+mpz_powm_ui	integers/gmp.html#mpz_powm_ui,mpz_struct,mpz_struct,culong,mpz_struct	gmp: mpz_powm_ui(a2: var mpz_t; a3: mpz_t; a4: culong; a5: mpz_t)	
+mpz_probab_prime_p	integers/gmp.html#mpz_probab_prime_p,mpz_srcptr,cint	gmp: mpz_probab_prime_p(a2: mpz_srcptr; a3: cint): cint	
+mpz_probab_prime_p	integers/gmp.html#mpz_probab_prime_p,mpz_struct,cint	gmp: mpz_probab_prime_p(a2: mpz_t; a3: cint): cint	
+mpz_random	integers/gmp.html#mpz_random,mpz_ptr,mp_size_t	gmp: mpz_random(a2: mpz_ptr; a3: mp_size_t)	
+mpz_random	integers/gmp.html#mpz_random,mpz_struct,mp_size_t	gmp: mpz_random(a2: var mpz_t; a3: mp_size_t)	
+mpz_random2	integers/gmp.html#mpz_random2,mpz_ptr,mp_size_t	gmp: mpz_random2(a2: mpz_ptr; a3: mp_size_t)	
+mpz_random2	integers/gmp.html#mpz_random2,mpz_struct,mp_size_t	gmp: mpz_random2(a2: var mpz_t; a3: mp_size_t)	
+mpz_realloc2	integers/gmp.html#mpz_realloc2,mpz_ptr,mp_bitcnt_t	gmp: mpz_realloc2(a2: mpz_ptr; a3: mp_bitcnt_t)	
+mpz_realloc2	integers/gmp.html#mpz_realloc2,mpz_struct,mp_bitcnt_t	gmp: mpz_realloc2(a2: var mpz_t; a3: mp_bitcnt_t)	
+mpz_remove	integers/gmp.html#mpz_remove,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_remove(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr): mp_bitcnt_t	
+mpz_remove	integers/gmp.html#mpz_remove,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_remove(a2: var mpz_t; a3: mpz_t; a4: mpz_t): mp_bitcnt_t	
+mpz_root	integers/gmp.html#mpz_root,mpz_ptr,mpz_srcptr,culong	gmp: mpz_root(a2: mpz_ptr; a3: mpz_srcptr; a4: culong): cint	
+mpz_root	integers/gmp.html#mpz_root,mpz_struct,mpz_struct,culong	gmp: mpz_root(a2: var mpz_t; a3: mpz_t; a4: culong): cint	
+mpz_rootrem	integers/gmp.html#mpz_rootrem,mpz_ptr,mpz_ptr,mpz_srcptr,culong	gmp: mpz_rootrem(a2: mpz_ptr; a3: mpz_ptr; a4: mpz_srcptr; a5: culong)	
+mpz_rootrem	integers/gmp.html#mpz_rootrem,mpz_struct,mpz_struct,mpz_struct,culong	gmp: mpz_rootrem(a2: var mpz_t; a3: var mpz_t; a4: mpz_t; a5: culong)	
+mpz_scan0	integers/gmp.html#mpz_scan0,mpz_srcptr,mp_bitcnt_t	gmp: mpz_scan0(a2: mpz_srcptr; a3: mp_bitcnt_t): mp_bitcnt_t	
+mpz_scan0	integers/gmp.html#mpz_scan0,mpz_struct,mp_bitcnt_t	gmp: mpz_scan0(a2: mpz_t; a3: mp_bitcnt_t): mp_bitcnt_t	
+mpz_scan1	integers/gmp.html#mpz_scan1,mpz_srcptr,mp_bitcnt_t	gmp: mpz_scan1(a2: mpz_srcptr; a3: mp_bitcnt_t): mp_bitcnt_t	
+mpz_scan1	integers/gmp.html#mpz_scan1,mpz_struct,mp_bitcnt_t	gmp: mpz_scan1(a2: mpz_t; a3: mp_bitcnt_t): mp_bitcnt_t	
+mpz_set	integers/gmp.html#mpz_set,mpz_ptr,mpz_srcptr	gmp: mpz_set(a2: mpz_ptr; a3: mpz_srcptr)	
+mpz_set	integers/gmp.html#mpz_set,mpz_struct,mpz_struct	gmp: mpz_set(a2: var mpz_t; a3: mpz_t)	
+mpz_set_d	integers/gmp.html#mpz_set_d,mpz_ptr,cdouble	gmp: mpz_set_d(a2: mpz_ptr; a3: cdouble)	
+mpz_set_d	integers/gmp.html#mpz_set_d,mpz_struct,cdouble	gmp: mpz_set_d(a2: var mpz_t; a3: cdouble)	
+mpz_set_f	integers/gmp.html#mpz_set_f,mpz_ptr,mpf_srcptr	gmp: mpz_set_f(a2: mpz_ptr; a3: mpf_srcptr)	
+mpz_set_f	integers/gmp.html#mpz_set_f,mpz_struct,mpf_struct	gmp: mpz_set_f(a2: var mpz_t; a3: mpf_t)	
+mpz_set_si	integers/gmp.html#mpz_set_si,mpz_ptr,clong	gmp: mpz_set_si(a2: mpz_ptr; a3: clong)	
+mpz_set_si	integers/gmp.html#mpz_set_si,mpz_struct,clong	gmp: mpz_set_si(a2: var mpz_t; a3: clong)	
+mpz_set_str	integers/gmp.html#mpz_set_str,mpz_ptr,cstring,cint	gmp: mpz_set_str(a2: mpz_ptr; a3: cstring; a4: cint): cint	
+mpz_set_str	integers/gmp.html#mpz_set_str,mpz_struct,cstring,cint	gmp: mpz_set_str(a2: var mpz_t; a3: cstring; a4: cint): cint	
+mpz_set_ui	integers/gmp.html#mpz_set_ui,mpz_ptr,culong	gmp: mpz_set_ui(a2: mpz_ptr; a3: culong)	
+mpz_set_ui	integers/gmp.html#mpz_set_ui,mpz_struct,culong	gmp: mpz_set_ui(a2: var mpz_t; a3: culong)	
+mpz_setbit	integers/gmp.html#mpz_setbit,mpz_ptr,mp_bitcnt_t	gmp: mpz_setbit(a2: mpz_ptr; a3: mp_bitcnt_t)	
+mpz_setbit	integers/gmp.html#mpz_setbit,mpz_struct,mp_bitcnt_t	gmp: mpz_setbit(a2: var mpz_t; a3: mp_bitcnt_t)	
+mpz_sizeinbase	integers/gmp.html#mpz_sizeinbase,mpz_srcptr,cint	gmp: mpz_sizeinbase(a2: mpz_srcptr; a3: cint): csize_t	
+mpz_sizeinbase	integers/gmp.html#mpz_sizeinbase,mpz_struct,cint	gmp: mpz_sizeinbase(a2: mpz_t; a3: cint): csize_t	
+mpz_sqrt	integers/gmp.html#mpz_sqrt,mpz_ptr,mpz_srcptr	gmp: mpz_sqrt(a2: mpz_ptr; a3: mpz_srcptr)	
+mpz_sqrt	integers/gmp.html#mpz_sqrt,mpz_struct,mpz_struct	gmp: mpz_sqrt(a2: var mpz_t; a3: mpz_t)	
+mpz_sqrtrem	integers/gmp.html#mpz_sqrtrem,mpz_ptr,mpz_ptr,mpz_srcptr	gmp: mpz_sqrtrem(a2: mpz_ptr; a3: mpz_ptr; a4: mpz_srcptr)	
+mpz_sqrtrem	integers/gmp.html#mpz_sqrtrem,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_sqrtrem(a2: var mpz_t; a3: var mpz_t; a4: mpz_t)	
+mpz_sub	integers/gmp.html#mpz_sub,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_sub(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_sub	integers/gmp.html#mpz_sub,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_sub(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_sub_ui	integers/gmp.html#mpz_sub_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_sub_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong)	
+mpz_sub_ui	integers/gmp.html#mpz_sub_ui,mpz_struct,mpz_struct,culong	gmp: mpz_sub_ui(a2: var mpz_t; a3: mpz_t; a4: culong)	
+mpz_ui_sub	integers/gmp.html#mpz_ui_sub,mpz_ptr,culong,mpz_srcptr	gmp: mpz_ui_sub(a2: mpz_ptr; a3: culong; a4: mpz_srcptr)	
+mpz_ui_sub	integers/gmp.html#mpz_ui_sub,mpz_struct,culong,mpz_struct	gmp: mpz_ui_sub(a2: var mpz_t; a3: culong; a4: mpz_t)	
+mpz_submul	integers/gmp.html#mpz_submul,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_submul(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_submul	integers/gmp.html#mpz_submul,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_submul(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_submul_ui	integers/gmp.html#mpz_submul_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_submul_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong)	
+mpz_submul_ui	integers/gmp.html#mpz_submul_ui,mpz_struct,mpz_struct,culong	gmp: mpz_submul_ui(a2: var mpz_t; a3: mpz_t; a4: culong)	
+mpz_swap	integers/gmp.html#mpz_swap,mpz_ptr,mpz_ptr	gmp: mpz_swap(a2: mpz_ptr; a3: mpz_ptr)	
+mpz_swap	integers/gmp.html#mpz_swap,mpz_struct,mpz_struct	gmp: mpz_swap(a2: var mpz_t; a3: var mpz_t)	
+mpz_tdiv_ui	integers/gmp.html#mpz_tdiv_ui,mpz_srcptr,culong	gmp: mpz_tdiv_ui(a2: mpz_srcptr; a3: culong): culong	
+mpz_tdiv_ui	integers/gmp.html#mpz_tdiv_ui,mpz_struct,culong	gmp: mpz_tdiv_ui(a2: mpz_t; a3: culong): culong	
+mpz_tdiv_q	integers/gmp.html#mpz_tdiv_q,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_tdiv_q(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_tdiv_q	integers/gmp.html#mpz_tdiv_q,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_tdiv_q(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_tdiv_q_2exp	integers/gmp.html#mpz_tdiv_q_2exp,mpz_ptr,mpz_srcptr,mp_bitcnt_t	gmp: mpz_tdiv_q_2exp(a2: mpz_ptr; a3: mpz_srcptr; a4: mp_bitcnt_t)	
+mpz_tdiv_q_2exp	integers/gmp.html#mpz_tdiv_q_2exp,mpz_struct,mpz_struct,mp_bitcnt_t	gmp: mpz_tdiv_q_2exp(a2: var mpz_t; a3: mpz_t; a4: mp_bitcnt_t)	
+mpz_tdiv_q_ui	integers/gmp.html#mpz_tdiv_q_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_tdiv_q_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong): culong	
+mpz_tdiv_q_ui	integers/gmp.html#mpz_tdiv_q_ui,mpz_struct,mpz_struct,culong	gmp: mpz_tdiv_q_ui(a2: var mpz_t; a3: mpz_t; a4: culong): culong	
+mpz_tdiv_qr	integers/gmp.html#mpz_tdiv_qr,mpz_ptr,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_tdiv_qr(a2: mpz_ptr; a3: mpz_ptr; a4: mpz_srcptr; a5: mpz_srcptr)	
+mpz_tdiv_qr	integers/gmp.html#mpz_tdiv_qr,mpz_struct,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_tdiv_qr(a2: var mpz_t; a3: var mpz_t; a4: mpz_t; a5: mpz_t)	
+mpz_tdiv_qr_ui	integers/gmp.html#mpz_tdiv_qr_ui,mpz_ptr,mpz_ptr,mpz_srcptr,culong	gmp: mpz_tdiv_qr_ui(a2: mpz_ptr; a3: mpz_ptr; a4: mpz_srcptr; a5: culong): culong	
+mpz_tdiv_qr_ui	integers/gmp.html#mpz_tdiv_qr_ui,mpz_struct,mpz_struct,mpz_struct,culong	gmp: mpz_tdiv_qr_ui(a2: var mpz_t; a3: var mpz_t; a4: mpz_t; a5: culong): culong	
+mpz_tdiv_r	integers/gmp.html#mpz_tdiv_r,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_tdiv_r(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_tdiv_r	integers/gmp.html#mpz_tdiv_r,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_tdiv_r(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_tdiv_r_2exp	integers/gmp.html#mpz_tdiv_r_2exp,mpz_ptr,mpz_srcptr,mp_bitcnt_t	gmp: mpz_tdiv_r_2exp(a2: mpz_ptr; a3: mpz_srcptr; a4: mp_bitcnt_t)	
+mpz_tdiv_r_2exp	integers/gmp.html#mpz_tdiv_r_2exp,mpz_struct,mpz_struct,mp_bitcnt_t	gmp: mpz_tdiv_r_2exp(a2: var mpz_t; a3: mpz_t; a4: mp_bitcnt_t)	
+mpz_tdiv_r_ui	integers/gmp.html#mpz_tdiv_r_ui,mpz_ptr,mpz_srcptr,culong	gmp: mpz_tdiv_r_ui(a2: mpz_ptr; a3: mpz_srcptr; a4: culong): culong	
+mpz_tdiv_r_ui	integers/gmp.html#mpz_tdiv_r_ui,mpz_struct,mpz_struct,culong	gmp: mpz_tdiv_r_ui(a2: var mpz_t; a3: mpz_t; a4: culong): culong	
+mpz_tstbit	integers/gmp.html#mpz_tstbit,mpz_srcptr,mp_bitcnt_t	gmp: mpz_tstbit(a2: mpz_srcptr; a3: mp_bitcnt_t): cint	
+mpz_tstbit	integers/gmp.html#mpz_tstbit,mpz_struct,mp_bitcnt_t	gmp: mpz_tstbit(a2: mpz_t; a3: mp_bitcnt_t): cint	
+mpz_ui_pow_ui	integers/gmp.html#mpz_ui_pow_ui,mpz_ptr,culong,culong	gmp: mpz_ui_pow_ui(a2: mpz_ptr; a3: culong; a4: culong)	
+mpz_ui_pow_ui	integers/gmp.html#mpz_ui_pow_ui,mpz_struct,culong,culong	gmp: mpz_ui_pow_ui(a2: var mpz_t; a3: culong; a4: culong)	
+mpz_xor	integers/gmp.html#mpz_xor,mpz_ptr,mpz_srcptr,mpz_srcptr	gmp: mpz_xor(a2: mpz_ptr; a3: mpz_srcptr; a4: mpz_srcptr)	
+mpz_xor	integers/gmp.html#mpz_xor,mpz_struct,mpz_struct,mpz_struct	gmp: mpz_xor(a2: var mpz_t; a3: mpz_t; a4: mpz_t)	
+mpz_limbs_read	integers/gmp.html#mpz_limbs_read,mpz_srcptr	gmp: mpz_limbs_read(a2: mpz_srcptr): mp_srcptr	
+mpz_limbs_read	integers/gmp.html#mpz_limbs_read,mpz_struct	gmp: mpz_limbs_read(a2: mpz_t): mp_srcptr	
+mpz_limbs_write	integers/gmp.html#mpz_limbs_write,mpz_ptr,mp_size_t	gmp: mpz_limbs_write(a2: mpz_ptr; a3: mp_size_t): mp_ptr	
+mpz_limbs_write	integers/gmp.html#mpz_limbs_write,mpz_struct,mp_size_t	gmp: mpz_limbs_write(a2: var mpz_t; a3: mp_size_t): mp_ptr	
+mpz_limbs_modify	integers/gmp.html#mpz_limbs_modify,mpz_ptr,mp_size_t	gmp: mpz_limbs_modify(a2: mpz_ptr; a3: mp_size_t): mp_ptr	
+mpz_limbs_modify	integers/gmp.html#mpz_limbs_modify,mpz_struct,mp_size_t	gmp: mpz_limbs_modify(a2: var mpz_t; a3: mp_size_t): mp_ptr	
+mpz_limbs_finish	integers/gmp.html#mpz_limbs_finish,mpz_ptr,mp_size_t	gmp: mpz_limbs_finish(a2: mpz_ptr; a3: mp_size_t)	
+mpz_limbs_finish	integers/gmp.html#mpz_limbs_finish,mpz_struct,mp_size_t	gmp: mpz_limbs_finish(a2: var mpz_t; a3: mp_size_t)	
+mpz_roinit_n	integers/gmp.html#mpz_roinit_n,mpz_ptr,mp_srcptr,mp_size_t	gmp: mpz_roinit_n(a2: mpz_ptr; a3: mp_srcptr; a4: mp_size_t): mpz_srcptr	
+mpz_roinit_n	integers/gmp.html#mpz_roinit_n,mpz_struct,mp_limb_t,mp_size_t	gmp: mpz_roinit_n(a2: var mpz_t; a3: var mp_limb_t; a4: mp_size_t): mpz_srcptr	
+mpz_abs	integers/gmp.html#mpz_abs,mpz_ptr,mpz_srcptr	gmp: mpz_abs(gmp_w: mpz_ptr; gmp_u: mpz_srcptr)	
+mpz_abs	integers/gmp.html#mpz_abs,mpz_struct,mpz_struct	gmp: mpz_abs(gmp_w: var mpz_t; gmp_u: mpz_t)	
+mpz_fits_uint_p	integers/gmp.html#mpz_fits_uint_p,mpz_srcptr	gmp: mpz_fits_uint_p(gmp_z: mpz_srcptr): cint	
+mpz_fits_uint_p	integers/gmp.html#mpz_fits_uint_p,mpz_struct	gmp: mpz_fits_uint_p(gmp_z: mpz_t): cint	
+mpz_fits_ulong_p	integers/gmp.html#mpz_fits_ulong_p,mpz_srcptr	gmp: mpz_fits_ulong_p(gmp_z: mpz_srcptr): cint	
+mpz_fits_ulong_p	integers/gmp.html#mpz_fits_ulong_p,mpz_struct	gmp: mpz_fits_ulong_p(gmp_z: mpz_t): cint	
+mpz_fits_ushort_p	integers/gmp.html#mpz_fits_ushort_p,mpz_srcptr	gmp: mpz_fits_ushort_p(gmp_z: mpz_srcptr): cint	
+mpz_fits_ushort_p	integers/gmp.html#mpz_fits_ushort_p,mpz_struct	gmp: mpz_fits_ushort_p(gmp_z: mpz_t): cint	
+mpz_get_ui	integers/gmp.html#mpz_get_ui,mpz_srcptr	gmp: mpz_get_ui(gmp_z: mpz_srcptr): culong	
+mpz_get_ui	integers/gmp.html#mpz_get_ui,mpz_struct	gmp: mpz_get_ui(gmp_z: mpz_t): culong	
+mpz_getlimbn	integers/gmp.html#mpz_getlimbn,mpz_srcptr,mp_size_t	gmp: mpz_getlimbn(gmp_z: mpz_srcptr; gmp_n: mp_size_t): mp_limb_t	
+mpz_getlimbn	integers/gmp.html#mpz_getlimbn,mpz_struct,mp_size_t	gmp: mpz_getlimbn(gmp_z: mpz_t; gmp_n: mp_size_t): mp_limb_t	
+mpz_neg	integers/gmp.html#mpz_neg,mpz_ptr,mpz_srcptr	gmp: mpz_neg(gmp_w: mpz_ptr; gmp_u: mpz_srcptr)	
+mpz_neg	integers/gmp.html#mpz_neg,mpz_struct,mpz_struct	gmp: mpz_neg(gmp_w: var mpz_t; gmp_u: mpz_t)	
+mpz_perfect_square_p	integers/gmp.html#mpz_perfect_square_p,mpz_srcptr	gmp: mpz_perfect_square_p(gmp_a: mpz_srcptr): cint	
+mpz_perfect_square_p	integers/gmp.html#mpz_perfect_square_p,mpz_struct	gmp: mpz_perfect_square_p(gmp_a: mpz_t): cint	
+mpz_popcount	integers/gmp.html#mpz_popcount,mpz_srcptr	gmp: mpz_popcount(gmp_u: mpz_srcptr): mp_bitcnt_t	
+mpz_popcount	integers/gmp.html#mpz_popcount,mpz_struct	gmp: mpz_popcount(gmp_u: mpz_t): mp_bitcnt_t	
+mpz_set_q	integers/gmp.html#mpz_set_q,mpz_ptr,mpq_srcptr	gmp: mpz_set_q(gmp_w: mpz_ptr; gmp_u: mpq_srcptr)	
+mpz_set_q	integers/gmp.html#mpz_set_q,mpz_struct,mpq_struct	gmp: mpz_set_q(gmp_w: var mpz_t; gmp_u: mpq_t)	
+mpz_size	integers/gmp.html#mpz_size,mpz_srcptr	gmp: mpz_size(gmp_z: mpz_srcptr): csize_t	
+mpz_size	integers/gmp.html#mpz_size,mpz_struct	gmp: mpz_size(gmp_z: mpz_t): csize_t	
+mpq_add	integers/gmp.html#mpq_add,mpq_ptr,mpq_srcptr,mpq_srcptr	gmp: mpq_add(a2: mpq_ptr; a3: mpq_srcptr; a4: mpq_srcptr)	
+mpq_add	integers/gmp.html#mpq_add,mpq_struct,mpq_struct,mpq_struct	gmp: mpq_add(a2: var mpq_t; a3: mpq_t; a4: mpq_t)	
+mpq_canonicalize	integers/gmp.html#mpq_canonicalize,mpq_ptr	gmp: mpq_canonicalize(a2: mpq_ptr)	
+mpq_canonicalize	integers/gmp.html#mpq_canonicalize,mpq_struct	gmp: mpq_canonicalize(a2: var mpq_t)	
+mpq_clear	integers/gmp.html#mpq_clear,mpq_ptr	gmp: mpq_clear(a2: mpq_ptr)	
+mpq_clear	integers/gmp.html#mpq_clear,mpq_struct	gmp: mpq_clear(a2: var mpq_t)	
+mpq_clears	integers/gmp.html#mpq_clears,mpq_ptr	gmp: mpq_clears(a2: mpq_ptr)	
+mpq_clears	integers/gmp.html#mpq_clears,mpq_struct	gmp: mpq_clears(a2: var mpq_t)	
+mpq_cmp	integers/gmp.html#mpq_cmp,mpq_srcptr,mpq_srcptr	gmp: mpq_cmp(a2: mpq_srcptr; a3: mpq_srcptr): cint	
+mpq_cmp	integers/gmp.html#mpq_cmp,mpq_struct,mpq_struct	gmp: mpq_cmp(a2: mpq_t; a3: mpq_t): cint	
+m_mpq_cmp_si	integers/gmp.html#m_mpq_cmp_si,mpq_srcptr,clong,culong	gmp: m_mpq_cmp_si(a2: mpq_srcptr; a3: clong; a4: culong): cint	
+m_mpq_cmp_si	integers/gmp.html#m_mpq_cmp_si,mpq_struct,clong,culong	gmp: m_mpq_cmp_si(a2: mpq_t; a3: clong; a4: culong): cint	
+m_mpq_cmp_ui	integers/gmp.html#m_mpq_cmp_ui,mpq_srcptr,culong,culong	gmp: m_mpq_cmp_ui(a2: mpq_srcptr; a3: culong; a4: culong): cint	
+m_mpq_cmp_ui	integers/gmp.html#m_mpq_cmp_ui,mpq_struct,culong,culong	gmp: m_mpq_cmp_ui(a2: mpq_t; a3: culong; a4: culong): cint	
+mpq_div	integers/gmp.html#mpq_div,mpq_ptr,mpq_srcptr,mpq_srcptr	gmp: mpq_div(a2: mpq_ptr; a3: mpq_srcptr; a4: mpq_srcptr)	
+mpq_div	integers/gmp.html#mpq_div,mpq_struct,mpq_struct,mpq_struct	gmp: mpq_div(a2: var mpq_t; a3: mpq_t; a4: mpq_t)	
+mpq_div_2exp	integers/gmp.html#mpq_div_2exp,mpq_ptr,mpq_srcptr,mp_bitcnt_t	gmp: mpq_div_2exp(a2: mpq_ptr; a3: mpq_srcptr; a4: mp_bitcnt_t)	
+mpq_div_2exp	integers/gmp.html#mpq_div_2exp,mpq_struct,mpq_struct,mp_bitcnt_t	gmp: mpq_div_2exp(a2: var mpq_t; a3: mpq_t; a4: mp_bitcnt_t)	
+mpq_equal	integers/gmp.html#mpq_equal,mpq_srcptr,mpq_srcptr	gmp: mpq_equal(a2: mpq_srcptr; a3: mpq_srcptr): cint	
+mpq_equal	integers/gmp.html#mpq_equal,mpq_struct,mpq_struct	gmp: mpq_equal(a2: mpq_t; a3: mpq_t): cint	
+mpq_get_num	integers/gmp.html#mpq_get_num,mpz_ptr,mpq_srcptr	gmp: mpq_get_num(a2: mpz_ptr; a3: mpq_srcptr)	
+mpq_get_num	integers/gmp.html#mpq_get_num,mpz_struct,mpq_struct	gmp: mpq_get_num(a2: var mpz_t; a3: mpq_t)	
+mpq_get_den	integers/gmp.html#mpq_get_den,mpz_ptr,mpq_srcptr	gmp: mpq_get_den(a2: mpz_ptr; a3: mpq_srcptr)	
+mpq_get_den	integers/gmp.html#mpq_get_den,mpz_struct,mpq_struct	gmp: mpq_get_den(a2: var mpz_t; a3: mpq_t)	
+mpq_get_d	integers/gmp.html#mpq_get_d,mpq_srcptr	gmp: mpq_get_d(a2: mpq_srcptr): cdouble	
+mpq_get_d	integers/gmp.html#mpq_get_d,mpq_struct	gmp: mpq_get_d(a2: mpq_t): cdouble	
+mpq_get_str	integers/gmp.html#mpq_get_str,cstring,cint,mpq_srcptr	gmp: mpq_get_str(a2: cstring; a3: cint; a4: mpq_srcptr): cstring	
+mpq_get_str	integers/gmp.html#mpq_get_str,cstring,cint,mpq_struct	gmp: mpq_get_str(a2: cstring; a3: cint; a4: mpq_t): cstring	
+mpq_init	integers/gmp.html#mpq_init,mpq_ptr	gmp: mpq_init(a2: mpq_ptr)	
+mpq_init	integers/gmp.html#mpq_init,mpq_struct	gmp: mpq_init(a2: var mpq_t)	
+mpq_inits	integers/gmp.html#mpq_inits,mpq_ptr	gmp: mpq_inits(a2: mpq_ptr)	
+mpq_inits	integers/gmp.html#mpq_inits,mpq_struct	gmp: mpq_inits(a2: var mpq_t)	
+mpq_inp_str	integers/gmp.html#mpq_inp_str,mpq_ptr,File,cint	gmp: mpq_inp_str(a2: mpq_ptr; a3: File; a4: cint): csize_t	
+mpq_inp_str	integers/gmp.html#mpq_inp_str,mpq_struct,File,cint	gmp: mpq_inp_str(a2: var mpq_t; a3: File; a4: cint): csize_t	
+mpq_inv	integers/gmp.html#mpq_inv,mpq_ptr,mpq_srcptr	gmp: mpq_inv(a2: mpq_ptr; a3: mpq_srcptr)	
+mpq_inv	integers/gmp.html#mpq_inv,mpq_struct,mpq_struct	gmp: mpq_inv(a2: var mpq_t; a3: mpq_t)	
+mpq_mul	integers/gmp.html#mpq_mul,mpq_ptr,mpq_srcptr,mpq_srcptr	gmp: mpq_mul(a2: mpq_ptr; a3: mpq_srcptr; a4: mpq_srcptr)	
+mpq_mul	integers/gmp.html#mpq_mul,mpq_struct,mpq_struct,mpq_struct	gmp: mpq_mul(a2: var mpq_t; a3: mpq_t; a4: mpq_t)	
+mpq_mul_2exp	integers/gmp.html#mpq_mul_2exp,mpq_ptr,mpq_srcptr,mp_bitcnt_t	gmp: mpq_mul_2exp(a2: mpq_ptr; a3: mpq_srcptr; a4: mp_bitcnt_t)	
+mpq_mul_2exp	integers/gmp.html#mpq_mul_2exp,mpq_struct,mpq_struct,mp_bitcnt_t	gmp: mpq_mul_2exp(a2: var mpq_t; a3: mpq_t; a4: mp_bitcnt_t)	
+mpq_out_str	integers/gmp.html#mpq_out_str,File,cint,mpq_srcptr	gmp: mpq_out_str(a2: File; a3: cint; a4: mpq_srcptr): csize_t	
+mpq_out_str	integers/gmp.html#mpq_out_str,File,cint,mpq_struct	gmp: mpq_out_str(a2: File; a3: cint; a4: mpq_t): csize_t	
+mpq_set	integers/gmp.html#mpq_set,mpq_ptr,mpq_srcptr	gmp: mpq_set(a2: mpq_ptr; a3: mpq_srcptr)	
+mpq_set	integers/gmp.html#mpq_set,mpq_struct,mpq_struct	gmp: mpq_set(a2: var mpq_t; a3: mpq_t)	
+mpq_set_d	integers/gmp.html#mpq_set_d,mpq_ptr,cdouble	gmp: mpq_set_d(a2: mpq_ptr; a3: cdouble)	
+mpq_set_d	integers/gmp.html#mpq_set_d,mpq_struct,cdouble	gmp: mpq_set_d(a2: var mpq_t; a3: cdouble)	
+mpq_set_den	integers/gmp.html#mpq_set_den,mpq_ptr,mpz_srcptr	gmp: mpq_set_den(a2: mpq_ptr; a3: mpz_srcptr)	
+mpq_set_den	integers/gmp.html#mpq_set_den,mpq_struct,mpz_struct	gmp: mpq_set_den(a2: var mpq_t; a3: mpz_t)	
+mpq_set_f	integers/gmp.html#mpq_set_f,mpq_ptr,mpf_srcptr	gmp: mpq_set_f(a2: mpq_ptr; a3: mpf_srcptr)	
+mpq_set_f	integers/gmp.html#mpq_set_f,mpq_struct,mpf_struct	gmp: mpq_set_f(a2: var mpq_t; a3: mpf_t)	
+mpq_set_num	integers/gmp.html#mpq_set_num,mpq_ptr,mpz_srcptr	gmp: mpq_set_num(a2: mpq_ptr; a3: mpz_srcptr)	
+mpq_set_num	integers/gmp.html#mpq_set_num,mpq_struct,mpz_struct	gmp: mpq_set_num(a2: var mpq_t; a3: mpz_t)	
+mpq_set_si	integers/gmp.html#mpq_set_si,mpq_ptr,clong,culong	gmp: mpq_set_si(a2: mpq_ptr; a3: clong; a4: culong)	
+mpq_set_si	integers/gmp.html#mpq_set_si,mpq_struct,clong,culong	gmp: mpq_set_si(a2: var mpq_t; a3: clong; a4: culong)	
+mpq_set_str	integers/gmp.html#mpq_set_str,mpq_ptr,cstring,cint	gmp: mpq_set_str(a2: mpq_ptr; a3: cstring; a4: cint): cint	
+mpq_set_str	integers/gmp.html#mpq_set_str,mpq_struct,cstring,cint	gmp: mpq_set_str(a2: var mpq_t; a3: cstring; a4: cint): cint	
+mpq_set_ui	integers/gmp.html#mpq_set_ui,mpq_ptr,culong,culong	gmp: mpq_set_ui(a2: mpq_ptr; a3: culong; a4: culong)	
+mpq_set_ui	integers/gmp.html#mpq_set_ui,mpq_struct,culong,culong	gmp: mpq_set_ui(a2: var mpq_t; a3: culong; a4: culong)	
+mpq_set_z	integers/gmp.html#mpq_set_z,mpq_ptr,mpz_srcptr	gmp: mpq_set_z(a2: mpq_ptr; a3: mpz_srcptr)	
+mpq_set_z	integers/gmp.html#mpq_set_z,mpq_struct,mpz_struct	gmp: mpq_set_z(a2: var mpq_t; a3: mpz_t)	
+mpq_sub	integers/gmp.html#mpq_sub,mpq_ptr,mpq_srcptr,mpq_srcptr	gmp: mpq_sub(a2: mpq_ptr; a3: mpq_srcptr; a4: mpq_srcptr)	
+mpq_sub	integers/gmp.html#mpq_sub,mpq_struct,mpq_struct,mpq_struct	gmp: mpq_sub(a2: var mpq_t; a3: mpq_t; a4: mpq_t)	
+mpq_swap	integers/gmp.html#mpq_swap,mpq_ptr,mpq_ptr	gmp: mpq_swap(a2: mpq_ptr; a3: mpq_ptr)	
+mpq_swap	integers/gmp.html#mpq_swap,mpq_struct,mpq_struct	gmp: mpq_swap(a2: var mpq_t; a3: var mpq_t)	
+mpf_abs	integers/gmp.html#mpf_abs,mpf_ptr,mpf_srcptr	gmp: mpf_abs(a2: mpf_ptr; a3: mpf_srcptr)	
+mpf_abs	integers/gmp.html#mpf_abs,mpf_struct,mpf_struct	gmp: mpf_abs(a2: var mpf_t; a3: mpf_t)	
+mpf_add	integers/gmp.html#mpf_add,mpf_ptr,mpf_srcptr,mpf_srcptr	gmp: mpf_add(a2: mpf_ptr; a3: mpf_srcptr; a4: mpf_srcptr)	
+mpf_add	integers/gmp.html#mpf_add,mpf_struct,mpf_struct,mpf_struct	gmp: mpf_add(a2: var mpf_t; a3: mpf_t; a4: mpf_t)	
+mpf_add_ui	integers/gmp.html#mpf_add_ui,mpf_ptr,mpf_srcptr,culong	gmp: mpf_add_ui(a2: mpf_ptr; a3: mpf_srcptr; a4: culong)	
+mpf_add_ui	integers/gmp.html#mpf_add_ui,mpf_struct,mpf_struct,culong	gmp: mpf_add_ui(a2: var mpf_t; a3: mpf_t; a4: culong)	
+mpf_ceil	integers/gmp.html#mpf_ceil,mpf_ptr,mpf_srcptr	gmp: mpf_ceil(a2: mpf_ptr; a3: mpf_srcptr)	
+mpf_ceil	integers/gmp.html#mpf_ceil,mpf_struct,mpf_struct	gmp: mpf_ceil(a2: var mpf_t; a3: mpf_t)	
+mpf_clear	integers/gmp.html#mpf_clear,mpf_ptr	gmp: mpf_clear(a2: mpf_ptr)	
+mpf_clear	integers/gmp.html#mpf_clear,mpf_struct	gmp: mpf_clear(a2: var mpf_t)	
+mpf_clears	integers/gmp.html#mpf_clears,mpf_ptr	gmp: mpf_clears(a2: mpf_ptr)	
+mpf_clears	integers/gmp.html#mpf_clears,mpf_struct	gmp: mpf_clears(a2: var mpf_t)	
+mpf_cmp	integers/gmp.html#mpf_cmp,mpf_srcptr,mpf_srcptr	gmp: mpf_cmp(a2: mpf_srcptr; a3: mpf_srcptr): cint	
+mpf_cmp	integers/gmp.html#mpf_cmp,mpf_struct,mpf_struct	gmp: mpf_cmp(a2: mpf_t; a3: mpf_t): cint	
+mpf_cmp_d	integers/gmp.html#mpf_cmp_d,mpf_srcptr,cdouble	gmp: mpf_cmp_d(a2: mpf_srcptr; a3: cdouble): cint	
+mpf_cmp_d	integers/gmp.html#mpf_cmp_d,mpf_struct,cdouble	gmp: mpf_cmp_d(a2: mpf_t; a3: cdouble): cint	
+mpf_cmp_si	integers/gmp.html#mpf_cmp_si,mpf_srcptr,clong	gmp: mpf_cmp_si(a2: mpf_srcptr; a3: clong): cint	
+mpf_cmp_si	integers/gmp.html#mpf_cmp_si,mpf_struct,clong	gmp: mpf_cmp_si(a2: mpf_t; a3: clong): cint	
+mpf_cmp_ui	integers/gmp.html#mpf_cmp_ui,mpf_srcptr,culong	gmp: mpf_cmp_ui(a2: mpf_srcptr; a3: culong): cint	
+mpf_cmp_ui	integers/gmp.html#mpf_cmp_ui,mpf_struct,culong	gmp: mpf_cmp_ui(a2: mpf_t; a3: culong): cint	
+mpf_div	integers/gmp.html#mpf_div,mpf_ptr,mpf_srcptr,mpf_srcptr	gmp: mpf_div(a2: mpf_ptr; a3: mpf_srcptr; a4: mpf_srcptr)	
+mpf_div	integers/gmp.html#mpf_div,mpf_struct,mpf_struct,mpf_struct	gmp: mpf_div(a2: var mpf_t; a3: mpf_t; a4: mpf_t)	
+mpf_div_2exp	integers/gmp.html#mpf_div_2exp,mpf_ptr,mpf_srcptr,mp_bitcnt_t	gmp: mpf_div_2exp(a2: mpf_ptr; a3: mpf_srcptr; a4: mp_bitcnt_t)	
+mpf_div_2exp	integers/gmp.html#mpf_div_2exp,mpf_struct,mpf_struct,mp_bitcnt_t	gmp: mpf_div_2exp(a2: var mpf_t; a3: mpf_t; a4: mp_bitcnt_t)	
+mpf_div_ui	integers/gmp.html#mpf_div_ui,mpf_ptr,mpf_srcptr,culong	gmp: mpf_div_ui(a2: mpf_ptr; a3: mpf_srcptr; a4: culong)	
+mpf_div_ui	integers/gmp.html#mpf_div_ui,mpf_struct,mpf_struct,culong	gmp: mpf_div_ui(a2: var mpf_t; a3: mpf_t; a4: culong)	
+mpf_dump	integers/gmp.html#mpf_dump,mpf_srcptr	gmp: mpf_dump(a2: mpf_srcptr)	
+mpf_dump	integers/gmp.html#mpf_dump,mpf_struct	gmp: mpf_dump(a2: mpf_t)	
+mpf_eq	integers/gmp.html#mpf_eq,mpf_srcptr,mpf_srcptr,mp_bitcnt_t	gmp: mpf_eq(a2: mpf_srcptr; a3: mpf_srcptr; a4: mp_bitcnt_t): cint	
+mpf_eq	integers/gmp.html#mpf_eq,mpf_struct,mpf_struct,mp_bitcnt_t	gmp: mpf_eq(a2: mpf_t; a3: mpf_t; a4: mp_bitcnt_t): cint	
+mpf_fits_sint_p	integers/gmp.html#mpf_fits_sint_p,mpf_srcptr	gmp: mpf_fits_sint_p(a2: mpf_srcptr): cint	
+mpf_fits_sint_p	integers/gmp.html#mpf_fits_sint_p,mpf_struct	gmp: mpf_fits_sint_p(a2: mpf_t): cint	
+mpf_fits_slong_p	integers/gmp.html#mpf_fits_slong_p,mpf_srcptr	gmp: mpf_fits_slong_p(a2: mpf_srcptr): cint	
+mpf_fits_slong_p	integers/gmp.html#mpf_fits_slong_p,mpf_struct	gmp: mpf_fits_slong_p(a2: mpf_t): cint	
+mpf_fits_sshort_p	integers/gmp.html#mpf_fits_sshort_p,mpf_srcptr	gmp: mpf_fits_sshort_p(a2: mpf_srcptr): cint	
+mpf_fits_sshort_p	integers/gmp.html#mpf_fits_sshort_p,mpf_struct	gmp: mpf_fits_sshort_p(a2: mpf_t): cint	
+mpf_fits_uint_p	integers/gmp.html#mpf_fits_uint_p,mpf_srcptr	gmp: mpf_fits_uint_p(a2: mpf_srcptr): cint	
+mpf_fits_uint_p	integers/gmp.html#mpf_fits_uint_p,mpf_struct	gmp: mpf_fits_uint_p(a2: mpf_t): cint	
+mpf_fits_ulong_p	integers/gmp.html#mpf_fits_ulong_p,mpf_srcptr	gmp: mpf_fits_ulong_p(a2: mpf_srcptr): cint	
+mpf_fits_ulong_p	integers/gmp.html#mpf_fits_ulong_p,mpf_struct	gmp: mpf_fits_ulong_p(a2: mpf_t): cint	
+mpf_fits_ushort_p	integers/gmp.html#mpf_fits_ushort_p,mpf_srcptr	gmp: mpf_fits_ushort_p(a2: mpf_srcptr): cint	
+mpf_fits_ushort_p	integers/gmp.html#mpf_fits_ushort_p,mpf_struct	gmp: mpf_fits_ushort_p(a2: mpf_t): cint	
+mpf_floor	integers/gmp.html#mpf_floor,mpf_ptr,mpf_srcptr	gmp: mpf_floor(a2: mpf_ptr; a3: mpf_srcptr)	
+mpf_floor	integers/gmp.html#mpf_floor,mpf_struct,mpf_struct	gmp: mpf_floor(a2: var mpf_t; a3: mpf_t)	
+mpf_get_d	integers/gmp.html#mpf_get_d,mpf_srcptr	gmp: mpf_get_d(a2: mpf_srcptr): cdouble	
+mpf_get_d	integers/gmp.html#mpf_get_d,mpf_struct	gmp: mpf_get_d(a2: mpf_t): cdouble	
+mpf_get_d_2exp	integers/gmp.html#mpf_get_d_2exp,ptr.clong,mpf_srcptr	gmp: mpf_get_d_2exp(a2: ptr clong; a3: mpf_srcptr): cdouble	
+mpf_get_d_2exp	integers/gmp.html#mpf_get_d_2exp,ptr.clong,mpf_struct	gmp: mpf_get_d_2exp(a2: ptr clong; a3: mpf_t): cdouble	
+mpf_get_default_prec	integers/gmp.html#mpf_get_default_prec	gmp: mpf_get_default_prec(): mp_bitcnt_t	
+mpf_get_prec	integers/gmp.html#mpf_get_prec,mpf_srcptr	gmp: mpf_get_prec(a2: mpf_srcptr): mp_bitcnt_t	
+mpf_get_prec	integers/gmp.html#mpf_get_prec,mpf_struct	gmp: mpf_get_prec(a2: mpf_t): mp_bitcnt_t	
+mpf_get_si	integers/gmp.html#mpf_get_si,mpf_srcptr	gmp: mpf_get_si(a2: mpf_srcptr): clong	
+mpf_get_si	integers/gmp.html#mpf_get_si,mpf_struct	gmp: mpf_get_si(a2: mpf_t): clong	
+mpf_get_str	integers/gmp.html#mpf_get_str,cstring,ptr.mp_exp_t,cint,csize_t,mpf_srcptr	gmp: mpf_get_str(a2: cstring; a3: ptr mp_exp_t; a4: cint; a5: csize_t; a6: mpf_srcptr): cstring	
+mpf_get_str	integers/gmp.html#mpf_get_str,cstring,mp_exp_t,cint,csize_t,mpf_struct	gmp: mpf_get_str(a2: cstring; a3: var mp_exp_t; a4: cint; a5: csize_t; a6: mpf_t): cstring	
+mpf_get_ui	integers/gmp.html#mpf_get_ui,mpf_srcptr	gmp: mpf_get_ui(a2: mpf_srcptr): culong	
+mpf_get_ui	integers/gmp.html#mpf_get_ui,mpf_struct	gmp: mpf_get_ui(a2: mpf_t): culong	
+mpf_init	integers/gmp.html#mpf_init,mpf_ptr	gmp: mpf_init(a2: mpf_ptr)	
+mpf_init	integers/gmp.html#mpf_init,mpf_struct	gmp: mpf_init(a2: var mpf_t)	
+mpf_init2	integers/gmp.html#mpf_init2,mpf_ptr,mp_bitcnt_t	gmp: mpf_init2(a2: mpf_ptr; a3: mp_bitcnt_t)	
+mpf_init2	integers/gmp.html#mpf_init2,mpf_struct,mp_bitcnt_t	gmp: mpf_init2(a2: var mpf_t; a3: mp_bitcnt_t)	
+mpf_inits	integers/gmp.html#mpf_inits,mpf_ptr	gmp: mpf_inits(a2: mpf_ptr)	
+mpf_inits	integers/gmp.html#mpf_inits,mpf_struct	gmp: mpf_inits(a2: var mpf_t)	
+mpf_init_set	integers/gmp.html#mpf_init_set,mpf_ptr,mpf_srcptr	gmp: mpf_init_set(a2: mpf_ptr; a3: mpf_srcptr)	
+mpf_init_set	integers/gmp.html#mpf_init_set,mpf_struct,mpf_struct	gmp: mpf_init_set(a2: var mpf_t; a3: mpf_t)	
+mpf_init_set_d	integers/gmp.html#mpf_init_set_d,mpf_ptr,cdouble	gmp: mpf_init_set_d(a2: mpf_ptr; a3: cdouble)	
+mpf_init_set_d	integers/gmp.html#mpf_init_set_d,mpf_struct,cdouble	gmp: mpf_init_set_d(a2: var mpf_t; a3: cdouble)	
+mpf_init_set_si	integers/gmp.html#mpf_init_set_si,mpf_ptr,clong	gmp: mpf_init_set_si(a2: mpf_ptr; a3: clong)	
+mpf_init_set_si	integers/gmp.html#mpf_init_set_si,mpf_struct,clong	gmp: mpf_init_set_si(a2: var mpf_t; a3: clong)	
+mpf_init_set_str	integers/gmp.html#mpf_init_set_str,mpf_ptr,cstring,cint	gmp: mpf_init_set_str(a2: mpf_ptr; a3: cstring; a4: cint): cint	
+mpf_init_set_str	integers/gmp.html#mpf_init_set_str,mpf_struct,cstring,cint	gmp: mpf_init_set_str(a2: var mpf_t; a3: cstring; a4: cint): cint	
+mpf_init_set_ui	integers/gmp.html#mpf_init_set_ui,mpf_ptr,culong	gmp: mpf_init_set_ui(a2: mpf_ptr; a3: culong)	
+mpf_init_set_ui	integers/gmp.html#mpf_init_set_ui,mpf_struct,culong	gmp: mpf_init_set_ui(a2: var mpf_t; a3: culong)	
+mpf_inp_str	integers/gmp.html#mpf_inp_str,mpf_ptr,File,cint	gmp: mpf_inp_str(a2: mpf_ptr; a3: File; a4: cint): csize_t	
+mpf_inp_str	integers/gmp.html#mpf_inp_str,mpf_struct,File,cint	gmp: mpf_inp_str(a2: var mpf_t; a3: File; a4: cint): csize_t	
+mpf_integer_p	integers/gmp.html#mpf_integer_p,mpf_srcptr	gmp: mpf_integer_p(a2: mpf_srcptr): cint	
+mpf_integer_p	integers/gmp.html#mpf_integer_p,mpf_struct	gmp: mpf_integer_p(a2: mpf_t): cint	
+mpf_mul	integers/gmp.html#mpf_mul,mpf_ptr,mpf_srcptr,mpf_srcptr	gmp: mpf_mul(a2: mpf_ptr; a3: mpf_srcptr; a4: mpf_srcptr)	
+mpf_mul	integers/gmp.html#mpf_mul,mpf_struct,mpf_struct,mpf_struct	gmp: mpf_mul(a2: var mpf_t; a3: mpf_t; a4: mpf_t)	
+mpf_mul_2exp	integers/gmp.html#mpf_mul_2exp,mpf_ptr,mpf_srcptr,mp_bitcnt_t	gmp: mpf_mul_2exp(a2: mpf_ptr; a3: mpf_srcptr; a4: mp_bitcnt_t)	
+mpf_mul_2exp	integers/gmp.html#mpf_mul_2exp,mpf_struct,mpf_struct,mp_bitcnt_t	gmp: mpf_mul_2exp(a2: var mpf_t; a3: mpf_t; a4: mp_bitcnt_t)	
+mpf_mul_ui	integers/gmp.html#mpf_mul_ui,mpf_ptr,mpf_srcptr,culong	gmp: mpf_mul_ui(a2: mpf_ptr; a3: mpf_srcptr; a4: culong)	
+mpf_mul_ui	integers/gmp.html#mpf_mul_ui,mpf_struct,mpf_struct,culong	gmp: mpf_mul_ui(a2: var mpf_t; a3: mpf_t; a4: culong)	
+mpf_neg	integers/gmp.html#mpf_neg,mpf_ptr,mpf_srcptr	gmp: mpf_neg(a2: mpf_ptr; a3: mpf_srcptr)	
+mpf_neg	integers/gmp.html#mpf_neg,mpf_struct,mpf_struct	gmp: mpf_neg(a2: var mpf_t; a3: mpf_t)	
+mpf_out_str	integers/gmp.html#mpf_out_str,File,cint,csize_t,mpf_srcptr	gmp: mpf_out_str(a2: File; a3: cint; a4: csize_t; a5: mpf_srcptr): csize_t	
+mpf_out_str	integers/gmp.html#mpf_out_str,File,cint,csize_t,mpf_struct	gmp: mpf_out_str(a2: File; a3: cint; a4: csize_t; a5: mpf_t): csize_t	
+mpf_pow_ui	integers/gmp.html#mpf_pow_ui,mpf_ptr,mpf_srcptr,culong	gmp: mpf_pow_ui(a2: mpf_ptr; a3: mpf_srcptr; a4: culong)	
+mpf_pow_ui	integers/gmp.html#mpf_pow_ui,mpf_struct,mpf_struct,culong	gmp: mpf_pow_ui(a2: var mpf_t; a3: mpf_t; a4: culong)	
+mpf_random2	integers/gmp.html#mpf_random2,mpf_ptr,mp_size_t,mp_exp_t	gmp: mpf_random2(a2: mpf_ptr; a3: mp_size_t; a4: mp_exp_t)	
+mpf_random2	integers/gmp.html#mpf_random2,mpf_struct,mp_size_t,mp_exp_t	gmp: mpf_random2(a2: var mpf_t; a3: mp_size_t; a4: mp_exp_t)	
+mpf_reldiff	integers/gmp.html#mpf_reldiff,mpf_ptr,mpf_srcptr,mpf_srcptr	gmp: mpf_reldiff(a2: mpf_ptr; a3: mpf_srcptr; a4: mpf_srcptr)	
+mpf_reldiff	integers/gmp.html#mpf_reldiff,mpf_struct,mpf_struct,mpf_struct	gmp: mpf_reldiff(a2: var mpf_t; a3: mpf_t; a4: mpf_t)	
+mpf_set	integers/gmp.html#mpf_set,mpf_ptr,mpf_srcptr	gmp: mpf_set(a2: mpf_ptr; a3: mpf_srcptr)	
+mpf_set	integers/gmp.html#mpf_set,mpf_struct,mpf_struct	gmp: mpf_set(a2: var mpf_t; a3: mpf_t)	
+mpf_set_d	integers/gmp.html#mpf_set_d,mpf_ptr,cdouble	gmp: mpf_set_d(a2: mpf_ptr; a3: cdouble)	
+mpf_set_d	integers/gmp.html#mpf_set_d,mpf_struct,cdouble	gmp: mpf_set_d(a2: var mpf_t; a3: cdouble)	
+mpf_set_default_prec	integers/gmp.html#mpf_set_default_prec,mp_bitcnt_t	gmp: mpf_set_default_prec(a2: mp_bitcnt_t)	
+mpf_set_prec	integers/gmp.html#mpf_set_prec,mpf_ptr,mp_bitcnt_t	gmp: mpf_set_prec(a2: mpf_ptr; a3: mp_bitcnt_t)	
+mpf_set_prec	integers/gmp.html#mpf_set_prec,mpf_struct,mp_bitcnt_t	gmp: mpf_set_prec(a2: var mpf_t; a3: mp_bitcnt_t)	
+mpf_set_prec_raw	integers/gmp.html#mpf_set_prec_raw,mpf_ptr,mp_bitcnt_t	gmp: mpf_set_prec_raw(a2: mpf_ptr; a3: mp_bitcnt_t)	
+mpf_set_prec_raw	integers/gmp.html#mpf_set_prec_raw,mpf_struct,mp_bitcnt_t	gmp: mpf_set_prec_raw(a2: var mpf_t; a3: mp_bitcnt_t)	
+mpf_set_q	integers/gmp.html#mpf_set_q,mpf_ptr,mpq_srcptr	gmp: mpf_set_q(a2: mpf_ptr; a3: mpq_srcptr)	
+mpf_set_q	integers/gmp.html#mpf_set_q,mpf_struct,mpq_struct	gmp: mpf_set_q(a2: var mpf_t; a3: mpq_t)	
+mpf_set_si	integers/gmp.html#mpf_set_si,mpf_ptr,clong	gmp: mpf_set_si(a2: mpf_ptr; a3: clong)	
+mpf_set_si	integers/gmp.html#mpf_set_si,mpf_struct,clong	gmp: mpf_set_si(a2: var mpf_t; a3: clong)	
+mpf_set_str	integers/gmp.html#mpf_set_str,mpf_ptr,cstring,cint	gmp: mpf_set_str(a2: mpf_ptr; a3: cstring; a4: cint): cint	
+mpf_set_str	integers/gmp.html#mpf_set_str,mpf_struct,cstring,cint	gmp: mpf_set_str(a2: var mpf_t; a3: cstring; a4: cint): cint	
+mpf_set_ui	integers/gmp.html#mpf_set_ui,mpf_ptr,culong	gmp: mpf_set_ui(a2: mpf_ptr; a3: culong)	
+mpf_set_ui	integers/gmp.html#mpf_set_ui,mpf_struct,culong	gmp: mpf_set_ui(a2: var mpf_t; a3: culong)	
+mpf_set_z	integers/gmp.html#mpf_set_z,mpf_ptr,mpz_srcptr	gmp: mpf_set_z(a2: mpf_ptr; a3: mpz_srcptr)	
+mpf_set_z	integers/gmp.html#mpf_set_z,mpf_struct,mpz_struct	gmp: mpf_set_z(a2: var mpf_t; a3: mpz_t)	
+mpf_size	integers/gmp.html#mpf_size,mpf_srcptr	gmp: mpf_size(a2: mpf_srcptr): csize_t	
+mpf_size	integers/gmp.html#mpf_size,mpf_struct	gmp: mpf_size(a2: mpf_t): csize_t	
+mpf_sqrt	integers/gmp.html#mpf_sqrt,mpf_ptr,mpf_srcptr	gmp: mpf_sqrt(a2: mpf_ptr; a3: mpf_srcptr)	
+mpf_sqrt	integers/gmp.html#mpf_sqrt,mpf_struct,mpf_struct	gmp: mpf_sqrt(a2: var mpf_t; a3: mpf_t)	
+mpf_sqrt_ui	integers/gmp.html#mpf_sqrt_ui,mpf_ptr,culong	gmp: mpf_sqrt_ui(a2: mpf_ptr; a3: culong)	
+mpf_sqrt_ui	integers/gmp.html#mpf_sqrt_ui,mpf_struct,culong	gmp: mpf_sqrt_ui(a2: var mpf_t; a3: culong)	
+mpf_sub	integers/gmp.html#mpf_sub,mpf_ptr,mpf_srcptr,mpf_srcptr	gmp: mpf_sub(a2: mpf_ptr; a3: mpf_srcptr; a4: mpf_srcptr)	
+mpf_sub	integers/gmp.html#mpf_sub,mpf_struct,mpf_struct,mpf_struct	gmp: mpf_sub(a2: var mpf_t; a3: mpf_t; a4: mpf_t)	
+mpf_sub_ui	integers/gmp.html#mpf_sub_ui,mpf_ptr,mpf_srcptr,culong	gmp: mpf_sub_ui(a2: mpf_ptr; a3: mpf_srcptr; a4: culong)	
+mpf_sub_ui	integers/gmp.html#mpf_sub_ui,mpf_struct,mpf_struct,culong	gmp: mpf_sub_ui(a2: var mpf_t; a3: mpf_t; a4: culong)	
+mpf_swap	integers/gmp.html#mpf_swap,mpf_ptr,mpf_ptr	gmp: mpf_swap(a2: mpf_ptr; a3: mpf_ptr)	
+mpf_swap	integers/gmp.html#mpf_swap,mpf_struct,mpf_struct	gmp: mpf_swap(a2: var mpf_t; a3: var mpf_t)	
+mpf_trunc	integers/gmp.html#mpf_trunc,mpf_ptr,mpf_srcptr	gmp: mpf_trunc(a2: mpf_ptr; a3: mpf_srcptr)	
+mpf_trunc	integers/gmp.html#mpf_trunc,mpf_struct,mpf_struct	gmp: mpf_trunc(a2: var mpf_t; a3: mpf_t)	
+mpf_ui_div	integers/gmp.html#mpf_ui_div,mpf_ptr,culong,mpf_srcptr	gmp: mpf_ui_div(a2: mpf_ptr; a3: culong; a4: mpf_srcptr)	
+mpf_ui_div	integers/gmp.html#mpf_ui_div,mpf_struct,culong,mpf_struct	gmp: mpf_ui_div(a2: var mpf_t; a3: culong; a4: mpf_t)	
+mpf_ui_sub	integers/gmp.html#mpf_ui_sub,mpf_ptr,culong,mpf_srcptr	gmp: mpf_ui_sub(a2: mpf_ptr; a3: culong; a4: mpf_srcptr)	
+mpf_ui_sub	integers/gmp.html#mpf_ui_sub,mpf_struct,culong,mpf_struct	gmp: mpf_ui_sub(a2: var mpf_t; a3: culong; a4: mpf_t)	
+mpn_add_n	integers/gmp.html#mpn_add_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_add_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t): mp_limb_t	
+mpn_add_n	integers/gmp.html#mpn_add_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_add_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t; a5: mp_size_t): mp_limb_t	
+mpn_addmul_1	integers/gmp.html#mpn_addmul_1,mp_ptr,mp_srcptr,mp_size_t,mp_limb_t	gmp: mpn_addmul_1(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_limb_t): mp_limb_t	
+mpn_addmul_1	integers/gmp.html#mpn_addmul_1,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_addmul_1(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t; a5: mp_limb_t): mp_limb_t	
+mpn_divexact_by3c	integers/gmp.html#mpn_divexact_by3c,mp_ptr,mp_srcptr,mp_size_t,mp_limb_t	gmp: mpn_divexact_by3c(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_limb_t): mp_limb_t	
+mpn_divexact_by3c	integers/gmp.html#mpn_divexact_by3c,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_divexact_by3c(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t;\n                  a5: mp_limb_t): mp_limb_t	
+mpn_divrem	integers/gmp.html#mpn_divrem,mp_ptr,mp_size_t,mp_ptr,mp_size_t,mp_srcptr,mp_size_t	gmp: mpn_divrem(a2: mp_ptr; a3: mp_size_t; a4: mp_ptr; a5: mp_size_t; a6: mp_srcptr;\n           a7: mp_size_t): mp_limb_t	
+mpn_divrem	integers/gmp.html#mpn_divrem,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t	gmp: mpn_divrem(a2: var mp_limb_t; a3: mp_size_t; a4: var mp_limb_t; a5: mp_size_t;\n           a6: var mp_limb_t; a7: mp_size_t): mp_limb_t	
+mpn_divrem_1	integers/gmp.html#mpn_divrem_1,mp_ptr,mp_size_t,mp_srcptr,mp_size_t,mp_limb_t	gmp: mpn_divrem_1(a2: mp_ptr; a3: mp_size_t; a4: mp_srcptr; a5: mp_size_t;\n             a6: mp_limb_t): mp_limb_t	
+mpn_divrem_1	integers/gmp.html#mpn_divrem_1,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_divrem_1(a2: var mp_limb_t; a3: mp_size_t; a4: var mp_limb_t; a5: mp_size_t;\n             a6: mp_limb_t): mp_limb_t	
+mpn_divrem_2	integers/gmp.html#mpn_divrem_2,mp_ptr,mp_size_t,mp_ptr,mp_size_t,mp_srcptr	gmp: mpn_divrem_2(a2: mp_ptr; a3: mp_size_t; a4: mp_ptr; a5: mp_size_t; a6: mp_srcptr): mp_limb_t	
+mpn_divrem_2	integers/gmp.html#mpn_divrem_2,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_divrem_2(a2: var mp_limb_t; a3: mp_size_t; a4: var mp_limb_t; a5: mp_size_t;\n             a6: var mp_limb_t): mp_limb_t	
+mpn_div_qr_1	integers/gmp.html#mpn_div_qr_1,mp_ptr,ptr.mp_limb_t,mp_srcptr,mp_size_t,mp_limb_t	gmp: mpn_div_qr_1(a2: mp_ptr; a3: ptr mp_limb_t; a4: mp_srcptr; a5: mp_size_t;\n             a6: mp_limb_t): mp_limb_t	
+mpn_div_qr_1	integers/gmp.html#mpn_div_qr_1,mp_limb_t,ptr.mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_div_qr_1(a2: var mp_limb_t; a3: ptr mp_limb_t; a4: var mp_limb_t;\n             a5: mp_size_t; a6: mp_limb_t): mp_limb_t	
+mpn_div_qr_2	integers/gmp.html#mpn_div_qr_2,mp_ptr,mp_ptr,mp_srcptr,mp_size_t,mp_srcptr	gmp: mpn_div_qr_2(a2: mp_ptr; a3: mp_ptr; a4: mp_srcptr; a5: mp_size_t; a6: mp_srcptr): mp_limb_t	
+mpn_div_qr_2	integers/gmp.html#mpn_div_qr_2,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_div_qr_2(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t;\n             a5: mp_size_t; a6: var mp_limb_t): mp_limb_t	
+mpn_gcd	integers/gmp.html#mpn_gcd,mp_ptr,mp_ptr,mp_size_t,mp_ptr,mp_size_t	gmp: mpn_gcd(a2: mp_ptr; a3: mp_ptr; a4: mp_size_t; a5: mp_ptr; a6: mp_size_t): mp_size_t	
+mpn_gcd	integers/gmp.html#mpn_gcd,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t	gmp: mpn_gcd(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t; a5: var mp_limb_t;\n        a6: mp_size_t): mp_size_t	
+mpn_gcd_1	integers/gmp.html#mpn_gcd_1,mp_srcptr,mp_size_t,mp_limb_t	gmp: mpn_gcd_1(a2: mp_srcptr; a3: mp_size_t; a4: mp_limb_t): mp_limb_t	
+mpn_gcd_1	integers/gmp.html#mpn_gcd_1,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_gcd_1(a2: var mp_limb_t; a3: mp_size_t; a4: mp_limb_t): mp_limb_t	
+mpn_gcdext_1	integers/gmp.html#mpn_gcdext_1,ptr.mp_limb_signed_t,ptr.mp_limb_signed_t,mp_limb_t,mp_limb_t	gmp: mpn_gcdext_1(a2: ptr mp_limb_signed_t; a3: ptr mp_limb_signed_t; a4: mp_limb_t;\n             a5: mp_limb_t): mp_limb_t	
+mpn_gcdext	integers/gmp.html#mpn_gcdext,mp_ptr,mp_ptr,ptr.mp_size_t,mp_ptr,mp_size_t,mp_ptr,mp_size_t	gmp: mpn_gcdext(a2: mp_ptr; a3: mp_ptr; a4: ptr mp_size_t; a5: mp_ptr; a6: mp_size_t;\n           a7: mp_ptr; a8: mp_size_t): mp_size_t	
+mpn_gcdext	integers/gmp.html#mpn_gcdext,mp_limb_t,mp_limb_t,ptr.mp_size_t,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t	gmp: mpn_gcdext(a2: var mp_limb_t; a3: var mp_limb_t; a4: ptr mp_size_t;\n           a5: var mp_limb_t; a6: mp_size_t; a7: var mp_limb_t; a8: mp_size_t): mp_size_t	
+mpn_get_str	integers/gmp.html#mpn_get_str,ptr.uint8,cint,mp_ptr,mp_size_t	gmp: mpn_get_str(a2: ptr uint8; a3: cint; a4: mp_ptr; a5: mp_size_t): csize_t	
+mpn_get_str	integers/gmp.html#mpn_get_str,ptr.uint8,cint,mp_limb_t,mp_size_t	gmp: mpn_get_str(a2: ptr uint8; a3: cint; a4: var mp_limb_t; a5: mp_size_t): csize_t	
+mpn_hamdist	integers/gmp.html#mpn_hamdist,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_hamdist(a2: mp_srcptr; a3: mp_srcptr; a4: mp_size_t): mp_bitcnt_t	
+mpn_hamdist	integers/gmp.html#mpn_hamdist,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_hamdist(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t): mp_bitcnt_t	
+mpn_lshift	integers/gmp.html#mpn_lshift,mp_ptr,mp_srcptr,mp_size_t,cuint	gmp: mpn_lshift(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: cuint): mp_limb_t	
+mpn_lshift	integers/gmp.html#mpn_lshift,mp_limb_t,mp_limb_t,mp_size_t,cuint	gmp: mpn_lshift(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t; a5: cuint): mp_limb_t	
+mpn_mod_1	integers/gmp.html#mpn_mod_1,mp_srcptr,mp_size_t,mp_limb_t	gmp: mpn_mod_1(a2: mp_srcptr; a3: mp_size_t; a4: mp_limb_t): mp_limb_t	
+mpn_mod_1	integers/gmp.html#mpn_mod_1,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_mod_1(a2: var mp_limb_t; a3: mp_size_t; a4: mp_limb_t): mp_limb_t	
+mpn_mul	integers/gmp.html#mpn_mul,mp_ptr,mp_srcptr,mp_size_t,mp_srcptr,mp_size_t	gmp: mpn_mul(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_srcptr; a6: mp_size_t): mp_limb_t	
+mpn_mul	integers/gmp.html#mpn_mul,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t	gmp: mpn_mul(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t; a5: var mp_limb_t;\n        a6: mp_size_t): mp_limb_t	
+mpn_mul_1	integers/gmp.html#mpn_mul_1,mp_ptr,mp_srcptr,mp_size_t,mp_limb_t	gmp: mpn_mul_1(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_limb_t): mp_limb_t	
+mpn_mul_1	integers/gmp.html#mpn_mul_1,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_mul_1(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t; a5: mp_limb_t): mp_limb_t	
+mpn_mul_n	integers/gmp.html#mpn_mul_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_mul_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t)	
+mpn_mul_n	integers/gmp.html#mpn_mul_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_mul_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t; a5: mp_size_t)	
+mpn_sqr	integers/gmp.html#mpn_sqr,mp_ptr,mp_srcptr,mp_size_t	gmp: mpn_sqr(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t)	
+mpn_sqr	integers/gmp.html#mpn_sqr,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_sqr(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t)	
+mpn_neg	integers/gmp.html#mpn_neg,mp_ptr,mp_srcptr,mp_size_t	gmp: mpn_neg(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t): mp_limb_t	
+mpn_neg	integers/gmp.html#mpn_neg,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_neg(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t): mp_limb_t	
+mpn_com	integers/gmp.html#mpn_com,mp_ptr,mp_srcptr,mp_size_t	gmp: mpn_com(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t)	
+mpn_com	integers/gmp.html#mpn_com,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_com(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t)	
+mpn_perfect_square_p	integers/gmp.html#mpn_perfect_square_p,mp_srcptr,mp_size_t	gmp: mpn_perfect_square_p(a2: mp_srcptr; a3: mp_size_t): cint	
+mpn_perfect_square_p	integers/gmp.html#mpn_perfect_square_p,mp_limb_t,mp_size_t	gmp: mpn_perfect_square_p(a2: var mp_limb_t; a3: mp_size_t): cint	
+mpn_perfect_power_p	integers/gmp.html#mpn_perfect_power_p,mp_srcptr,mp_size_t	gmp: mpn_perfect_power_p(a2: mp_srcptr; a3: mp_size_t): cint	
+mpn_perfect_power_p	integers/gmp.html#mpn_perfect_power_p,mp_limb_t,mp_size_t	gmp: mpn_perfect_power_p(a2: var mp_limb_t; a3: mp_size_t): cint	
+mpn_popcount	integers/gmp.html#mpn_popcount,mp_srcptr,mp_size_t	gmp: mpn_popcount(a2: mp_srcptr; a3: mp_size_t): mp_bitcnt_t	
+mpn_popcount	integers/gmp.html#mpn_popcount,mp_limb_t,mp_size_t	gmp: mpn_popcount(a2: var mp_limb_t; a3: mp_size_t): mp_bitcnt_t	
+mpn_pow_1	integers/gmp.html#mpn_pow_1,mp_ptr,mp_srcptr,mp_size_t,mp_limb_t,mp_ptr	gmp: mpn_pow_1(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_limb_t; a6: mp_ptr): mp_size_t	
+mpn_pow_1	integers/gmp.html#mpn_pow_1,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_limb_t	gmp: mpn_pow_1(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t; a5: mp_limb_t;\n          a6: var mp_limb_t): mp_size_t	
+mpn_preinv_mod_1	integers/gmp.html#mpn_preinv_mod_1,mp_srcptr,mp_size_t,mp_limb_t,mp_limb_t	gmp: mpn_preinv_mod_1(a2: mp_srcptr; a3: mp_size_t; a4: mp_limb_t; a5: mp_limb_t): mp_limb_t	
+mpn_preinv_mod_1	integers/gmp.html#mpn_preinv_mod_1,mp_limb_t,mp_size_t,mp_limb_t,mp_limb_t	gmp: mpn_preinv_mod_1(a2: var mp_limb_t; a3: mp_size_t; a4: mp_limb_t; a5: mp_limb_t): mp_limb_t	
+mpn_random	integers/gmp.html#mpn_random,mp_ptr,mp_size_t	gmp: mpn_random(a2: mp_ptr; a3: mp_size_t)	
+mpn_random	integers/gmp.html#mpn_random,mp_limb_t,mp_size_t	gmp: mpn_random(a2: var mp_limb_t; a3: mp_size_t)	
+mpn_random2	integers/gmp.html#mpn_random2,mp_ptr,mp_size_t	gmp: mpn_random2(a2: mp_ptr; a3: mp_size_t)	
+mpn_random2	integers/gmp.html#mpn_random2,mp_limb_t,mp_size_t	gmp: mpn_random2(a2: var mp_limb_t; a3: mp_size_t)	
+mpn_rshift	integers/gmp.html#mpn_rshift,mp_ptr,mp_srcptr,mp_size_t,cuint	gmp: mpn_rshift(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: cuint): mp_limb_t	
+mpn_rshift	integers/gmp.html#mpn_rshift,mp_limb_t,mp_limb_t,mp_size_t,cuint	gmp: mpn_rshift(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t; a5: cuint): mp_limb_t	
+mpn_scan0	integers/gmp.html#mpn_scan0,mp_srcptr,mp_bitcnt_t	gmp: mpn_scan0(a2: mp_srcptr; a3: mp_bitcnt_t): mp_bitcnt_t	
+mpn_scan0	integers/gmp.html#mpn_scan0,mp_limb_t,mp_bitcnt_t	gmp: mpn_scan0(a2: var mp_limb_t; a3: mp_bitcnt_t): mp_bitcnt_t	
+mpn_scan1	integers/gmp.html#mpn_scan1,mp_srcptr,mp_bitcnt_t	gmp: mpn_scan1(a2: mp_srcptr; a3: mp_bitcnt_t): mp_bitcnt_t	
+mpn_scan1	integers/gmp.html#mpn_scan1,mp_limb_t,mp_bitcnt_t	gmp: mpn_scan1(a2: var mp_limb_t; a3: mp_bitcnt_t): mp_bitcnt_t	
+mpn_set_str	integers/gmp.html#mpn_set_str,mp_ptr,ptr.uint8,csize_t,cint	gmp: mpn_set_str(a2: mp_ptr; a3: ptr uint8; a4: csize_t; a5: cint): mp_size_t	
+mpn_set_str	integers/gmp.html#mpn_set_str,mp_limb_t,ptr.uint8,csize_t,cint	gmp: mpn_set_str(a2: var mp_limb_t; a3: ptr uint8; a4: csize_t; a5: cint): mp_size_t	
+mpn_sizeinbase	integers/gmp.html#mpn_sizeinbase,mp_srcptr,mp_size_t,cint	gmp: mpn_sizeinbase(a2: mp_srcptr; a3: mp_size_t; a4: cint): csize_t	
+mpn_sizeinbase	integers/gmp.html#mpn_sizeinbase,mp_limb_t,mp_size_t,cint	gmp: mpn_sizeinbase(a2: var mp_limb_t; a3: mp_size_t; a4: cint): csize_t	
+mpn_sqrtrem	integers/gmp.html#mpn_sqrtrem,mp_ptr,mp_ptr,mp_srcptr,mp_size_t	gmp: mpn_sqrtrem(a2: mp_ptr; a3: mp_ptr; a4: mp_srcptr; a5: mp_size_t): mp_size_t	
+mpn_sqrtrem	integers/gmp.html#mpn_sqrtrem,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_sqrtrem(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t;\n            a5: mp_size_t): mp_size_t	
+mpn_sub	integers/gmp.html#mpn_sub,mp_ptr,mp_srcptr,mp_size_t,mp_srcptr,mp_size_t	gmp: mpn_sub(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_srcptr; a6: mp_size_t): mp_limb_t	
+mpn_sub	integers/gmp.html#mpn_sub,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t	gmp: mpn_sub(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t; a5: var mp_limb_t;\n        a6: mp_size_t): mp_limb_t	
+mpn_sub_1	integers/gmp.html#mpn_sub_1,mp_ptr,mp_srcptr,mp_size_t,mp_limb_t	gmp: mpn_sub_1(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_limb_t): mp_limb_t	
+mpn_sub_1	integers/gmp.html#mpn_sub_1,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_sub_1(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t; a5: mp_limb_t): mp_limb_t	
+mpn_sub_n	integers/gmp.html#mpn_sub_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_sub_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t): mp_limb_t	
+mpn_sub_n	integers/gmp.html#mpn_sub_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_sub_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t; a5: mp_size_t): mp_limb_t	
+mpn_submul_1	integers/gmp.html#mpn_submul_1,mp_ptr,mp_srcptr,mp_size_t,mp_limb_t	gmp: mpn_submul_1(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_limb_t): mp_limb_t	
+mpn_submul_1	integers/gmp.html#mpn_submul_1,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_submul_1(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t; a5: mp_limb_t): mp_limb_t	
+mpn_tdiv_qr	integers/gmp.html#mpn_tdiv_qr,mp_ptr,mp_ptr,mp_size_t,mp_srcptr,mp_size_t,mp_srcptr,mp_size_t	gmp: mpn_tdiv_qr(a2: mp_ptr; a3: mp_ptr; a4: mp_size_t; a5: mp_srcptr; a6: mp_size_t;\n            a7: mp_srcptr; a8: mp_size_t)	
+mpn_tdiv_qr	integers/gmp.html#mpn_tdiv_qr,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t	gmp: mpn_tdiv_qr(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t;\n            a5: var mp_limb_t; a6: mp_size_t; a7: var mp_limb_t; a8: mp_size_t)	
+mpn_and_n	integers/gmp.html#mpn_and_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_and_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t)	
+mpn_and_n	integers/gmp.html#mpn_and_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_and_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t; a5: mp_size_t)	
+mpn_andn_n	integers/gmp.html#mpn_andn_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_andn_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t)	
+mpn_andn_n	integers/gmp.html#mpn_andn_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_andn_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t;\n           a5: mp_size_t)	
+mpn_nand_n	integers/gmp.html#mpn_nand_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_nand_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t)	
+mpn_nand_n	integers/gmp.html#mpn_nand_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_nand_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t;\n           a5: mp_size_t)	
+mpn_ior_n	integers/gmp.html#mpn_ior_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_ior_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t)	
+mpn_ior_n	integers/gmp.html#mpn_ior_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_ior_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t; a5: mp_size_t)	
+mpn_iorn_n	integers/gmp.html#mpn_iorn_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_iorn_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t)	
+mpn_iorn_n	integers/gmp.html#mpn_iorn_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_iorn_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t;\n           a5: mp_size_t)	
+mpn_nior_n	integers/gmp.html#mpn_nior_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_nior_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t)	
+mpn_nior_n	integers/gmp.html#mpn_nior_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_nior_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t;\n           a5: mp_size_t)	
+mpn_xor_n	integers/gmp.html#mpn_xor_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_xor_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t)	
+mpn_xor_n	integers/gmp.html#mpn_xor_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_xor_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t; a5: mp_size_t)	
+mpn_xnor_n	integers/gmp.html#mpn_xnor_n,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_xnor_n(a2: mp_ptr; a3: mp_srcptr; a4: mp_srcptr; a5: mp_size_t)	
+mpn_xnor_n	integers/gmp.html#mpn_xnor_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_xnor_n(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t;\n           a5: mp_size_t)	
+mpn_copyi	integers/gmp.html#mpn_copyi,mp_ptr,mp_srcptr,mp_size_t	gmp: mpn_copyi(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t)	
+mpn_copyi	integers/gmp.html#mpn_copyi,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_copyi(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t)	
+mpn_copyd	integers/gmp.html#mpn_copyd,mp_ptr,mp_srcptr,mp_size_t	gmp: mpn_copyd(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t)	
+mpn_copyd	integers/gmp.html#mpn_copyd,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_copyd(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t)	
+mpn_zero	integers/gmp.html#mpn_zero,mp_ptr,mp_size_t	gmp: mpn_zero(a2: mp_ptr; a3: mp_size_t)	
+mpn_zero	integers/gmp.html#mpn_zero,mp_limb_t,mp_size_t	gmp: mpn_zero(a2: var mp_limb_t; a3: mp_size_t)	
+mpn_cnd_add_n	integers/gmp.html#mpn_cnd_add_n,mp_limb_t,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_cnd_add_n(a2: mp_limb_t; a3: mp_ptr; a4: mp_srcptr; a5: mp_srcptr;\n              a6: mp_size_t): mp_limb_t	
+mpn_cnd_add_n	integers/gmp.html#mpn_cnd_add_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_cnd_add_n(a2: mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t;\n              a5: var mp_limb_t; a6: mp_size_t): mp_limb_t	
+mpn_cnd_sub_n	integers/gmp.html#mpn_cnd_sub_n,mp_limb_t,mp_ptr,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_cnd_sub_n(a2: mp_limb_t; a3: mp_ptr; a4: mp_srcptr; a5: mp_srcptr;\n              a6: mp_size_t): mp_limb_t	
+mpn_cnd_sub_n	integers/gmp.html#mpn_cnd_sub_n,mp_limb_t,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_cnd_sub_n(a2: mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t;\n              a5: var mp_limb_t; a6: mp_size_t): mp_limb_t	
+mpn_sec_add_1	integers/gmp.html#mpn_sec_add_1,mp_ptr,mp_srcptr,mp_size_t,mp_limb_t,mp_ptr	gmp: mpn_sec_add_1(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_limb_t;\n              a6: mp_ptr): mp_limb_t	
+mpn_sec_add_1	integers/gmp.html#mpn_sec_add_1,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_limb_t	gmp: mpn_sec_add_1(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t;\n              a5: mp_limb_t; a6: var mp_limb_t): mp_limb_t	
+mpn_sec_add_1_itch	integers/gmp.html#mpn_sec_add_1_itch,mp_size_t	gmp: mpn_sec_add_1_itch(a2: mp_size_t): mp_size_t	
+mpn_sec_sub_1	integers/gmp.html#mpn_sec_sub_1,mp_ptr,mp_srcptr,mp_size_t,mp_limb_t,mp_ptr	gmp: mpn_sec_sub_1(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_limb_t;\n              a6: mp_ptr): mp_limb_t	
+mpn_sec_sub_1	integers/gmp.html#mpn_sec_sub_1,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_limb_t	gmp: mpn_sec_sub_1(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t;\n              a5: mp_limb_t; a6: var mp_limb_t): mp_limb_t	
+mpn_sec_sub_1_itch	integers/gmp.html#mpn_sec_sub_1_itch,mp_size_t	gmp: mpn_sec_sub_1_itch(a2: mp_size_t): mp_size_t	
+mpn_sec_mul	integers/gmp.html#mpn_sec_mul,mp_ptr,mp_srcptr,mp_size_t,mp_srcptr,mp_size_t,mp_ptr	gmp: mpn_sec_mul(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_srcptr;\n            a6: mp_size_t; a7: mp_ptr)	
+mpn_sec_mul	integers/gmp.html#mpn_sec_mul,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_sec_mul(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t;\n            a5: var mp_limb_t; a6: mp_size_t; a7: var mp_limb_t)	
+mpn_sec_mul_itch	integers/gmp.html#mpn_sec_mul_itch,mp_size_t,mp_size_t	gmp: mpn_sec_mul_itch(a2: mp_size_t; a3: mp_size_t): mp_size_t	
+mpn_sec_sqr	integers/gmp.html#mpn_sec_sqr,mp_ptr,mp_srcptr,mp_size_t,mp_ptr	gmp: mpn_sec_sqr(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_ptr)	
+mpn_sec_sqr	integers/gmp.html#mpn_sec_sqr,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_sec_sqr(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t;\n            a5: var mp_limb_t)	
+mpn_sec_sqr_itch	integers/gmp.html#mpn_sec_sqr_itch,mp_size_t	gmp: mpn_sec_sqr_itch(a2: mp_size_t): mp_size_t	
+mpn_sec_powm	integers/gmp.html#mpn_sec_powm,mp_ptr,mp_srcptr,mp_size_t,mp_srcptr,mp_bitcnt_t,mp_srcptr,mp_size_t,mp_ptr	gmp: mpn_sec_powm(a2: mp_ptr; a3: mp_srcptr; a4: mp_size_t; a5: mp_srcptr;\n             a6: mp_bitcnt_t; a7: mp_srcptr; a8: mp_size_t; a9: mp_ptr)	
+mpn_sec_powm	integers/gmp.html#mpn_sec_powm,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_bitcnt_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_sec_powm(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t;\n             a5: var mp_limb_t; a6: mp_bitcnt_t; a7: var mp_limb_t;\n             a8: mp_size_t; a9: var mp_limb_t)	
+mpn_sec_powm_itch	integers/gmp.html#mpn_sec_powm_itch,mp_size_t,mp_bitcnt_t,mp_size_t	gmp: mpn_sec_powm_itch(a2: mp_size_t; a3: mp_bitcnt_t; a4: mp_size_t): mp_size_t	
+mpn_sec_tabselect	integers/gmp.html#mpn_sec_tabselect,ptr.mp_limb_t,ptr.mp_limb_t,mp_size_t,mp_size_t,mp_size_t	gmp: mpn_sec_tabselect(a2: ptr mp_limb_t; a3: ptr mp_limb_t; a4: mp_size_t;\n                  a5: mp_size_t; a6: mp_size_t)	
+mpn_sec_div_qr	integers/gmp.html#mpn_sec_div_qr,mp_ptr,mp_ptr,mp_size_t,mp_srcptr,mp_size_t,mp_ptr	gmp: mpn_sec_div_qr(a2: mp_ptr; a3: mp_ptr; a4: mp_size_t; a5: mp_srcptr;\n               a6: mp_size_t; a7: mp_ptr): mp_limb_t	
+mpn_sec_div_qr	integers/gmp.html#mpn_sec_div_qr,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_sec_div_qr(a2: var mp_limb_t; a3: var mp_limb_t; a4: mp_size_t;\n               a5: var mp_limb_t; a6: mp_size_t; a7: var mp_limb_t): mp_limb_t	
+mpn_sec_div_qr_itch	integers/gmp.html#mpn_sec_div_qr_itch,mp_size_t,mp_size_t	gmp: mpn_sec_div_qr_itch(a2: mp_size_t; a3: mp_size_t): mp_size_t	
+mpn_sec_div_r	integers/gmp.html#mpn_sec_div_r,mp_ptr,mp_size_t,mp_srcptr,mp_size_t,mp_ptr	gmp: mpn_sec_div_r(a2: mp_ptr; a3: mp_size_t; a4: mp_srcptr; a5: mp_size_t;\n              a6: mp_ptr)	
+mpn_sec_div_r	integers/gmp.html#mpn_sec_div_r,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_sec_div_r(a2: var mp_limb_t; a3: mp_size_t; a4: var mp_limb_t;\n              a5: mp_size_t; a6: var mp_limb_t)	
+mpn_sec_div_r_itch	integers/gmp.html#mpn_sec_div_r_itch,mp_size_t,mp_size_t	gmp: mpn_sec_div_r_itch(a2: mp_size_t; a3: mp_size_t): mp_size_t	
+mpn_sec_invert	integers/gmp.html#mpn_sec_invert,mp_ptr,mp_ptr,mp_srcptr,mp_size_t,mp_bitcnt_t,mp_ptr	gmp: mpn_sec_invert(a2: mp_ptr; a3: mp_ptr; a4: mp_srcptr; a5: mp_size_t;\n               a6: mp_bitcnt_t; a7: mp_ptr): cint	
+mpn_sec_invert	integers/gmp.html#mpn_sec_invert,mp_limb_t,mp_limb_t,mp_limb_t,mp_size_t,mp_bitcnt_t,mp_limb_t	gmp: mpn_sec_invert(a2: var mp_limb_t; a3: var mp_limb_t; a4: var mp_limb_t;\n               a5: mp_size_t; a6: mp_bitcnt_t; a7: var mp_limb_t): cint	
+mpn_sec_invert_itch	integers/gmp.html#mpn_sec_invert_itch,mp_size_t	gmp: mpn_sec_invert_itch(a2: mp_size_t): mp_size_t	
+mpq_abs	integers/gmp.html#mpq_abs,mpq_ptr,mpq_srcptr	gmp: mpq_abs(gmp_w: mpq_ptr; gmp_u: mpq_srcptr)	
+mpq_abs	integers/gmp.html#mpq_abs,mpq_struct,mpq_struct	gmp: mpq_abs(gmp_w: var mpq_t; gmp_u: mpq_t)	
+mpq_neg	integers/gmp.html#mpq_neg,mpq_ptr,mpq_srcptr	gmp: mpq_neg(gmp_w: mpq_ptr; gmp_u: mpq_srcptr)	
+mpq_neg	integers/gmp.html#mpq_neg,mpq_struct,mpq_struct	gmp: mpq_neg(gmp_w: var mpq_t; gmp_u: mpq_t)	
+mpn_add	integers/gmp.html#mpn_add,mp_ptr,mp_srcptr,mp_size_t,mp_srcptr,mp_size_t	gmp: mpn_add(gmp_wp: mp_ptr; gmp_xp: mp_srcptr; gmp_xsize: mp_size_t;\n        gmp_yp: mp_srcptr; gmp_ysize: mp_size_t): mp_limb_t	
+mpn_add	integers/gmp.html#mpn_add,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t,mp_size_t	gmp: mpn_add(gmp_wp: var mp_limb_t; gmp_xp: var mp_limb_t; gmp_xsize: mp_size_t;\n        gmp_yp: var mp_limb_t; gmp_ysize: mp_size_t): mp_limb_t	
+mpn_add_1	integers/gmp.html#mpn_add_1,mp_ptr,mp_srcptr,mp_size_t,mp_limb_t	gmp: mpn_add_1(gmp_dst: mp_ptr; gmp_src: mp_srcptr; gmp_size: mp_size_t;\n          gmp_n: mp_limb_t): mp_limb_t	
+mpn_add_1	integers/gmp.html#mpn_add_1,mp_limb_t,mp_limb_t,mp_size_t,mp_limb_t	gmp: mpn_add_1(gmp_dst: var mp_limb_t; gmp_src: var mp_limb_t; gmp_size: mp_size_t;\n          gmp_n: mp_limb_t): mp_limb_t	
+mpn_cmp	integers/gmp.html#mpn_cmp,mp_srcptr,mp_srcptr,mp_size_t	gmp: mpn_cmp(gmp_xp: mp_srcptr; gmp_yp: mp_srcptr; gmp_size: mp_size_t): cint	
+mpn_cmp	integers/gmp.html#mpn_cmp,mp_limb_t,mp_limb_t,mp_size_t	gmp: mpn_cmp(gmp_xp: var mp_limb_t; gmp_yp: var mp_limb_t; gmp_size: mp_size_t): cint	
+mpz_sgn	integers/gmp.html#mpz_sgn,mpz_srcptr	gmp: mpz_sgn(a2: mpz_srcptr): cint	
+mpz_sgn	integers/gmp.html#mpz_sgn,mpz_struct	gmp: mpz_sgn(a2: mpz_t): cint	
+mpf_sgn	integers/gmp.html#mpf_sgn,mpf_srcptr	gmp: mpf_sgn(a2: mpf_srcptr): cint	
+mpf_sgn	integers/gmp.html#mpf_sgn,mpf_struct	gmp: mpf_sgn(a2: mpf_t): cint	
+mpq_sgn	integers/gmp.html#mpq_sgn,mpq_srcptr	gmp: mpq_sgn(a2: mpq_srcptr): cint	
+mpq_sgn	integers/gmp.html#mpq_sgn,mpq_struct	gmp: mpq_sgn(a2: mpq_t): cint	
+mpz_odd_p	integers/gmp.html#mpz_odd_p,mpz_srcptr	gmp: mpz_odd_p(a2: mpz_srcptr): cint	
+mpz_odd_p	integers/gmp.html#mpz_odd_p,mpz_struct	gmp: mpz_odd_p(a2: mpz_t): cint	
+mpz_even_p	integers/gmp.html#mpz_even_p,mpz_srcptr	gmp: mpz_even_p(a2: mpz_srcptr): cint	
+mpz_even_p	integers/gmp.html#mpz_even_p,mpz_struct	gmp: mpz_even_p(a2: mpz_t): cint	
+GMP_ERROR_NONE	integers/gmp.html#GMP_ERROR_NONE	gmp: GMP_ERROR_NONE	
+GMP_ERROR_UNSUPPORTED_ARGUMENT	integers/gmp.html#GMP_ERROR_UNSUPPORTED_ARGUMENT	gmp: GMP_ERROR_UNSUPPORTED_ARGUMENT	
+GMP_ERROR_DIVISION_BY_ZERO	integers/gmp.html#GMP_ERROR_DIVISION_BY_ZERO	gmp: GMP_ERROR_DIVISION_BY_ZERO	
+GMP_ERROR_SQRT_OF_NEGATIVE	integers/gmp.html#GMP_ERROR_SQRT_OF_NEGATIVE	gmp: GMP_ERROR_SQRT_OF_NEGATIVE	
+GMP_ERROR_INVALID_ARGUMENT	integers/gmp.html#GMP_ERROR_INVALID_ARGUMENT	gmp: GMP_ERROR_INVALID_ARGUMENT	
+`=destroy`	integers/gmp.html#=destroy,mpz_struct	gmp: `=destroy`(dest: var mpz_struct)	
+`=copy`	integers/gmp.html#=copy,mpz_struct,mpz_struct	gmp: `=copy`(dest: var mpz_struct; src: mpz_struct)	
+`=sink`	integers/gmp.html#=sink,mpz_struct,mpz_struct	gmp: `=sink`(dest: var mpz_struct; src: mpz_struct)	

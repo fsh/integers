@@ -1,0 +1,4 @@
+invMod	integers/modular.html#invMod,,	modular: invMod(a, m: distinct AnyInteger): Integer	
+setInvMod	integers/modular.html#setInvMod,mpz_struct,mpz_struct	modular: setInvMod(a: var Integer; m: Integer)	
+powMod	integers/modular.html#powMod,,,	modular: powMod(a, exp, m: distinct AnyInteger): Integer	
+setPowMod	integers/modular.html#setPowMod,mpz_struct,AnyInteger,mpz_struct	modular: setPowMod(result: var Integer; exp: AnyInteger; m: Integer)	

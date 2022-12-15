@@ -1,0 +1,22 @@
+remove	integers/misc.html#remove,sinkstring,char	misc: remove(str: sink string; ch: char): string	
+shrinkToC	integers/misc.html#shrinkToC,string	misc: shrinkToC(str: var string)	
+permutations	integers/misc.html#permutations.i,HSlice[T,U]	misc: permutations[T, U](v: HSlice[T, U]): seq[T]	
+permutations	integers/misc.html#permutations.i,string	misc: permutations(v: string): string	
+permutations	integers/misc.html#permutations.i,openArray[T]	misc: permutations[T](v: openArray[T]): seq[T]	
+toUnsigned	integers/misc.html#toUnsigned.t,int8	misc: toUnsigned(x`gensym12: int8): uint8	
+toSigned	integers/misc.html#toSigned.t,uint8	misc: toSigned(x`gensym12: uint8): int8	
+unsignedAbs	integers/misc.html#unsignedAbs,int8	misc: unsignedAbs(x`gensym12: int8): uint8	
+toUnsigned	integers/misc.html#toUnsigned.t,int16	misc: toUnsigned(x`gensym16: int16): uint16	
+toSigned	integers/misc.html#toSigned.t,uint16	misc: toSigned(x`gensym16: uint16): int16	
+unsignedAbs	integers/misc.html#unsignedAbs,int16	misc: unsignedAbs(x`gensym16: int16): uint16	
+toUnsigned	integers/misc.html#toUnsigned.t,int32	misc: toUnsigned(x`gensym20: int32): uint32	
+toSigned	integers/misc.html#toSigned.t,uint32	misc: toSigned(x`gensym20: uint32): int32	
+unsignedAbs	integers/misc.html#unsignedAbs,int32	misc: unsignedAbs(x`gensym20: int32): uint32	
+toUnsigned	integers/misc.html#toUnsigned.t,int64	misc: toUnsigned(x`gensym24: int64): uint64	
+toSigned	integers/misc.html#toSigned.t,uint64	misc: toSigned(x`gensym24: uint64): int64	
+unsignedAbs	integers/misc.html#unsignedAbs,int64	misc: unsignedAbs(x`gensym24: int64): uint64	
+toUnsigned	integers/misc.html#toUnsigned.t,int	misc: toUnsigned(x`gensym28: int): uint	
+toSigned	integers/misc.html#toSigned.t,uint	misc: toSigned(x`gensym28: uint): int	
+unsignedAbs	integers/misc.html#unsignedAbs,int	misc: unsignedAbs(x`gensym28: int): uint	
+unsignedAbs	integers/misc.html#unsignedAbs,T	misc: unsignedAbs[T: SomeUnsignedInt](x: T): T	
+bitsof	integers/misc.html#bitsof.t,typedesc	misc: bitsof(ty: typedesc): auto	

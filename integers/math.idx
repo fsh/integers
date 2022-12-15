@@ -1,0 +1,12 @@
+scaledTo	integers/math.html#scaledTo,mpz_struct,typedesc	math: scaledTo(val: Integer; T: typedesc): T:type	
+toOdd	integers/math.html#toOdd,mpz_struct	math: toOdd(n: Integer): (Integer, int)	
+divisible	integers/math.html#divisible,mpz_struct,AnyInteger	math: divisible(val: Integer; n: AnyInteger): bool	
+setDivExp	integers/math.html#setDivExp,mpz_struct,AnyInteger	math: setDivExp(val: var Integer; n: AnyInteger): int	
+gcd	integers/math.html#gcd,mpz_struct,mpz_struct	math: gcd(a, b: Integer): Integer	
+egcd	integers/math.html#egcd,mpz_struct,mpz_struct	math: egcd(a, b: Integer): (Integer, Integer, Integer)	
+isqrt	integers/math.html#isqrt,mpz_struct	math: isqrt(val: Integer): Integer	
+iroot	integers/math.html#iroot,mpz_struct,SomeUnsignedInt	math: iroot(val: Integer; n: SomeUnsignedInt): Integer	
+isqrtRem	integers/math.html#isqrtRem,mpz_struct	math: isqrtRem(val: Integer): (Integer, Integer)	
+isqrtRem	integers/math.html#isqrtRem,mpz_struct,SomeUnsignedInt	math: isqrtRem(val: Integer; n: SomeUnsignedInt): (Integer, Integer)	
+factorial	integers/math.html#factorial,AnyInteger	math: factorial(n: AnyInteger): Integer	
+factorial	integers/math.html#factorial,AnyInteger,SomeInteger	math: factorial(n: AnyInteger; m: SomeInteger): Integer	

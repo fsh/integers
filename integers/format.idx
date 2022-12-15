@@ -1,0 +1,3 @@
+`$`	integers/format.html#$,mpz_struct,int	format: `$`(n: Integer; base: int = 10): string	
+formatInteger	integers/format.html#formatInteger,sinkmpz_struct,string	format: formatInteger(n: sink Integer; fmt: string): string	
+formatValue	integers/format.html#formatValue,string,sinkmpz_struct,string	format: formatValue(output: var string; n: sink Integer; fmt: string)	
