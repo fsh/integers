@@ -11,7 +11,7 @@ type
     ## An integer in `woLSF` (least-significant first) order means the least-significant digit comes first,
     ## and vice versa for `woMSF` (most-significant first).
     ##
-    ## For example the current year is ``2202` with `woLSF` word order, using digits in base-10.
+    ## For example the current year is `2202` with `woLSF` word order, using digits in base-10.
     ##
     ## "Word" here means "a digit in base `2^8`, `2^16`, `2^32`, etc.", represented by an `uint8`, `uint16`, etc.
     ##
@@ -57,7 +57,7 @@ proc newInteger*[T: SomeUnsignedInt](
              size.csize_t(),
              endianness.cint(),
              nails.csize_t(),
-             words[0].addr)
+             words[0].unsafeAddr)
 
 proc toSeq*(
   val: Integer,

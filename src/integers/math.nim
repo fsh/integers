@@ -105,7 +105,7 @@ func factorial*(n: AnyInteger): Integer =
   ## Returns `n!` (= `n * (n-1) * (n-2) * ... * 2 * 1`).
   ##
   runnableExamples:
-    assert factorial(6) == 6 * 5 * 4 * 2 * 1
+    assert factorial(6) == 6 * 5 * 4 * 3 * 2 * 1
 
   when n is Integer:
     let n = n.getOr(uint64):

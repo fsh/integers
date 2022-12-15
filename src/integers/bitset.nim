@@ -120,7 +120,7 @@ proc scanOne*(val: Integer, start: int = 0): int =
   runnableExamples:
     assert 11.scanOne() == 0
     assert 8.scanOne() == 3
-    assert 8.scanOne(3) == -1
+    assert 4.scanOne(3) == -1
     assert (-2).scanOne(100) == 100 # 0b..∞..11111110
 
   mpz_scan1(val, start.mp_bitcnt_t()).uint.toSigned()

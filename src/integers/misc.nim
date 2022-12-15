@@ -10,22 +10,16 @@ func remove*(str: sink string, ch: char): string =
     assert "test".remove('t') == "es"
 
   var t = str.find(ch)
-
   if t == -1:
     return str
 
-  var
-    s = t + 1
-    l = str.len
-
-  while s < l:
-    if str[s] != ch:
-      str[t] = str[s]
+  result = str
+  for s in t + 1 ..< str.len:
+    if result[s] != ch:
+      result[t] = result[s]
       t.inc
-    s.inc
 
-  str.setLen(t)
-  return str
+  result.setLen(t)
 
 
 func shrinkToC*(str: var string) =

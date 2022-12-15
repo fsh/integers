@@ -6,7 +6,7 @@
 ## "bignums," "arbitrary precision integers," "true integers") for Nim by
 ## wrapping the GMP library in a nice ergonomic way.
 ##
-## See README on GitHub page for raison d'être and caveats.
+## See README on `GitHub page <https://github.com/fsh/integers>`_ for raison d'être and caveats.
 ##
 ## Basics
 ## ======
