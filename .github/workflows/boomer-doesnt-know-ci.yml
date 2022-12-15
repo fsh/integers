@@ -1,0 +1,49 @@
+name: Test and generate docs
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get Date
+      id: get-date
+      run: echo "::set-output name=date::$(date '+%Y-%m-%d')"
+      shell: bash
+
+    - name: Cache choosenim
+      id: cache-choosenim
+      uses: actions/cache@v3
+      with:
+        path: ~/.choosenim
+        key: ${{ runner.os }}-choosenim-devel-${{ steps.get-date.outputs.date }}
+    - name: Cache nimble
+      id: cache-nimble
+      uses: actions/cache@v1
+      with:
+        path: ~/.nimble
+        key: ${{ runner.os }}-nimble-${{ hashFiles('strides.nimble') }}
+    - uses: jiro4989/setup-nim-action@v1
+      with:
+        nim-version: 'devel'
+
+    - uses: actions/checkout@v3
+
+    # - name: Run tests
+    #   run: nimble test
+
+    - name: Clean up old documentation
+      run: rm -rf ./htmldocs
+    - name: Generate documentation
+      run: |
+        nimble develop -y
+        rm -rf ./htmldocs
+        nim doc --project --index:on --git.url:https://github.com/fsh/integers --git.commit:main --git.devel:main --outdir:htmldocs src/integers.nim
+    - name: Publish documentation to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./htmldocs
