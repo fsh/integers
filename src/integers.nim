@@ -35,7 +35,7 @@ runnableExamples:
 
   # Integers can also be constructed from any array of primitive unsigned
   # integers or a series of raw bytes. Numerous options exist for order
-  # and interpretation. See documentation under `integers/bytes`.
+  # and interpretation. See documentation under `integers/bytes <integers/bytes.html>`.
   let f = newInteger([255'u8, 1, 2], woMSF)
   assert f == 0xff0102'gmp
   assert f.toBytes(woLSF) == @[2'u8, 1, 255]
@@ -268,7 +268,7 @@ runnableExamples:
 ## functions for generating random `Integer <integers/core.html#Integer>`_\s using the `Rand` state object.
 ##
 ## It is not exported by `integers`_ by default.
-## `integers/random`_ re-exports `std/random`_.
+## `integers/random <integers/random.html>`_ re-exports `std/random`_.
 ##
 runnableExamples:
 
