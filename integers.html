@@ -95,7 +95,7 @@
 
 <span class="Comment"># Integers can also be constructed from any array of primitive unsigned</span>
 <span class="Comment"># integers or a series of raw bytes. Numerous options exist for order</span>
-<span class="Comment"># and interpretation. See documentation under `integers/bytes`.</span>
+<span class="Comment"># and interpretation. See documentation under `integers/bytes &lt;integers/bytes.html&gt;`.</span>
 <span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Operator">=</span> <span class="Identifier">newInteger</span><span class="Punctuation">(</span><span class="Punctuation">[</span><span class="DecNumber">255'</span><span class="Identifier">u8</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Identifier">woMSF</span><span class="Punctuation">)</span>
 <span class="Identifier">assert</span> <span class="Identifier">f</span> <span class="Operator">==</span> <span class="HexNumber">0xff0102'</span><span class="Identifier">gmp</span>
 <span class="Identifier">assert</span> <span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">toBytes</span><span class="Punctuation">(</span><span class="Identifier">woLSF</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">2'</span><span class="Identifier">u8</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">255</span><span class="Punctuation">]</span>
@@ -240,7 +240,7 @@ Although these operations also work on regular primitive integers, the result is
 <span class="Identifier">assert</span> <span class="Identifier">y</span><span class="Operator">.</span><span class="Identifier">scanOne</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
 <span class="Identifier">assert</span> <span class="Identifier">y</span><span class="Punctuation">[</span><span class="DecNumber">1</span><span class="Punctuation">]</span> <span class="Keyword">and</span> <span class="Keyword">not</span> <span class="Identifier">y</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">]</span></pre>
 <h1><a class="toc-backref" id="random-numbers" href="#random-numbers">Random Numbers</a></h1><p>This library ties in with the standard Nim library <tt class="docutils literal"><span class="pre"><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">random</span></span></tt> <sup><strong><a class="reference internal" href="#footnote-rng">[1]</a></strong></sup> and provides functions for generating random <a class="reference external" href="integers/core.html#Integer">Integer</a>s using the <tt class="docutils literal"><span class="pre"><span class="Identifier">Rand</span></span></tt> state object.</p>
-<p>It is not exported by <a class="reference internal" href="#">integers</a> by default. <a class="reference internal" href="#integers">integers</a> re-exports <a class="reference internal" href="#std">std</a>. </p>
+<p>It is not exported by <a class="reference internal" href="#">integers</a> by default. <a class="reference external" href="integers/random.html">integers/random</a> re-exports <a class="reference internal" href="#std">std</a>. </p>
 
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">integers</span>
@@ -349,7 +349,7 @@ Although these operations also work on regular primitive integers, the result is
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 14:53:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 15:05:39 UTC</small>
       </div>
     </div>
   </div>
