@@ -1,5 +1,0 @@
-setRandBits	integers/random.html#setRandBits,Rand,mpz_struct,int	random: setRandBits(rng: var Rand; dest: var Integer; bits: int)	
-randBits	integers/random.html#randBits,Rand,int	random: randBits(rng: var Rand; bits: int): Integer	
-randBelow	integers/random.html#randBelow,Rand,mpz_struct	random: randBelow(rng: var Rand; val: Integer): Integer	
-randPrimeBits	integers/random.html#randPrimeBits,Rand,int,bool	random: randPrimeBits(rng: var Rand; bits: int; fixed: bool = false): Integer	
-randGermainPrime	integers/random.html#randGermainPrime,Rand,int,bool	random: randGermainPrime(rng: var Rand; bits: int; fixed: bool = false): Integer	

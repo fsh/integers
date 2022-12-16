@@ -386,7 +386,7 @@
   <dt><pre><span class="Keyword">func</span> <a href="#bit%2Ctypedesc%5Bmpz_struct%5D%2CSomeInteger"><span class="Identifier">bit</span></a><span class="Other">(</span><span class="Operator">_</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">[</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">idx</span><span class="Other">:</span> <span class="Identifier">SomeInteger</span><span class="Other">)</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a> {.<span class="Identifier">inline</span>.}</pre></dt>
   <dd>
     
-    Returns an <a class="reference internal" href="#Integer">Integer</a> consisting of a single 1-bit at the given index.
+    Returns an <a class="reference external" href="core.html#Integer">Integer</a> consisting of a single 1-bit at the given index.
     <a href="https://github.com/fsh/integers/tree/main/src/integers/bitset.nim#L88" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
 <a href="https://github.com/fsh/integers/edit/main/src/integers/bitset.nim#L88" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
@@ -597,7 +597,7 @@
   <dt><pre><span class="Keyword">iterator</span> <a href="#items.i%2Cmpz_struct"><span class="Identifier">items</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">inline</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    <p>Iterates over the positions of 1-bits in the given <a class="reference internal" href="#Integer">Integer</a> <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt>, going from least significant to most significant.</p>
+    <p>Iterates over the positions of 1-bits in the given <a class="reference external" href="core.html#Integer">Integer</a> <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt>, going from least significant to most significant.</p>
 <p>For example <tt class="docutils literal"><span class="pre"><span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">10'</span><span class="Identifier">gmp</span></span></tt> would repeat the loop body twice, first with <tt class="docutils literal"><span class="pre"><span class="Identifier">i</span><span class="Operator">=</span><span class="DecNumber">1</span></span></tt> followed by <tt class="docutils literal"><span class="pre"><span class="Identifier">i</span><span class="Operator">=</span><span class="DecNumber">3</span></span></tt>, as <tt class="docutils literal"><span class="pre"><span class="DecNumber">10</span> <span class="Operator">=</span> <span class="DecNumber">2</span><span class="Operator">^</span><span class="DecNumber">1</span> <span class="Operator">+</span> <span class="DecNumber">2</span><span class="Operator">^</span><span class="DecNumber">3</span></span></tt>.</p>
 <div class="admonition admonition-info"><span class="admonition-info-text"><b>Note:</b></span>
 Giving a negative number yielsds an <em>infinte loop</em> of ever-increasing indices, negative numbers act as if they're two's-complement of infinite size.</div>
@@ -625,7 +625,7 @@ Giving a negative number yielsds an <em>infinte loop</em> of ever-increasing ind
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 02:41:35 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 13:39:45 UTC</small>
       </div>
     </div>
   </div>
