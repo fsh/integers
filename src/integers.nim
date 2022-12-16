@@ -271,6 +271,14 @@ runnableExamples:
   assert y[1] and not y[0]
 
 ##
+## Random Numbers
+## ==============
+##
+## This library ties in with the standard Nim library `std/random` and provides
+## some functions for generating random `Integer`_\s using the `Rand` state.
+##
+## TODO: examples, documentation
+##
 ## Math and Number Theory
 ## ======================
 ##
@@ -393,8 +401,8 @@ export bytes
 import ./integers/primes
 export primes
 
-# import integers/random
-# export random
+import ./integers/random
+export random
 
 import ./integers/modular
 export modular

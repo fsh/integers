@@ -48,7 +48,7 @@ op_bitshift(`shl`, `&<<`, `&<<=`, mpz_mul_2exp)
 
 
 
-func nbits*(val: Integer): int =
+func nbits*(val: Integer): int {.inline.} =
   ## Returns the number of bits needed to represent the absolute value of the
   ## given integer.
   ##
