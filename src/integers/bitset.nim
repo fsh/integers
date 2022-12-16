@@ -86,7 +86,7 @@ func count*(val: Integer): int {.inline.} =
 
 
 func bit*(_: typedesc[Integer], idx: SomeInteger): Integer {.inline.} =
-  ## Returns an `Integer`_ consisting of a single 1-bit at the given index.
+  ## Returns an `Integer <core.html#Integer>`_ consisting of a single 1-bit at the given index.
   mpz_setbit(result, mp_bitcnt_t(idx))
 
 
@@ -167,7 +167,7 @@ func `[]=`*(n: var Integer, idx: int, bit: static[bool]) {.inline.} =
 
 
 iterator items*(n: Integer): int {.inline.} =
-  ## Iterates over the positions of 1-bits in the given `Integer`_ `n`, going
+  ## Iterates over the positions of 1-bits in the given `Integer <core.html#Integer>`_ `n`, going
   ## from least significant to most significant.
   ##
   ## For example `for i in 10'gmp` would repeat the loop body twice, first with

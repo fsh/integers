@@ -1,3 +1,6 @@
+
+{.doctype: rst.}
+
 ## ========
 ## Integers
 ## ========
@@ -11,8 +14,8 @@
 ## Basics
 ## ======
 ##
-## `Integers`_ can be conveniently written as literals directly in Nim code with
-## the postfix `'gmp`. They can also be instantiated via `newInteger`_. A rich
+## `Integer <integers/core.html#Integer>`_\s can be conveniently written as literals directly in Nim code with
+## the postfix `'gmp`. They can also be instantiated via `newInteger <integers/core.html#newInteger>`_. A rich
 ## set of conversions from string and bytes also exist. The usual suspects like
 ## `$` and so on will also work.
 ##
@@ -46,18 +49,18 @@ runnableExamples:
 ## ----------
 ##
 ## Ordinary arithmetic operations `+`, `-`, `*`, `div`, `mod` should work as
-## expected. The same goes for comparison operators, `==`, `!=`, `<=`, `<`, and
-## so on.
+## expected (`caveat <#divwarn>`_). The same goes for comparison operators,
+## `==`, `!=`, `<=`, `<`, and so on.
 ##
 ## Most operators can be used with any integer operands. That is, as long as at
-## least one operand is an `Integer`_ the other operand can be of type
-## `AnyInteger`_ (a GMP `Integer`_ or any primitive fixed-size integer, like
+## least one operand is an `Integer <integers/core.html#Integer>`_ the other operand can be of type
+## `AnyInteger <integers/core.html#AnyInteger>`_ (a GMP `Integer <integers/core.html#Integer>`_ or any primitive fixed-size integer, like
 ## `int` or `uint8`). This might look like auto-promotion, but in code
 ## there's specializations to make it more efficient, as GMP often has
 ## specialized routines for handling fixed-sized arguments.
 ##
 ## In general, doing operations the natural way with primitive integers tends to
-## be more efficient than forcing everything to be `Integer`_ ahead of time.
+## be more efficient than forcing everything to be `Integer <integers/core.html#Integer>`_ ahead of time.
 ## That is, prefer `x + 1`, over `x + 1'gmp`.
 ##
 
@@ -122,9 +125,9 @@ runnableExamples:
 ## Mutability
 ## ==========
 ##
-## For reasons of efficiency, `Integer`_\s are *mutable*.
+## For reasons of efficiency, `Integer <integers/core.html#Integer>`_\s are *mutable*.
 ##
-## Every time a new non-zero `Integer`_ is instantiated a heap allocation occurs
+## Every time a new non-zero `Integer <integers/core.html#Integer>`_ is instantiated a heap allocation occurs
 ## (in GMP), thus it is usually more efficient to re-use variables if possible.
 ## As such this package provides a cornucopia of in-place and assignment
 ## operators.
@@ -142,7 +145,7 @@ runnableExamples:
 ##
 ## See also `bit operations`_ for more such operator aliases.
 ##
-## The in-place version of unary `-` is `setNegative`_.
+## The in-place version of unary `-` is `setNegative <integers/core.html#setNegative,mpz_struct>`_.
 ##
 ## There is also `addMul` and `subMul` which are trinary operators that does
 ## fused multiply-and-add or multiply-and-sub. If you are writing something like
@@ -184,27 +187,13 @@ runnableExamples:
 ## - `&^`, `&^=` bitwise XOR (`xor` can also be used)
 ## - `&>>`, `&>>=` shift bits right (`shr` can also be used)
 ## - `&<<`, `&<<=` shift bits left (`shl` can also be used)
-## - `~` does bitwise NOT (`not` can also be used). The in-place version of this is `setNot`_.
+## - `~` does bitwise NOT (`not` can also be used). The in-place version of this is `setNot <integers/bitset.html#setNot,mpz_struct>`_.
 ##
-## .. warning:: I agree this is rather ugly but it's the best I could do within
-##   Nim. The keyword operators are special cased in the language, and there's
-##   no way to customize precedence rules. (For example, as far as I know,
-##   there's no way to make anything have the same precedence as `and` or `or`,
-##   nor to make assignment-operator versions of those.)
-##
-##   Originally I experimented with using the less noisy ``:`` as a prefix
-##   instead. But then it turns out that they would have lower precedence than
-##   comparison operators, which creates its own chaos, as intuitive expressions
-##   like `x :& 0xf == 1` wouldn't parse correctly.
-##
-##   Even so the headache is not over, as `not` now has lower precedence than
-##   the ``&..`` operators, so it also needed to be made into a symbolic
-##   operator.
-##
-##   It's a bit of a mess.
+## I agree this is rather ugly but it's the best I could do within
+## the constraints of Nim\ [#ugly]_.
 ##
 ## .. note:: Although these operations also work on regular primitive integers,
-##   the result is always an `Integer`_ (might change?), so they're not
+##   the result is always an `Integer <integers/core.html#Integer>`_ (might change?), so they're not
 ##   recommended for regular use.
 ##
 runnableExamples:
@@ -222,7 +211,7 @@ runnableExamples:
 ## Bit Sets
 ## --------
 ##
-## As a *radical convenience*, `Integer`_\s can be treated directly as implementing
+## As a *radical convenience*, `Integer <integers/core.html#Integer>`_\s can be treated directly as implementing
 ## fast dynamic bitsets.
 ##
 ## If you think about it, arbitrary precision integers and dynamically sized
@@ -230,7 +219,7 @@ runnableExamples:
 ## in exposed functionality (with the bitsets having a vastly simpler API and
 ## implementation of course).
 ##
-## As such, `Integer`_\s can be indexed, iterated over, they have a `size` and a `count`,
+## As such, `Integer <integers/core.html#Integer>`_\s can be indexed, iterated over, they have a `size` and a `count`,
 ## and so on.
 ## The above bit operations can be used to do unions, intersections, et cetera.
 ##
@@ -246,7 +235,7 @@ runnableExamples:
 ## `size(n)` (an alias for `nbits(n)`) gives the total number of bits
 ## required to express the absolute value of `n`.
 ##
-## And finally, iterating over an `Integer`_ will loop over the indices of its
+## And finally, iterating over an `Integer <integers/core.html#Integer>`_ will loop over the indices of its
 ## 1-bits. See XXX for more ## information.
 
 runnableExamples:
@@ -274,9 +263,36 @@ runnableExamples:
 ## Random Numbers
 ## ==============
 ##
-## This library ties in with the standard Nim library `std/random` and provides
-## some functions for generating random `Integer`_\s using the `Rand` state.
+## This library ties in with the standard Nim library `std/random` [#rng]_ and provides
+## functions for generating random `Integer <integers/core.html#Integer>`_\s using the `Rand` state object.
 ##
+## It is not exported by `integers`_ by default.
+## `integers/random`_ re-exports `std/random`_.
+##
+runnableExamples:
+
+  import integers/random # also imports std/random
+
+  var rng = initRand(0xdead533d) # leave out argument for time-initialized seed.
+
+  assert rng.randBelow(100) < 100
+  assert rng.rand(2^80 .. 3^80) in 2^80 .. 3^80
+
+  var t: Integer
+  for _ in 0 ..< 20:
+    t &|= rng.randBits(100) # bitwise OR in 100 random bits
+
+  # Extremely likely that t is now all 1-bits.
+  assert t.count() == 100
+  assert t.nbits() == 100
+  assert t == 2^100 - 1
+
+  # Functionality for generating primes.
+  import integers/primes
+  assert rng.randPrimeBits(100).isPrime() # random ~100-bit prime
+  let p = rng.randPrimeBits(100, fixed=true) # random =100-bit prime
+  assert p.isPrime() and p.nbits() == 100
+
 ## TODO: examples, documentation
 ##
 ## Math and Number Theory
@@ -308,18 +324,18 @@ runnableExamples:
 ## Other Goodies
 ## =============
 ##
-## Some additional utility functions which are used internally are also exported,
-## as I consider them largely universally useful.
-##
-## There's a `bitsof(T)` that is a synonym for `8 * sizeof(T)`.
+## Some additional utility functions are exported by `integers/misc`_ which are used internally.
+## I consider them universally useful.
 ##
 ## `AnyInteger`_ types are imbued with type-level functions `one(T)` and `zero(T)` for
-## easing generic programming.
+## easing generic programming, as an expression like `T(1)` does not work with object-types.
 ##
 ## For primitive integers we also export `unsignedAbs(x)`, `toSigned(x)`, and
 ## `toUnsigned(x)`. The latter two are simple bitcasts and self-explanatory.
 ## `unsignedAbs(x)` is functionally equivalent to `abs(x).toUnsigned()` but
 ## without any risk of integer overflow.
+##
+## There's a `bitsof(T)` that is a synonym for `8 * sizeof(T)`.
 ##
 runnableExamples:
   func mysteryFunc[T: AnyInteger](x: T): T =
@@ -344,15 +360,17 @@ runnableExamples:
 ## ================
 ##
 ## Unless otherwise stated, GMP functions are thread safe (unless compiled with
-## special flags). Multiple threads can use the same `Integer`_. However, it is
-## of course *not* safe for one thread to modify an `Integer`_ while other
+## special flags). Multiple threads can use the same `Integer <integers/core.html#Integer>`_. However, it is
+## of course *not* safe for one thread to modify an `Integer <integers/core.html#Integer>`_ while other
 ## therads are using it. There are no locks.
 ##
-## `Integer`_\s are not safe to be memory-copied (e.g. `memcpy` or similar).
+## `Integer <integers/core.html#Integer>`_\s are not safe to be memory-copied (e.g. `memcpy` or similar).
 ## Doing so will likely lead to a crash. This will never happen accidentally
 ## though; if you're doing something naughty, you'll know about it.
 ##
-## .. warning:: The semantics of `div` and `mod` on `Integer`_\s use floored division (they round toward
+## .. _divwarn:
+##
+## .. warning:: The semantics of `div` and `mod` on `Integer <integers/core.html#Integer>`_\s use floored division (they round toward
 ##   negative infinity, like in Python).
 ##   This is a deliberate choice breaking with Nim's convention
 ##   of using truncated division (rounding toward zero, like in C).
@@ -364,15 +382,37 @@ runnableExamples:
 ##   and modulus is strongly related by `n == (n div k) * k + (n mod k)`.
 ##
 ##   Under floored division the sign of `mod` matches the sign of its second
-##   operand, for example `-1 % 5 == 4`, which is usually the desired result.
+##   operand, for example `-1 % 5 == 4`, which is more often the desired result.
 ##   Whereas under truncated division the sign would propagate as with
-##   multiplication: `-1 % 5 == -1`.
+##   multiplication: `-1 % 5 == -1`, making it useless for doing modular arithmetic.
 ##
 ##   Another reasonable alternative is Euclidean division, which guarantees that
 ##   the remainder is *always* positive, and rounds the quotient accordingly, but
 ##   it is technically not as efficient at a low level.
 ##
 
+## .. [#rng] Even though I personally think it's rather inflexible. Don't get me
+##   wrong, xoroshiro128+ is a much better universal RNG than the Mersenne
+##   Twister that many languages use, but it vulnerable if it can be put in a
+##   state with few bits set. I personally prefer an RNG in the PCG family for
+##   non-crypto and ChaCha for cryptographic RNG.
+##
+## .. [#ugly] The keyword operators are special cased in the language, and there's
+##   no way to customize precedence rules. For example, as far as I know,
+##   there's no way to make anything share precedence with the constructs `and` or `or`,
+##   nor is there a way to make assignment-operator versions of those.
+##
+##   Originally I experimented with using the less noisy ``:`` as a prefix
+##   instead. But then it turns out that they would have lower precedence than
+##   comparison operators, which creates its own chaos, as intuitive expressions
+##   like `x :& 0xf == 1` wouldn't parse correctly.
+##
+##   Even so the headache is not over, as `not` now has lower precedence than
+##   the ``&..`` operators, so it also needed to be made into a symbolic
+##   operator.
+##
+##   It's a bit of a mess.
+##
 
 from ./integers/misc import unsignedAbs, toUnsigned, bitsof
 export misc
@@ -401,8 +441,8 @@ export bytes
 import ./integers/primes
 export primes
 
-import ./integers/random
-export random
+# import ./integers/random
+# export random
 
 import ./integers/modular
 export modular

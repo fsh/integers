@@ -38,7 +38,6 @@ proc randBits*(rng: var Rand, bits: int): Integer =
   ##
   rng.setRandBits(result, bits)
 
-
 proc randBelow*(rng: var Rand, val: Integer): Integer =
   ## Random `Integer`_ less than the given number.
   if val <= 0:
@@ -50,6 +49,10 @@ proc randBelow*(rng: var Rand, val: Integer): Integer =
     rng.setRandBits(result, bits)
     if result < val:
       break
+
+proc rand*(rng: var Rand, range: HSlice[AnyInteger, Integer]): Integer =
+  let l = range.b - range.a + 1
+  rng.randBelow(l) + range.a
 
 proc randPrimeBits*(rng: var Rand, bits: int, fixed: bool = false): Integer =
   ## Generate a random prime number with the given number of bits.
@@ -72,7 +75,6 @@ func randGermainPrime*(rng: var Rand, bits: int, fixed: bool = false): Integer =
   ## the upper bits are random.
   runnableExamples:
 
-    import integers
     var rng = initRand(1)
 
     let p = rng.randGermainPrime(20, fixed=true)
