@@ -58,17 +58,9 @@
   <li><a class="reference" href="#divisible%2Cmpz_struct%2CAnyInteger" title="divisible(val: Integer; n: AnyInteger): bool">divisible(val: Integer; n: AnyInteger): bool</a></li>
 
 </ul>
-<ul class="simple nested-toc-section">egcd
-  <li><a class="reference" href="#egcd%2Cmpz_struct%2Cmpz_struct" title="egcd(a, b: Integer): (Integer, Integer, Integer)">egcd(a, b: Integer): (Integer, Integer, Integer)</a></li>
-
-</ul>
 <ul class="simple nested-toc-section">factorial
   <li><a class="reference" href="#factorial%2CAnyInteger" title="factorial(n: AnyInteger): Integer">factorial(n: AnyInteger): Integer</a></li>
 <li><a class="reference" href="#factorial%2CAnyInteger%2CSomeInteger" title="factorial(n: AnyInteger; m: SomeInteger): Integer">factorial(n: AnyInteger; m: SomeInteger): Integer</a></li>
-
-</ul>
-<ul class="simple nested-toc-section">gcd
-  <li><a class="reference" href="#gcd%2Cmpz_struct%2Cmpz_struct" title="gcd(a, b: Integer): Integer">gcd(a, b: Integer): Integer</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">iroot
@@ -128,23 +120,11 @@
   <dt><pre><span class="Keyword">func</span> <a href="#divisible%2Cmpz_struct%2CAnyInteger"><span class="Identifier">divisible</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
   <dd>
     
-    
+    <p>Returns <tt class="docutils literal"><span class="pre"><span class="Identifier">true</span></span></tt> if the first argument is divisble by the second.</p>
+<p>More efficient than actually dividing and checking the remainder. </p>
+
     <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L63" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
 <a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L63" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
-
-  </dd>
-</div>
-
-</div>
-<div id="egcd-procs-all">
-  <div id="egcd,mpz_struct,mpz_struct">
-  <dt><pre><span class="Keyword">func</span> <a href="#egcd%2Cmpz_struct%2Cmpz_struct"><span class="Identifier">egcd</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span> {.<span class="Identifier">inline</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-  <dd>
-    
-    
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L88" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L88" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -158,8 +138,8 @@
     Returns <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span><span class="Operator">!</span></span></tt> (= <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span> <span class="Operator">*</span> <span class="Punctuation">(</span><span class="Identifier">n</span><span class="Operator">-</span><span class="DecNumber">1</span><span class="Punctuation">)</span> <span class="Operator">*</span> <span class="Punctuation">(</span><span class="Identifier">n</span><span class="Operator">-</span><span class="DecNumber">2</span><span class="Punctuation">)</span> <span class="Operator">*</span> <span class="Operator">...</span> <span class="Operator">*</span> <span class="DecNumber">2</span> <span class="Operator">*</span> <span class="DecNumber">1</span></span></tt>). 
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">6</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">6</span> <span class="Operator">*</span> <span class="DecNumber">5</span> <span class="Operator">*</span> <span class="DecNumber">4</span> <span class="Operator">*</span> <span class="DecNumber">3</span> <span class="Operator">*</span> <span class="DecNumber">2</span> <span class="Operator">*</span> <span class="DecNumber">1</span></pre>
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L104" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L104" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L102" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L102" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -171,21 +151,8 @@
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">10</span> <span class="Operator">*</span> <span class="DecNumber">7</span> <span class="Operator">*</span> <span class="DecNumber">4</span> <span class="Operator">*</span> <span class="DecNumber">1</span>
 <span class="Identifier">assert</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">20</span><span class="Punctuation">,</span> <span class="DecNumber">5</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">20</span> <span class="Operator">*</span> <span class="DecNumber">15</span> <span class="Operator">*</span> <span class="DecNumber">10</span> <span class="Operator">*</span> <span class="DecNumber">5</span></pre>
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L119" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L119" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
-
-  </dd>
-</div>
-
-</div>
-<div id="gcd-procs-all">
-  <div id="gcd,mpz_struct,mpz_struct">
-  <dt><pre><span class="Keyword">func</span> <a href="#gcd%2Cmpz_struct%2Cmpz_struct"><span class="Identifier">gcd</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a> {.<span class="Identifier">inline</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
-  <dd>
-    
-    
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L85" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L85" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L117" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L117" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -197,8 +164,8 @@
   <dd>
     
     
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L94" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L94" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L92" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L92" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -210,8 +177,8 @@
   <dd>
     
     
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L91" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L91" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L89" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L89" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -224,8 +191,8 @@
   <dd>
     
     
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L97" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L97" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L95" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L95" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -234,8 +201,8 @@
   <dd>
     
     
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L100" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L100" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L98" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L98" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -267,8 +234,8 @@
   <dd>
     
     
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L72" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L72" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L76" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L76" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -306,7 +273,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-15 23:07:57 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 02:16:16 UTC</small>
       </div>
     </div>
   </div>

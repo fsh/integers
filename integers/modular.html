@@ -106,6 +106,9 @@
 <p>If returns <tt class="docutils literal"><span class="pre"><span class="DecNumber">0'</span><span class="Identifier">gmp</span></span></tt> if the inverse does not exist.</p>
 <p>See <a class="reference internal nimdoc" title="proc setInvMod(a: var Integer; m: Integer)" href="#setInvMod,mpz_struct,mpz_struct">setInvMod</a> for in-place version. </p>
 
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Operator">=</span> <span class="DecNumber">1000'</span><span class="Identifier">gmp</span><span class="Operator">.</span><span class="Identifier">invMod</span><span class="Punctuation">(</span><span class="DecNumber">1999</span><span class="Punctuation">)</span>
+<span class="Identifier">assert</span> <span class="Identifier">x</span> <span class="Operator">*</span> <span class="DecNumber">1000</span> <span class="Operator">%</span> <span class="DecNumber">1999</span> <span class="Operator">==</span> <span class="DecNumber">1</span></pre>
     <a href="https://github.com/fsh/integers/tree/main/src/integers/modular.nim#L7" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
 <a href="https://github.com/fsh/integers/edit/main/src/integers/modular.nim#L7" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
@@ -126,8 +129,8 @@
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">powMod</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">10_000_000_000_000_000_000'</span><span class="Identifier">gmp</span><span class="Punctuation">,</span> <span class="DecNumber">99</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
 <span class="Identifier">assert</span> <span class="Identifier">powMod</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">10_000_000_000_000_000_001'</span><span class="Identifier">gmp</span><span class="Punctuation">,</span> <span class="DecNumber">99</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">10</span></pre>
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/modular.nim#L34" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/modular.nim#L34" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/modular.nim#L38" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/modular.nim#L38" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -143,8 +146,8 @@
 <p>If returns <tt class="docutils literal"><span class="pre"><span class="DecNumber">0'</span><span class="Identifier">gmp</span></span></tt> if the inverse does not exist.</p>
 <p>See <a class="reference internal nimdoc" title="proc invMod(a, m: distinct AnyInteger): Integer" href="#invMod,,">invMod</a> for functional version. </p>
 
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/modular.nim#L23" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/modular.nim#L23" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/modular.nim#L27" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/modular.nim#L27" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -163,8 +166,8 @@
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">powMod</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">10_000_000_000_000_000_000'</span><span class="Identifier">gmp</span><span class="Punctuation">,</span> <span class="DecNumber">99</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
 <span class="Identifier">assert</span> <span class="Identifier">powMod</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">10_000_000_000_000_000_001'</span><span class="Identifier">gmp</span><span class="Punctuation">,</span> <span class="DecNumber">99</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">10</span></pre>
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/modular.nim#L60" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/modular.nim#L60" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/modular.nim#L64" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/modular.nim#L64" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -186,7 +189,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-15 23:07:56 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 02:16:14 UTC</small>
       </div>
     </div>
   </div>

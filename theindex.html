@@ -21,7 +21,7 @@
   <div class="document" id="documentId">
     <div class="container">
       <h1 class="title">Index</h1>
-      Documents: <a href="integers.html">Integers</a>.<br/><p />Modules: <a href="integers/bitset.html">integers/bitset</a>, <a href="integers/bytes.html">integers/bytes</a>, <a href="integers/common.html">integers/common</a>, <a href="integers/core.html">integers/core</a>, <a href="integers/format.html">integers/format</a>, <a href="integers/gmp.html">integers/gmp</a>, <a href="integers/math.html">integers/math</a>, <a href="integers/misc.html">integers/misc</a>, <a href="integers/modular.html">integers/modular</a>.<br/><p /><h2>API symbols</h2>
+      Documents: <a href="integers.html">Integers</a>.<br/><p />Modules: <a href="integers/bitset.html">integers/bitset</a>, <a href="integers/bytes.html">integers/bytes</a>, <a href="integers/common.html">integers/common</a>, <a href="integers/core.html">integers/core</a>, <a href="integers/format.html">integers/format</a>, <a href="integers/gmp.html">integers/gmp</a>, <a href="integers/math.html">integers/math</a>, <a href="integers/misc.html">integers/misc</a>, <a href="integers/modular.html">integers/modular</a>, <a href="integers/primes.html">integers/primes</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%21%3D%25%60" href="#%60%21%3D%25%60"><span>`!=%`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="core: `!=%`(a`gensym7: Integer; b`gensym7: Integer): bool" href="integers/core.html#%21%3D%25%2Cmpz_struct%2Cmpz_struct">core: `!=%`(a`gensym7: Integer; b`gensym7: Integer): bool</a></li>
@@ -362,10 +362,6 @@
 <li><a class="reference external"
           data-doc-search-tag="Endianness.eBE" href="integers/bytes.html#eBE">Endianness.eBE</a></li>
           </ul></dd>
-<dt><a name="egcd" href="#egcd"><span>egcd:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="math: egcd(a, b: Integer): (Integer, Integer, Integer)" href="integers/math.html#egcd%2Cmpz_struct%2Cmpz_struct">math: egcd(a, b: Integer): (Integer, Integer, Integer)</a></li>
-          </ul></dd>
 <dt><a name="eLE" href="#eLE"><span>eLE:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="Endianness.eLE" href="integers/bytes.html#eLE">Endianness.eLE</a></li>
@@ -377,6 +373,10 @@
 <dt><a name="Endianness" href="#Endianness"><span>Endianness:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="bytes: Endianness" href="integers/bytes.html#Endianness">bytes: Endianness</a></li>
+          </ul></dd>
+<dt><a name="extGcd" href="#extGcd"><span>extGcd:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="primes: extGcd(a, b: Integer): (Integer, Integer, Integer)" href="integers/primes.html#extGcd%2Cmpz_struct%2Cmpz_struct">primes: extGcd(a, b: Integer): (Integer, Integer, Integer)</a></li>
           </ul></dd>
 <dt><a name="factorial" href="#factorial"><span>factorial:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -394,7 +394,7 @@
           </ul></dd>
 <dt><a name="gcd" href="#gcd"><span>gcd:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="math: gcd(a, b: Integer): Integer" href="integers/math.html#gcd%2Cmpz_struct%2Cmpz_struct">math: gcd(a, b: Integer): Integer</a></li>
+          data-doc-search-tag="primes: gcd(a, b: Integer): Integer" href="integers/primes.html#gcd%2Cmpz_struct%2Cmpz_struct">primes: gcd(a, b: Integer): Integer</a></li>
           </ul></dd>
 <dt><a name="getOr" href="#getOr"><span>getOr:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -504,6 +504,10 @@
 <li><a class="reference external"
           data-doc-search-tag="core: isPositive(val: AnyInteger): bool" href="integers/core.html#isPositive%2CAnyInteger">core: isPositive(val: AnyInteger): bool</a></li>
           </ul></dd>
+<dt><a name="isPrime" href="#isPrime"><span>isPrime:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="primes: isPrime(val: AnyInteger; reps: int = 1): bool" href="integers/primes.html#isPrime%2CAnyInteger%2Cint">primes: isPrime(val: AnyInteger; reps: int = 1): bool</a></li>
+          </ul></dd>
 <dt><a name="isqrt" href="#isqrt"><span>isqrt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="math: isqrt(val: Integer): Integer" href="integers/math.html#isqrt%2Cmpz_struct">math: isqrt(val: Integer): Integer</a></li>
@@ -521,6 +525,10 @@
 <dt><a name="items" href="#items"><span>items:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="bitset: items(n: Integer): int" href="integers/bitset.html#items.i%2Cmpz_struct">bitset: items(n: Integer): int</a></li>
+          </ul></dd>
+<dt><a name="lcm" href="#lcm"><span>lcm:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="primes: lcm(a, b: Integer): Integer" href="integers/primes.html#lcm%2Cmpz_struct%2Cmpz_struct">primes: lcm(a, b: Integer): Integer</a></li>
           </ul></dd>
 <dt><a name="m_mpq_cmp_si" href="#m_mpq_cmp_si"><span>m_mpq_cmp_si:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2724,6 +2732,10 @@
           <li><a class="reference external"
           data-doc-search-tag="core: newInteger(str: string; base: int = 0): Integer" href="integers/core.html#newInteger%2Cstring%2Cint">core: newInteger(str: string; base: int = 0): Integer</a></li>
           </ul></dd>
+<dt><a name="nextPrime" href="#nextPrime"><span>nextPrime:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="primes: nextPrime[T: AnyInteger](val: T): T" href="integers/primes.html#nextPrime%2CT">primes: nextPrime[T: AnyInteger](val: T): T</a></li>
+          </ul></dd>
 <dt><a name="one" href="#one"><span>one:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="common: one[T: AnyInteger](_: typedesc[T]): auto" href="integers/common.html#one%2Ctypedesc%5BT%5D">common: one[T: AnyInteger](_: typedesc[T]): auto</a></li>
@@ -2743,6 +2755,10 @@
 <dt><a name="pred" href="#pred"><span>pred:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="core: pred(n: Integer): Integer" href="integers/core.html#pred%2Cmpz_struct">core: pred(n: Integer): Integer</a></li>
+          </ul></dd>
+<dt><a name="prevPrime" href="#prevPrime"><span>prevPrime:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="primes: prevPrime[T: AnyInteger](n: T): T" href="integers/primes.html#prevPrime%2CT">primes: prevPrime[T: AnyInteger](n: T): T</a></li>
           </ul></dd>
 <dt><a name="remove" href="#remove"><span>remove:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2779,6 +2795,10 @@
 <dt><a name="setNegative" href="#setNegative"><span>setNegative:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="core: setNegative(val: var Integer)" href="integers/core.html#setNegative%2Cmpz_struct">core: setNegative(val: var Integer)</a></li>
+          </ul></dd>
+<dt><a name="setNextPrime" href="#setNextPrime"><span>setNextPrime:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="primes: setNextPrime(val: var Integer)" href="integers/primes.html#setNextPrime%2Cmpz_struct">primes: setNextPrime(val: var Integer)</a></li>
           </ul></dd>
 <dt><a name="setNot" href="#setNot"><span>setNot:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2880,7 +2900,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-15 23:08:00 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 02:16:19 UTC</small>
       </div>
     </div>
   </div>
