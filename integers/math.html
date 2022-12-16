@@ -54,7 +54,11 @@
   <details open>
     <summary><a class="reference reference-toplevel" href="#12" id="62">Procs</a></summary>
     <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">divisible
+      <ul class="simple nested-toc-section">divExp
+  <li><a class="reference" href="#divExp%2Csinkmpz_struct%2C" title="divExp(n: sink Integer; s: AnyInteger | static[int]): (Integer, int)">divExp(n: sink Integer; s: AnyInteger | static[int]): (Integer, int)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">divisible
   <li><a class="reference" href="#divisible%2Cmpz_struct%2CAnyInteger" title="divisible(val: Integer; n: AnyInteger): bool">divisible(val: Integer; n: AnyInteger): bool</a></li>
 
 </ul>
@@ -64,7 +68,11 @@
 
 </ul>
 <ul class="simple nested-toc-section">iroot
-  <li><a class="reference" href="#iroot%2Cmpz_struct%2CSomeUnsignedInt" title="iroot(val: Integer; n: SomeUnsignedInt): Integer">iroot(val: Integer; n: SomeUnsignedInt): Integer</a></li>
+  <li><a class="reference" href="#iroot%2Cmpz_struct%2CSomeUnsignedInt" title="iroot(n: Integer; k: SomeUnsignedInt): Integer">iroot(n: Integer; k: SomeUnsignedInt): Integer</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">irootRem
+  <li><a class="reference" href="#irootRem%2Cmpz_struct%2CSomeUnsignedInt" title="irootRem(n: Integer; k: SomeUnsignedInt): (Integer, Integer)">irootRem(n: Integer; k: SomeUnsignedInt): (Integer, Integer)</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">isqrt
@@ -73,7 +81,18 @@
 </ul>
 <ul class="simple nested-toc-section">isqrtRem
   <li><a class="reference" href="#isqrtRem%2Cmpz_struct" title="isqrtRem(val: Integer): (Integer, Integer)">isqrtRem(val: Integer): (Integer, Integer)</a></li>
-<li><a class="reference" href="#isqrtRem%2Cmpz_struct%2CSomeUnsignedInt" title="isqrtRem(val: Integer; n: SomeUnsignedInt): (Integer, Integer)">isqrtRem(val: Integer; n: SomeUnsignedInt): (Integer, Integer)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">jacobi
+  <li><a class="reference" href="#jacobi%2C%2C" title="jacobi(a, b: distinct AnyInteger): int">jacobi(a, b: distinct AnyInteger): int</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">kronecker
+  <li><a class="reference" href="#kronecker%2C%2C" title="kronecker(a, b: distinct AnyInteger): int">kronecker(a, b: distinct AnyInteger): int</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">legendre
+  <li><a class="reference" href="#legendre%2C%2C" title="legendre(a, b: distinct AnyInteger): int">legendre(a, b: distinct AnyInteger): int</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">scaledTo
@@ -81,11 +100,15 @@
 
 </ul>
 <ul class="simple nested-toc-section">setDivExp
-  <li><a class="reference" href="#setDivExp%2Cmpz_struct%2CAnyInteger" title="setDivExp(val: var Integer; n: AnyInteger): int">setDivExp(val: var Integer; n: AnyInteger): int</a></li>
+  <li><a class="reference" href="#setDivExp%2Cmpz_struct%2C" title="setDivExp(n: var Integer; s: AnyInteger | static[int]): int">setDivExp(n: var Integer; s: AnyInteger | static[int]): int</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">setOdd
+  <li><a class="reference" href="#setOdd%2Cmpz_struct" title="setOdd(n: var Integer): int">setOdd(n: var Integer): int</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">toOdd
-  <li><a class="reference" href="#toOdd%2Cmpz_struct" title="toOdd(n: Integer): (Integer, int)">toOdd(n: Integer): (Integer, int)</a></li>
+  <li><a class="reference" href="#toOdd%2Csinkmpz_struct" title="toOdd(n: sink Integer): (Integer, int)">toOdd(n: sink Integer): (Integer, int)</a></li>
 
 </ul>
 
@@ -115,7 +138,30 @@
 <div class="section" id="12">
   <h1><a class="toc-backref" href="#12">Procs</a></h1>
   <dl class="item">
-    <div id="divisible-procs-all">
+    <div id="divExp-procs-all">
+  <div id="divExp,sinkmpz_struct,">
+  <dt><pre><span class="Keyword">func</span> <a href="#divExp%2Csinkmpz_struct%2C"><span class="Identifier">divExp</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">sink</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a> <span class="Operator">|</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
+  <dd>
+    
+    <p>Factors an integer <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt> into <tt class="docutils literal"><span class="pre"><span class="Identifier">q</span> <span class="Operator">*</span> <span class="Identifier">s</span><span class="Operator">^</span><span class="Identifier">k</span></span></tt> where <tt class="docutils literal"><span class="pre"><span class="Identifier">q</span></span></tt> is not divisible by <tt class="docutils literal"><span class="pre"><span class="Identifier">s</span></span></tt>. Returns <tt class="docutils literal"><span class="pre"><span class="Punctuation">(</span><span class="Identifier">q</span><span class="Punctuation">,</span> <span class="Identifier">k</span><span class="Punctuation">)</span></span></tt>.</p>
+<p>That is, it &quot;factors out&quot; <tt class="docutils literal"><span class="pre"><span class="Identifier">s</span></span></tt> of <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt>, and returns the remaining factor as well as how many factors of <tt class="docutils literal"><span class="pre"><span class="Identifier">s</span></span></tt> was present.</p>
+<p>This is intended to be more efficient than dividing out manually.</p>
+<p>(In Sage this is called <tt class="docutils literal"><span class="pre"><span class="Identifier">val_unit</span><span class="Punctuation">(</span><span class="Punctuation">)</span></span></tt>, using p-adic terminology.) </p>
+
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">n</span> <span class="Operator">=</span> <span class="DecNumber">17</span><span class="Operator">^</span><span class="DecNumber">3</span> <span class="Operator">*</span> <span class="DecNumber">1900</span>
+<span class="Identifier">assert</span> <span class="Identifier">n</span> <span class="Keyword">is</span> <span class="Identifier">Integer</span>
+
+<span class="Identifier">assert</span> <span class="Identifier">n</span><span class="Operator">.</span><span class="Identifier">divExp</span><span class="Punctuation">(</span><span class="DecNumber">17</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Punctuation">(</span><span class="DecNumber">1900'</span><span class="Identifier">gmp</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">)</span>
+<span class="Identifier">assert</span> <span class="Identifier">n</span><span class="Operator">.</span><span class="Identifier">divExp</span><span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Punctuation">(</span><span class="DecNumber">17</span><span class="Operator">^</span><span class="DecNumber">3</span> <span class="Operator">*</span> <span class="DecNumber">475</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">)</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L96" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L96" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="divisible-procs-all">
   <div id="divisible,mpz_struct,AnyInteger">
   <dt><pre><span class="Keyword">func</span> <a href="#divisible%2Cmpz_struct%2CAnyInteger"><span class="Identifier">divisible</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
   <dd>
@@ -123,8 +169,8 @@
     <p>Returns <tt class="docutils literal"><span class="pre"><span class="Identifier">true</span></span></tt> if the first argument is divisble by the second.</p>
 <p>More efficient than actually dividing and checking the remainder. </p>
 
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L63" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L63" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L68" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L68" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -138,8 +184,8 @@
     Returns <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span><span class="Operator">!</span></span></tt> (= <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span> <span class="Operator">*</span> <span class="Punctuation">(</span><span class="Identifier">n</span><span class="Operator">-</span><span class="DecNumber">1</span><span class="Punctuation">)</span> <span class="Operator">*</span> <span class="Punctuation">(</span><span class="Identifier">n</span><span class="Operator">-</span><span class="DecNumber">2</span><span class="Punctuation">)</span> <span class="Operator">*</span> <span class="Operator">...</span> <span class="Operator">*</span> <span class="DecNumber">2</span> <span class="Operator">*</span> <span class="DecNumber">1</span></span></tt>). 
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">6</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">6</span> <span class="Operator">*</span> <span class="DecNumber">5</span> <span class="Operator">*</span> <span class="DecNumber">4</span> <span class="Operator">*</span> <span class="DecNumber">3</span> <span class="Operator">*</span> <span class="DecNumber">2</span> <span class="Operator">*</span> <span class="DecNumber">1</span></pre>
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L102" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L102" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L194" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L194" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -151,8 +197,8 @@
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">10</span> <span class="Operator">*</span> <span class="DecNumber">7</span> <span class="Operator">*</span> <span class="DecNumber">4</span> <span class="Operator">*</span> <span class="DecNumber">1</span>
 <span class="Identifier">assert</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">20</span><span class="Punctuation">,</span> <span class="DecNumber">5</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">20</span> <span class="Operator">*</span> <span class="DecNumber">15</span> <span class="Operator">*</span> <span class="DecNumber">10</span> <span class="Operator">*</span> <span class="DecNumber">5</span></pre>
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L117" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L117" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L209" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L209" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -160,12 +206,31 @@
 </div>
 <div id="iroot-procs-all">
   <div id="iroot,mpz_struct,SomeUnsignedInt">
-  <dt><pre><span class="Keyword">func</span> <a href="#iroot%2Cmpz_struct%2CSomeUnsignedInt"><span class="Identifier">iroot</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeUnsignedInt</span><span class="Other">)</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a> {.<span class="Identifier">inline</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">func</span> <a href="#iroot%2Cmpz_struct%2CSomeUnsignedInt"><span class="Identifier">iroot</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">k</span><span class="Other">:</span> <span class="Identifier">SomeUnsignedInt</span><span class="Other">)</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a> {.<span class="Identifier">inline</span>.}</pre></dt>
   <dd>
     
+    Returns the <tt class="docutils literal"><span class="pre"><span class="Identifier">k</span></span></tt>th root of <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt>, rounded down to an integer.
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Identifier">assert</span> <span class="DecNumber">34'</span><span class="Identifier">gmp</span><span class="Operator">.</span><span class="Identifier">iroot</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">3</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L123" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L123" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="irootRem-procs-all">
+  <div id="irootRem,mpz_struct,SomeUnsignedInt">
+  <dt><pre><span class="Keyword">func</span> <a href="#irootRem%2Cmpz_struct%2CSomeUnsignedInt"><span class="Identifier">irootRem</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">k</span><span class="Other">:</span> <span class="Identifier">SomeUnsignedInt</span><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span> {.<span class="Identifier">inline</span>.}</pre></dt>
+  <dd>
     
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L92" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L92" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <p>Like <a class="reference internal nimdoc" title="proc iroot(n: Integer; k: SomeUnsignedInt): Integer" href="#iroot,mpz_struct,SomeUnsignedInt">iroot</a> but also returns the remainder.</p>
+<p>Invariant: <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span> <span class="Operator">==</span> <span class="Identifier">root</span><span class="Operator">^</span><span class="Identifier">k</span> <span class="Operator">+</span> <span class="Identifier">remainder</span></span></tt>.</p>
+
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Identifier">assert</span> <span class="DecNumber">34'</span><span class="Identifier">gmp</span><span class="Operator">.</span><span class="Identifier">irootRem</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Punctuation">(</span><span class="DecNumber">3'</span><span class="Identifier">gmp</span><span class="Punctuation">,</span> <span class="DecNumber">7'</span><span class="Identifier">gmp</span><span class="Punctuation">)</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L138" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L138" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -176,9 +241,11 @@
   <dt><pre><span class="Keyword">func</span> <a href="#isqrt%2Cmpz_struct"><span class="Identifier">isqrt</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a> {.<span class="Identifier">inline</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L89" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L89" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    Returns the square root of <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt>, rounded down to an integer.
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Identifier">assert</span> <span class="DecNumber">17'</span><span class="Identifier">gmp</span><span class="Operator">.</span><span class="Identifier">isqrt</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">4</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L117" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L117" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -190,19 +257,69 @@
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L95" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L95" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <p>Like <a class="reference internal nimdoc" title="proc isqrt(val: Integer): Integer" href="#isqrt,mpz_struct">isqrt</a> but also returns the remainder.</p>
+<p>Invariant: <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span> <span class="Operator">==</span> <span class="Identifier">root</span> <span class="Operator">*</span> <span class="Identifier">root</span> <span class="Operator">+</span> <span class="Identifier">remainder</span></span></tt>.</p>
+
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Identifier">assert</span> <span class="DecNumber">17'</span><span class="Identifier">gmp</span><span class="Operator">.</span><span class="Identifier">isqrtRem</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Punctuation">(</span><span class="DecNumber">4'</span><span class="Identifier">gmp</span><span class="Punctuation">,</span> <span class="DecNumber">1'</span><span class="Identifier">gmp</span><span class="Punctuation">)</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L129" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L129" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
-<div id="isqrtRem,mpz_struct,SomeUnsignedInt">
-  <dt><pre><span class="Keyword">func</span> <a href="#isqrtRem%2Cmpz_struct%2CSomeUnsignedInt"><span class="Identifier">isqrtRem</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeUnsignedInt</span><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span> {.<span class="Identifier">inline</span>.}</pre></dt>
+
+</div>
+<div id="jacobi-procs-all">
+  <div id="jacobi,,">
+  <dt><pre><span class="Keyword">func</span> <a href="#jacobi%2C%2C"><span class="Identifier">jacobi</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Keyword">distinct</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span></pre></dt>
   <dd>
     
+    Alias for <a class="reference internal nimdoc" title="proc kronecker(a, b: distinct AnyInteger): int" href="#kronecker,,">kronecker</a>, as it is merely an extension of the Jacobi symbol.
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L190" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L190" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="kronecker-procs-all">
+  <div id="kronecker,,">
+  <dt><pre><span class="Keyword">func</span> <a href="#kronecker%2C%2C"><span class="Identifier">kronecker</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Keyword">distinct</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span></pre></dt>
+  <dd>
     
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L98" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L98" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <p>Returns the Kronecker/Jacobi/Legendre-symbol of <tt class="docutils literal"><span class="pre"><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Operator">|</span><span class="Identifier">b</span><span class="Punctuation">)</span></span></tt>.</p>
+<p>The return value is one of <tt class="docutils literal"><span class="pre"><span class="Punctuation">{</span><span class="Operator">-</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">0</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">}</span></span></tt>.</p>
+<ul class="simple"><li><p>When <tt class="docutils literal"><span class="pre"><span class="Identifier">b</span></span></tt> is an odd prime and <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> is not zero:</p>
+<p><tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> is a quadratic residue modulo <tt class="docutils literal"><span class="pre"><span class="Identifier">b</span></span></tt> <em>if and only if</em> <tt class="docutils literal"><span class="pre"><span class="Identifier">kronecker</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span><span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span></span></tt>.</p>
+</li>
+<li><p>When <tt class="docutils literal"><span class="pre"><span class="Identifier">b</span></span></tt> is an odd composite:</p>
+<p><tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> is <em>not</em> a quadratic residue if <tt class="docutils literal"><span class="pre"><span class="Identifier">kronecker</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span><span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">1</span></span></tt>. Otherwise the result is inconclusive.</p>
+</li>
+<li><p>When <tt class="docutils literal"><span class="pre"><span class="Identifier">b</span></span></tt> is even:</p>
+<p>See <a class="reference external" href="https://en.wikipedia.org/wiki/Kronecker_symbol">Wikipedia</a> for more information.</p>
+</li>
+</ul>
+
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">p</span> <span class="Operator">=</span> <span class="DecNumber">257'</span><span class="Identifier">gmp</span> <span class="Comment"># a prime</span>
+
+<span class="Identifier">assert</span> <span class="Identifier">kronecker</span><span class="Punctuation">(</span><span class="DecNumber">17</span><span class="Operator">*</span><span class="DecNumber">17</span> <span class="Operator">%</span> <span class="Identifier">p</span><span class="Punctuation">,</span> <span class="Identifier">p</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span> <span class="Comment"># obviously a quadratic residue</span>
+<span class="Identifier">assert</span> <span class="Identifier">kronecker</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="Identifier">p</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">1</span> <span class="Comment"># 3 is not a quadratic residue modulo 257</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L148" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L148" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="legendre-procs-all">
+  <div id="legendre,,">
+  <dt><pre><span class="Keyword">func</span> <a href="#legendre%2C%2C"><span class="Identifier">legendre</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Keyword">distinct</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span></pre></dt>
+  <dd>
+    
+    Alias for <a class="reference internal nimdoc" title="proc kronecker(a, b: distinct AnyInteger): int" href="#kronecker,,">kronecker</a>, as it is merely an extension of the Jacobi symbol which is an extension of the Legendre symbol.
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L186" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L186" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -229,29 +346,42 @@
 
 </div>
 <div id="setDivExp-procs-all">
-  <div id="setDivExp,mpz_struct,AnyInteger">
-  <dt><pre><span class="Keyword">proc</span> <a href="#setDivExp%2Cmpz_struct%2CAnyInteger"><span class="Identifier">setDivExp</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span></pre></dt>
+  <div id="setDivExp,mpz_struct,">
+  <dt><pre><span class="Keyword">proc</span> <a href="#setDivExp%2Cmpz_struct%2C"><span class="Identifier">setDivExp</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a> <span class="Operator">|</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span></pre></dt>
   <dd>
     
+    In-place version of <a class="reference internal nimdoc" title="proc divExp(n: sink Integer; s: AnyInteger | static[int]): (Integer, int)" href="#divExp,sinkmpz_struct,">divExp</a>.
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L81" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L81" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="setOdd-procs-all">
+  <div id="setOdd,mpz_struct">
+  <dt><pre><span class="Keyword">proc</span> <a href="#setOdd%2Cmpz_struct"><span class="Identifier">setOdd</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
     
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L76" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L76" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    In-place version of <a class="reference internal nimdoc" title="proc toOdd(n: sink Integer): (Integer, int)" href="#toOdd,sinkmpz_struct">toOdd</a>.
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L49" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L49" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
 
 </div>
 <div id="toOdd-procs-all">
-  <div id="toOdd,mpz_struct">
-  <dt><pre><span class="Keyword">proc</span> <a href="#toOdd%2Cmpz_struct"><span class="Identifier">toOdd</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <div id="toOdd,sinkmpz_struct">
+  <dt><pre><span class="Keyword">proc</span> <a href="#toOdd%2Csinkmpz_struct"><span class="Identifier">toOdd</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">sink</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <p>Returns <tt class="docutils literal"><span class="pre"><span class="Punctuation">(</span><span class="Identifier">q</span><span class="Punctuation">,</span> <span class="Identifier">k</span><span class="Punctuation">)</span></span></tt> where <tt class="docutils literal"><span class="pre"><span class="Identifier">q</span></span></tt> is the largest odd factor of <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">k</span></span></tt> is the highest power of 2 which divides <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt>.</p>
 <p>Equivalently, shifts <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt> right until it is odd, and then returns this number (<tt class="docutils literal"><span class="pre"><span class="Identifier">q</span></span></tt>) as well as the number of bits shifted.</p>
 <p>No-op for zero.</p>
 
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L50" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L50" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L58" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L58" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -273,7 +403,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 13:39:46 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 14:53:33 UTC</small>
       </div>
     </div>
   </div>

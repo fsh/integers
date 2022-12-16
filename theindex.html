@@ -350,6 +350,10 @@
 <li><a class="reference external"
           data-doc-search-tag="core: dec(n: var Integer)" href="integers/core.html#dec%2Cmpz_struct">core: dec(n: var Integer)</a></li>
           </ul></dd>
+<dt><a name="divExp" href="#divExp"><span>divExp:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="math: divExp(n: sink Integer; s: AnyInteger | static[int]): (Integer, int)" href="integers/math.html#divExp%2Csinkmpz_struct%2C">math: divExp(n: sink Integer; s: AnyInteger | static[int]): (Integer, int)</a></li>
+          </ul></dd>
 <dt><a name="divisible" href="#divisible"><span>divisible:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="math: divisible(val: Integer; n: AnyInteger): bool" href="integers/math.html#divisible%2Cmpz_struct%2CAnyInteger">math: divisible(val: Integer; n: AnyInteger): bool</a></li>
@@ -486,7 +490,11 @@
           </ul></dd>
 <dt><a name="iroot" href="#iroot"><span>iroot:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="math: iroot(val: Integer; n: SomeUnsignedInt): Integer" href="integers/math.html#iroot%2Cmpz_struct%2CSomeUnsignedInt">math: iroot(val: Integer; n: SomeUnsignedInt): Integer</a></li>
+          data-doc-search-tag="math: iroot(n: Integer; k: SomeUnsignedInt): Integer" href="integers/math.html#iroot%2Cmpz_struct%2CSomeUnsignedInt">math: iroot(n: Integer; k: SomeUnsignedInt): Integer</a></li>
+          </ul></dd>
+<dt><a name="irootRem" href="#irootRem"><span>irootRem:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="math: irootRem(n: Integer; k: SomeUnsignedInt): (Integer, Integer)" href="integers/math.html#irootRem%2Cmpz_struct%2CSomeUnsignedInt">math: irootRem(n: Integer; k: SomeUnsignedInt): (Integer, Integer)</a></li>
           </ul></dd>
 <dt><a name="isNatural" href="#isNatural"><span>isNatural:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -515,8 +523,6 @@
 <dt><a name="isqrtRem" href="#isqrtRem"><span>isqrtRem:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="math: isqrtRem(val: Integer): (Integer, Integer)" href="integers/math.html#isqrtRem%2Cmpz_struct">math: isqrtRem(val: Integer): (Integer, Integer)</a></li>
-          <li><a class="reference external"
-          data-doc-search-tag="math: isqrtRem(val: Integer; n: SomeUnsignedInt): (Integer, Integer)" href="integers/math.html#isqrtRem%2Cmpz_struct%2CSomeUnsignedInt">math: isqrtRem(val: Integer; n: SomeUnsignedInt): (Integer, Integer)</a></li>
           </ul></dd>
 <dt><a name="isZero" href="#isZero"><span>isZero:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -526,9 +532,21 @@
 <li><a class="reference external"
           data-doc-search-tag="bitset: items(n: Integer): int" href="integers/bitset.html#items.i%2Cmpz_struct">bitset: items(n: Integer): int</a></li>
           </ul></dd>
+<dt><a name="jacobi" href="#jacobi"><span>jacobi:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="math: jacobi(a, b: distinct AnyInteger): int" href="integers/math.html#jacobi%2C%2C">math: jacobi(a, b: distinct AnyInteger): int</a></li>
+          </ul></dd>
+<dt><a name="kronecker" href="#kronecker"><span>kronecker:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="math: kronecker(a, b: distinct AnyInteger): int" href="integers/math.html#kronecker%2C%2C">math: kronecker(a, b: distinct AnyInteger): int</a></li>
+          </ul></dd>
 <dt><a name="lcm" href="#lcm"><span>lcm:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="primes: lcm(a, b: Integer): Integer" href="integers/primes.html#lcm%2Cmpz_struct%2Cmpz_struct">primes: lcm(a, b: Integer): Integer</a></li>
+          </ul></dd>
+<dt><a name="legendre" href="#legendre"><span>legendre:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="math: legendre(a, b: distinct AnyInteger): int" href="integers/math.html#legendre%2C%2C">math: legendre(a, b: distinct AnyInteger): int</a></li>
           </ul></dd>
 <dt><a name="m_mpq_cmp_si" href="#m_mpq_cmp_si"><span>m_mpq_cmp_si:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2782,7 +2800,7 @@
           </ul></dd>
 <dt><a name="setDivExp" href="#setDivExp"><span>setDivExp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="math: setDivExp(val: var Integer; n: AnyInteger): int" href="integers/math.html#setDivExp%2Cmpz_struct%2CAnyInteger">math: setDivExp(val: var Integer; n: AnyInteger): int</a></li>
+          data-doc-search-tag="math: setDivExp(n: var Integer; s: AnyInteger | static[int]): int" href="integers/math.html#setDivExp%2Cmpz_struct%2C">math: setDivExp(n: var Integer; s: AnyInteger | static[int]): int</a></li>
           </ul></dd>
 <dt><a name="setDivMod" href="#setDivMod"><span>setDivMod:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2803,6 +2821,10 @@
 <dt><a name="setNot" href="#setNot"><span>setNot:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="bitset: setNot(n: var Integer)" href="integers/bitset.html#setNot%2Cmpz_struct">bitset: setNot(n: var Integer)</a></li>
+          </ul></dd>
+<dt><a name="setOdd" href="#setOdd"><span>setOdd:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="math: setOdd(n: var Integer): int" href="integers/math.html#setOdd%2Cmpz_struct">math: setOdd(n: var Integer): int</a></li>
           </ul></dd>
 <dt><a name="setPowMod" href="#setPowMod"><span>setPowMod:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2834,7 +2856,7 @@
           </ul></dd>
 <dt><a name="toOdd" href="#toOdd"><span>toOdd:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="math: toOdd(n: Integer): (Integer, int)" href="integers/math.html#toOdd%2Cmpz_struct">math: toOdd(n: Integer): (Integer, int)</a></li>
+          data-doc-search-tag="math: toOdd(n: sink Integer): (Integer, int)" href="integers/math.html#toOdd%2Csinkmpz_struct">math: toOdd(n: sink Integer): (Integer, int)</a></li>
           </ul></dd>
 <dt><a name="toSeq" href="#toSeq"><span>toSeq:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2900,7 +2922,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 13:39:49 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-16 14:53:38 UTC</small>
       </div>
     </div>
   </div>
