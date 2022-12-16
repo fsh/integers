@@ -11,6 +11,10 @@ func invMod*(a, m: distinct AnyInteger): Integer {.inline.} =
   ##
   ## See `setInvMod`_ for in-place version.
   ##
+  runnableExamples:
+    let x = 1000'gmp.invMod(1999)
+    assert x * 1000 % 1999 == 1
+
   # XXX: specialize
   when a isnot Integer:
     let a = newInteger(a)

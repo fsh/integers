@@ -61,6 +61,10 @@ proc toOdd*(n: Integer): (Integer, int) =
     (n shr e.uint, e)
 
 func divisible*(val: Integer, n: AnyInteger): bool =
+  ## Returns `true` if the first argument is divisble by the second.
+  ##
+  ## More efficient than actually dividing and checking the remainder.
+  ##
   when n is Integer:
     return mpz_divisible_p(val, n) != 0
   else:
@@ -81,12 +85,6 @@ proc setDivExp*(val: var Integer, n: AnyInteger): int =
       mpz_divexact_ui(val, val, n)
       inc result
 
-
-func gcd*(a, b: Integer): Integer {.inline.} =
-  mpz_gcd(result, a, b)
-
-func egcd*(a, b: Integer): (Integer, Integer, Integer) {.inline.} =
-  mpz_gcdext(result[0], result[1], result[2], a, b)
 
 func isqrt*(val: Integer): Integer {.inline.} =
   mpz_sqrt(result, val)

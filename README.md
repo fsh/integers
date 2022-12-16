@@ -130,7 +130,7 @@ library).
 
 ## Mutability
 
-For reasons of efficiency, `Integer`\s are *mutable*.
+For reasons of efficiency, `Integer`s are *mutable*.
 
 Every time a new non-zero `Integer` is instantiated a heap allocation occurs
 (in GMP), thus it is usually more efficient to re-use variables if possible.
@@ -231,7 +231,7 @@ recommended for regular use.*
 ### Bit Sets
 
 
-As a *radical convenience*, `Integer`\s can be treated directly as implementing
+As a *radical convenience*, `Integer`s can be treated directly as implementing
 fast dynamic bitsets.
 
 If you think about it, arbitrary precision integers and dynamically sized
@@ -239,7 +239,7 @@ bitsets are usually built upon the same core data structure, but differ only
 in exposed functionality (with the bitsets having a vastly simpler API and
 implementation of course).
 
-As such, `Integer`\s can be indexed, iterated over, they have a `size` and a `count`,
+As such, `Integer`s can be indexed, iterated over, they have a `size` and a `count`,
 and so on.
 The above bit operations can be used to do unions, intersections, et cetera.
 

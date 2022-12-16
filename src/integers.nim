@@ -279,11 +279,16 @@ runnableExamples:
 ## TODO
 ##
 ## `isqrt` `isqrtRem` `iroot` `irootRem`,
-## `isPrime` `nextPrime` `prevPrime`, `comb`, `divPow`,
-## `setNextPrime`, `factorial`, `primorial`, `kronecker`, `gcd`, `lucas`, ...
+## `comb`, `divPow`,
+## `factorial`, `primorial`, `kronecker`, `lucas`, ...
 ##
-## Primes
-## ------
+## Primes and Factors
+## ------------------
+##
+## - `gcd`, `extGcd`: greatest common divisors
+## - `lcm`: least common multiplier
+## - `isPrime`: primality testing
+## - `nextPrime`, `setNextPrime`, `prevPrime`: finding primes
 ##
 ## Modular Numbers
 ## ---------------
@@ -382,17 +387,14 @@ export math
 import ./integers/format
 export format
 
-import integers/bytes
+import ./integers/bytes
 export bytes
 
-# import integers/arithmetic
-# export arithmetic
-
-# import integers/primes
-# export primes
+import ./integers/primes
+export primes
 
 # import integers/random
 # export random
 
-# import integers/modular
-# export modular
+import ./integers/modular
+export modular
