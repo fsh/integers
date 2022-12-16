@@ -46,19 +46,24 @@ func scaledTo*(val: Integer, T: typedesc): T =
     return if val.isNatural: ltt else: -ltt
 
 
+proc setOdd*(n: var Integer): int =
+  ## In-place version of `toOdd`_.
+  let e = n.scanOne()
+  if e == -1:
+    0
+  else:
+    mpz_tdiv_q_2exp(n, n, mp_bitcnt_t(e))
+    e
 
-proc toOdd*(n: Integer): (Integer, int) =
+proc toOdd*(n: sink Integer): (Integer, int) =
   ## Returns `(q, k)` where `q` is the largest odd factor of `n` and `k` is the highest power of 2 which divides `n`.
   ##
   ## Equivalently, shifts `n` right until it is odd, and then returns this
   ## number (`q`) as well as the number of bits shifted.
   ##
   ## No-op for zero.
-  let e = n.scanOne()
-  if e == -1:
-    (n, 0)
-  else:
-    (n shr e.uint, e)
+  let k = n.setOdd()
+  (n, k)
 
 func divisible*(val: Integer, n: AnyInteger): bool =
   ## Returns `true` if the first argument is divisble by the second.
@@ -73,31 +78,118 @@ func divisible*(val: Integer, n: AnyInteger): bool =
       let n = n.unsignedAbs()
     return mpz_divisible_ui_p(val, n.culong()) != 0
 
-proc setDivExp*(val: var Integer, n: AnyInteger): int =
-  when n is Integer:
-    while mpz_divisible_p(val, n) != 0:
-      mpz_divexact(val, val, n)
+proc setDivExp*(n: var Integer, s: AnyInteger | static[int]): int =
+  ## In-place version of `divExp`_.
+  when (s is static[int]) and (s == 2):
+    n.setOdd()
+  elif s is Integer:
+    while mpz_divisible_p(n, s) != 0:
+      mpz_divexact(n, n, s)
       inc result
   else:
-    when n is SomeSignedInt:
-      let n = n.unsignedAbs()
-    while mpz_divisible_ui_p(val, n) != 0:
-      mpz_divexact_ui(val, val, n)
+    when s is SomeSignedInt:
+      let s = s.unsignedAbs()
+    while mpz_divisible_ui_p(n, s) != 0:
+      mpz_divexact_ui(n, n, s)
       inc result
+
+func divExp*(n: sink Integer, s: AnyInteger | static[int]): (Integer, int) =
+  ## Factors an integer `n` into `q * s^k` where `q` is not divisible by `s`.
+  ## Returns `(q, k)`.
+  ##
+  ## That is, it "factors out" `s` of `n`, and returns the remaining factor as well as how many factors of `s` was present.
+  ##
+  ## This is intended to be more efficient than dividing out manually.
+  ##
+  ## (In Sage this is called `val_unit()`, using p-adic terminology.)
+  ##
+  runnableExamples:
+    let n = 17^3 * 1900
+    assert n is Integer
+
+    assert n.divExp(17) == (1900'gmp, 3)
+    assert n.divExp(2) == (17^3 * 475, 2)
+
+  let k = n.setDivExp(s)
+  (n, k)
 
 
 func isqrt*(val: Integer): Integer {.inline.} =
+  ## Returns the square root of `n`, rounded down to an integer.
+  runnableExamples:
+    assert 17'gmp.isqrt() == 4
   mpz_sqrt(result, val)
 
-func iroot*(val: Integer, n: SomeUnsignedInt): Integer {.inline.} =
-  mpz_root(result, val, n.culong)
+func iroot*(n: Integer, k: SomeUnsignedInt): Integer {.inline.} =
+  ## Returns the `k`\ th root of `n`, rounded down to an integer.
+  runnableExamples:
+    assert 34'gmp.iroot(3) == 3
+  discard mpz_root(result, n, culong(k))
 
 func isqrtRem*(val: Integer): (Integer, Integer) {.inline.} =
+  ## Like `isqrt`_ but also returns the remainder.
+  ##
+  ## Invariant: `n == root * root + remainder`.
+  runnableExamples:
+    assert 17'gmp.isqrtRem() == (4'gmp, 1'gmp)
+
   mpz_sqrtrem(result[0], result[1], val)
 
-func isqrtRem*(val: Integer, n: SomeUnsignedInt): (Integer, Integer) {.inline.} =
-  mpz_rootrem(result[0], result[1], val, n.culong)
+func irootRem*(n: Integer, k: SomeUnsignedInt): (Integer, Integer) {.inline.} =
+  ## Like `iroot`_ but also returns the remainder.
+  ##
+  ## Invariant: `n == root^k + remainder`.
+  runnableExamples:
+    assert 34'gmp.irootRem(3) == (3'gmp, 7'gmp)
 
+  mpz_rootrem(result[0], result[1], n, culong(k))
+
+
+func kronecker*(a, b: distinct AnyInteger): int =
+  ## Returns the Kronecker/Jacobi/Legendre-symbol of `(a|b)`.
+  ##
+  ## The return value is one of `{-1, 0, 1}`.
+  ##
+  ## - When `b` is an odd prime and `a` is not zero:
+  ##
+  ##   `a` is a quadratic residue modulo `b` *if and only if* `kronecker(a,b) == 1`.
+  ##
+  ## - When `b` is an odd composite:
+  ##
+  ##   `a` is *not* a quadratic residue if `kronecker(a,b) == -1`. Otherwise the result is inconclusive.
+  ##
+  ## - When `b` is even:
+  ##
+  ##   See `Wikipedia <https://en.wikipedia.org/wiki/Kronecker_symbol>`_ for more information.
+  ##
+  runnableExamples:
+    let p = 257'gmp # a prime
+
+    assert kronecker(17*17 % p, p) == 1 # obviously a quadratic residue
+    assert kronecker(3, p) == -1 # 3 is not a quadratic residue modulo 257
+
+  when a is Integer:
+    when b is SomeUnsignedInt:
+      mpz_kronecker_ui(a, culong(b))
+    elif b is SomeSignedInt:
+      mpz_kronecker_si(a, clong(b))
+    else: # Integer
+      mpz_jacobi(a, b).int
+  else:
+    when b isnot Integer:
+      let b = newInteger(b)
+    when a is SomeUnsignedInt:
+      mpz_ui_kronecker(culong(a), b)
+    else: # SomeSignedInt
+      mpz_si_kronecker(clong(a), b)
+
+func legendre*(a, b: distinct AnyInteger): int =
+  ## Alias for `kronecker`_, as it is merely an extension of the Jacobi symbol which is an extension of the Legendre symbol.
+  kronecker(a, b)
+
+func jacobi*(a, b: distinct AnyInteger): int =
+  ## Alias for `kronecker`_, as it is merely an extension of the Jacobi symbol.
+  kronecker(a, b)
 
 func factorial*(n: AnyInteger): Integer =
   ## Returns `n!` (= `n * (n-1) * (n-2) * ... * 2 * 1`).

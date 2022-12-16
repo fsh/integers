@@ -1,5 +1,6 @@
 
-{.doctype: rst.}
+when NimVersion >= "1.7":
+  {.doctype: rst.}
 
 ## ========
 ## Integers
@@ -293,18 +294,25 @@ runnableExamples:
   let p = rng.randPrimeBits(100, fixed=true) # random =100-bit prime
   assert p.isPrime() and p.nbits() == 100
 
-## TODO: examples, documentation
 ##
 ## Math and Number Theory
 ## ======================
 ##
-## Documentation here.
+## See `integers/math <integers/math.html>`_.
 ##
-## TODO
+## - `isqrt`, `isqrtRem`: integer square roots.
+## - `iroot`, `irootRem`: integer k-roots.
 ##
-## `isqrt` `isqrtRem` `iroot` `irootRem`,
-## `comb`, `divPow`,
-## `factorial`, `primorial`, `kronecker`, `lucas`, ...
+## The ``...Rem`` versions return `(result, remainder)`.
+##
+## - `kronecker`, `jacobi`, `legendre`: number-theoretical calculations related to quadratic residues. See `Wikipedia <https://en.wikipedia.org/wiki/Kronecker_symbol>`_.
+##
+## - `toOdd`, `setOdd`: divide out factors of `2`
+## - `divExp`, `setDivExp`: divide out arbitrary factors
+##
+## - `factorial`
+##
+## TODO: `comb` `primorial` `lucas`, ...
 ##
 ## Primes and Factors
 ## ------------------
