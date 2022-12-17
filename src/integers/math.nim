@@ -235,7 +235,7 @@ func binomial*(n, k: distinct AnyInteger): Integer =
     assert binomial(1000, 60) == factorial(1000) div (factorial(60) * factorial(940))
 
   when k is Integer:
-    let k = n.getOrDo(uint64):
+    let k = k.getOrDo(uint64):
       raise newException(ValueError, "domain error for `k` in `binomial(_, k)`")
   elif k isnot SomeUnsignedInt:
     doAssert k >= 0, "domain error for binomial() function: requires non-negative arguments"
