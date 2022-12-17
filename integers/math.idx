@@ -22,3 +22,5 @@ setLucas	integers/math.html#setLucas,mpz_struct,AnyInteger	math: setLucas(res: v
 lucas	integers/math.html#lucas,AnyInteger	math: lucas(k: AnyInteger): Integer	
 setLucasPair	integers/math.html#setLucasPair,mpz_struct,mpz_struct,AnyInteger	math: setLucasPair(prev, this: var Integer; k: AnyInteger)	
 lucasPair	integers/math.html#lucasPair,AnyInteger	math: lucasPair(k: AnyInteger): (Integer, Integer)	
+setPrimorial	integers/math.html#setPrimorial,mpz_struct,AnyInteger	math: setPrimorial(res: var Integer; n: AnyInteger)	
+primorial	integers/math.html#primorial,AnyInteger	math: primorial(n: AnyInteger): Integer	

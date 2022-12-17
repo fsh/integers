@@ -115,6 +115,10 @@
   <li><a class="reference" href="#lucasPair%2CAnyInteger" title="lucasPair(k: AnyInteger): (Integer, Integer)">lucasPair(k: AnyInteger): (Integer, Integer)</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">primorial
+  <li><a class="reference" href="#primorial%2CAnyInteger" title="primorial(n: AnyInteger): Integer">primorial(n: AnyInteger): Integer</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">scaledTo
   <li><a class="reference" href="#scaledTo%2Cmpz_struct%2Ctypedesc" title="scaledTo(val: Integer; T: typedesc): T:type">scaledTo(val: Integer; T: typedesc): T:type</a></li>
 
@@ -141,6 +145,10 @@
 </ul>
 <ul class="simple nested-toc-section">setOdd
   <li><a class="reference" href="#setOdd%2Cmpz_struct" title="setOdd(n: var Integer): int">setOdd(n: var Integer): int</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">setPrimorial
+  <li><a class="reference" href="#setPrimorial%2Cmpz_struct%2CAnyInteger" title="setPrimorial(res: var Integer; n: AnyInteger)">setPrimorial(res: var Integer; n: AnyInteger)</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">toOdd
@@ -464,6 +472,21 @@
 </div>
 
 </div>
+<div id="primorial-procs-all">
+  <div id="primorial,AnyInteger">
+  <dt><pre><span class="Keyword">func</span> <a href="#primorial%2CAnyInteger"><span class="Identifier">primorial</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a></pre></dt>
+  <dd>
+    
+    Returns the primorial of <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt>. That is, the product of all primes less than or equal to <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt>. 
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">primorial</span><span class="Punctuation">(</span><span class="DecNumber">30</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">2</span> <span class="Operator">*</span> <span class="DecNumber">3</span> <span class="Operator">*</span> <span class="DecNumber">5</span> <span class="Operator">*</span> <span class="DecNumber">7</span> <span class="Operator">*</span> <span class="DecNumber">11</span> <span class="Operator">*</span> <span class="DecNumber">13</span> <span class="Operator">*</span> <span class="DecNumber">17</span> <span class="Operator">*</span> <span class="DecNumber">19</span> <span class="Operator">*</span> <span class="DecNumber">23</span> <span class="Operator">*</span> <span class="DecNumber">29</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L342" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L342" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
 <div id="scaledTo-procs-all">
   <div id="scaledTo,mpz_struct,typedesc">
   <dt><pre><span class="Keyword">func</span> <a href="#scaledTo%2Cmpz_struct%2Ctypedesc"><span class="Identifier">scaledTo</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T:type</span></pre></dt>
@@ -562,6 +585,19 @@
 </div>
 
 </div>
+<div id="setPrimorial-procs-all">
+  <div id="setPrimorial,mpz_struct,AnyInteger">
+  <dt><pre><span class="Keyword">func</span> <a href="#setPrimorial%2Cmpz_struct%2CAnyInteger"><span class="Identifier">setPrimorial</span></a><span class="Other">(</span><span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span> {.<span class="Identifier">inline</span>.}</pre></dt>
+  <dd>
+    
+    In-place version of <a class="reference internal nimdoc" title="proc primorial(n: AnyInteger): Integer" href="#primorial,AnyInteger">primorial</a>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L336" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L336" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
 <div id="toOdd-procs-all">
   <div id="toOdd,sinkmpz_struct">
   <dt><pre><span class="Keyword">proc</span> <a href="#toOdd%2Csinkmpz_struct"><span class="Identifier">toOdd</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">sink</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -594,7 +630,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-17 20:57:03 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-17 23:11:50 UTC</small>
       </div>
     </div>
   </div>

@@ -104,7 +104,7 @@
     
     <p>Inverse of <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> under modulus <tt class="docutils literal"><span class="pre"><span class="Identifier">m</span></span></tt>.</p>
 <p>If returns <tt class="docutils literal"><span class="pre"><span class="DecNumber">0'</span><span class="Identifier">gmp</span></span></tt> if the inverse does not exist.</p>
-<p>See <a class="reference internal nimdoc" title="proc setInvMod(a: var Integer; m: Integer)" href="#setInvMod,mpz_struct,mpz_struct">setInvMod</a> for in-place version. </p>
+<p>See <a class="reference external" href="#setInvMod,mpz_struct,mpz_struct">setInvMod</a> for in-place version. </p>
 
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Operator">=</span> <span class="DecNumber">1000'</span><span class="Identifier">gmp</span><span class="Operator">.</span><span class="Identifier">invMod</span><span class="Punctuation">(</span><span class="DecNumber">1999</span><span class="Punctuation">)</span>
@@ -124,7 +124,7 @@
     <p>Returns <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> to the power of <tt class="docutils literal"><span class="pre"><span class="Identifier">exp</span></span></tt> modulus <tt class="docutils literal"><span class="pre"><span class="Identifier">m</span></span></tt>, that is <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span><span class="Operator">^</span><span class="Identifier">exp</span> <span class="Punctuation">(</span><span class="Keyword">mod</span> <span class="Identifier">m</span><span class="Punctuation">)</span></span></tt>.</p>
 <p>Arguments can be of any integer type.</p>
 <p><tt class="docutils literal"><span class="pre"><span class="Identifier">exp</span></span></tt> can be negative if <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> is invertible (i.e. <tt class="docutils literal"><span class="pre"><span class="Identifier">gcd</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">m</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span></span></tt>).</p>
-<p>See <a class="reference internal nimdoc" title="proc setPowMod(result: var Integer; exp: AnyInteger; m: Integer)" href="#setPowMod,mpz_struct,AnyInteger,mpz_struct">setPowMod</a> for in-place version. </p>
+<p>See <a class="reference external" href="#setPowMod,mpz_struct,AnyInteger,mpz_struct">setPowMod</a> for in-place version. </p>
 
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">powMod</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">10_000_000_000_000_000_000'</span><span class="Identifier">gmp</span><span class="Punctuation">,</span> <span class="DecNumber">99</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
@@ -144,7 +144,7 @@
     
     <p>Sets <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> to its inverse under modulus <tt class="docutils literal"><span class="pre"><span class="Identifier">m</span></span></tt>.</p>
 <p>If returns <tt class="docutils literal"><span class="pre"><span class="DecNumber">0'</span><span class="Identifier">gmp</span></span></tt> if the inverse does not exist.</p>
-<p>See <a class="reference internal nimdoc" title="proc invMod(a, m: distinct AnyInteger): Integer" href="#invMod,,">invMod</a> for functional version. </p>
+<p>See <a class="reference external" href="#invMod,,">invMod</a> for functional version. </p>
 
     <a href="https://github.com/fsh/integers/tree/main/src/integers/modular.nim#L27" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
 <a href="https://github.com/fsh/integers/edit/main/src/integers/modular.nim#L27" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
@@ -161,7 +161,7 @@
     <p>Raises <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> to the power of <tt class="docutils literal"><span class="pre"><span class="Identifier">exp</span></span></tt> modulus <tt class="docutils literal"><span class="pre"><span class="Identifier">m</span></span></tt>, that is <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span> <span class="Operator">=</span> <span class="Identifier">a</span><span class="Operator">^</span><span class="Identifier">exp</span> <span class="Punctuation">(</span><span class="Keyword">mod</span> <span class="Identifier">m</span><span class="Punctuation">)</span></span></tt>.</p>
 <p>Arguments <tt class="docutils literal"><span class="pre"><span class="Identifier">exp</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">m</span></span></tt> can be of any integer type.</p>
 <p><tt class="docutils literal"><span class="pre"><span class="Identifier">exp</span></span></tt> can be negative if <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> is invertible (i.e. <tt class="docutils literal"><span class="pre"><span class="Identifier">gcd</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">m</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span></span></tt>).</p>
-<p>See <a class="reference internal nimdoc" title="proc powMod(a, exp, m: distinct AnyInteger): Integer" href="#powMod,,,">powMod</a> for functional version. </p>
+<p>See <a class="reference external" href="#powMod,,,">powMod</a> for functional version. </p>
 
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">powMod</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">10_000_000_000_000_000_000'</span><span class="Identifier">gmp</span><span class="Punctuation">,</span> <span class="DecNumber">99</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
@@ -189,7 +189,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-17 20:57:00 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-17 23:11:48 UTC</small>
       </div>
     </div>
   </div>
