@@ -71,6 +71,14 @@
 <li><a class="reference" href="#factorial%2CAnyInteger%2CSomeInteger" title="factorial(n: AnyInteger; m: SomeInteger): Integer">factorial(n: AnyInteger; m: SomeInteger): Integer</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">fibonacci
+  <li><a class="reference" href="#fibonacci%2CAnyInteger" title="fibonacci(k: AnyInteger): Integer">fibonacci(k: AnyInteger): Integer</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">fibonacciPair
+  <li><a class="reference" href="#fibonacciPair%2CAnyInteger" title="fibonacciPair(k: AnyInteger): (Integer, Integer)">fibonacciPair(k: AnyInteger): (Integer, Integer)</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">iroot
   <li><a class="reference" href="#iroot%2Cmpz_struct%2CSomeUnsignedInt" title="iroot(n: Integer; k: SomeUnsignedInt): Integer">iroot(n: Integer; k: SomeUnsignedInt): Integer</a></li>
 
@@ -99,12 +107,36 @@
   <li><a class="reference" href="#legendre%2C%2C" title="legendre(a, b: distinct AnyInteger): int">legendre(a, b: distinct AnyInteger): int</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">lucas
+  <li><a class="reference" href="#lucas%2CAnyInteger" title="lucas(k: AnyInteger): Integer">lucas(k: AnyInteger): Integer</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">lucasPair
+  <li><a class="reference" href="#lucasPair%2CAnyInteger" title="lucasPair(k: AnyInteger): (Integer, Integer)">lucasPair(k: AnyInteger): (Integer, Integer)</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">scaledTo
   <li><a class="reference" href="#scaledTo%2Cmpz_struct%2Ctypedesc" title="scaledTo(val: Integer; T: typedesc): T:type">scaledTo(val: Integer; T: typedesc): T:type</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">setDivExp
   <li><a class="reference" href="#setDivExp%2Cmpz_struct%2C" title="setDivExp(n: var Integer; s: AnyInteger | static[int]): int">setDivExp(n: var Integer; s: AnyInteger | static[int]): int</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">setFibonacci
+  <li><a class="reference" href="#setFibonacci%2Cmpz_struct%2CAnyInteger" title="setFibonacci(res: var Integer; k: AnyInteger)">setFibonacci(res: var Integer; k: AnyInteger)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">setFibonacciPair
+  <li><a class="reference" href="#setFibonacciPair%2Cmpz_struct%2Cmpz_struct%2CAnyInteger" title="setFibonacciPair(prev, this: var Integer; k: AnyInteger)">setFibonacciPair(prev, this: var Integer; k: AnyInteger)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">setLucas
+  <li><a class="reference" href="#setLucas%2Cmpz_struct%2CAnyInteger" title="setLucas(res: var Integer; k: AnyInteger)">setLucas(res: var Integer; k: AnyInteger)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">setLucasPair
+  <li><a class="reference" href="#setLucasPair%2Cmpz_struct%2Cmpz_struct%2CAnyInteger" title="setLucasPair(prev, this: var Integer; k: AnyInteger)">setLucasPair(prev, this: var Integer; k: AnyInteger)</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">setOdd
@@ -154,8 +186,8 @@
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">binomial</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">45</span>
 <span class="Identifier">assert</span> <span class="Identifier">binomial</span><span class="Punctuation">(</span><span class="DecNumber">1000</span><span class="Punctuation">,</span> <span class="DecNumber">60</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">1000</span><span class="Punctuation">)</span> <span class="Keyword">div</span> <span class="Punctuation">(</span><span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">60</span><span class="Punctuation">)</span> <span class="Operator">*</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">940</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L227" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L227" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L232" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L232" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -207,8 +239,8 @@
     Returns <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span><span class="Operator">!</span></span></tt> (= <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span> <span class="Operator">*</span> <span class="Punctuation">(</span><span class="Identifier">n</span><span class="Operator">-</span><span class="DecNumber">1</span><span class="Punctuation">)</span> <span class="Operator">*</span> <span class="Punctuation">(</span><span class="Identifier">n</span><span class="Operator">-</span><span class="DecNumber">2</span><span class="Punctuation">)</span> <span class="Operator">*</span> <span class="Operator">...</span> <span class="Operator">*</span> <span class="DecNumber">2</span> <span class="Operator">*</span> <span class="DecNumber">1</span></span></tt>). 
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">6</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">6</span> <span class="Operator">*</span> <span class="DecNumber">5</span> <span class="Operator">*</span> <span class="DecNumber">4</span> <span class="Operator">*</span> <span class="DecNumber">3</span> <span class="Operator">*</span> <span class="DecNumber">2</span> <span class="Operator">*</span> <span class="DecNumber">1</span></pre>
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L194" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L194" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L209" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L209" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -220,8 +252,50 @@
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">10</span> <span class="Operator">*</span> <span class="DecNumber">7</span> <span class="Operator">*</span> <span class="DecNumber">4</span> <span class="Operator">*</span> <span class="DecNumber">1</span>
 <span class="Identifier">assert</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">20</span><span class="Punctuation">,</span> <span class="DecNumber">5</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">20</span> <span class="Operator">*</span> <span class="DecNumber">15</span> <span class="Operator">*</span> <span class="DecNumber">10</span> <span class="Operator">*</span> <span class="DecNumber">5</span></pre>
-    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L209" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L209" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L218" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L218" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="fibonacci-procs-all">
+  <div id="fibonacci,AnyInteger">
+  <dt><pre><span class="Keyword">func</span> <a href="#fibonacci%2CAnyInteger"><span class="Identifier">fibonacci</span></a><span class="Other">(</span><span class="Identifier">k</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a></pre></dt>
+  <dd>
+    
+    <p>Returns the <tt class="docutils literal"><span class="pre"><span class="Identifier">k</span></span></tt>th Fibonacci number.</p>
+<p>See <a class="reference internal nimdoc" title="proc fibonacciPair(k: AnyInteger): (Integer, Integer)" href="#fibonacciPair,AnyInteger">fibonacciPair</a> for getting two consecutive Fibonacci numbers if you want to iterate to generate more. It is faster than calling <a class="reference internal nimdoc" title="proc fibonacci(k: AnyInteger): Integer" href="#fibonacci,AnyInteger">fibonacci</a> twice.</p>
+<p>Fibonacci numbers (and the closely related but less well known Lucas numbers) have a wide variety of applications, see <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_number">Wikipedia</a> for more. </p>
+
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">fibonacci</span><span class="Punctuation">(</span><span class="DecNumber">210</span><span class="Punctuation">)</span> <span class="Operator">+</span> <span class="Identifier">fibonacci</span><span class="Punctuation">(</span><span class="DecNumber">212</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Identifier">lucas</span><span class="Punctuation">(</span><span class="DecNumber">211</span><span class="Punctuation">)</span>
+<span class="Identifier">assert</span> <span class="Identifier">fibonacci</span><span class="Punctuation">(</span><span class="DecNumber">101</span><span class="Punctuation">)</span> <span class="Operator">+</span> <span class="Identifier">fibonacci</span><span class="Punctuation">(</span><span class="DecNumber">102</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Identifier">fibonacci</span><span class="Punctuation">(</span><span class="DecNumber">103</span><span class="Punctuation">)</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L257" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L257" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="fibonacciPair-procs-all">
+  <div id="fibonacciPair,AnyInteger">
+  <dt><pre><span class="Keyword">func</span> <a href="#fibonacciPair%2CAnyInteger"><span class="Identifier">fibonacciPair</span></a><span class="Other">(</span><span class="Identifier">k</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span></pre></dt>
+  <dd>
+    
+    <p>Returns the <tt class="docutils literal"><span class="pre"><span class="Punctuation">(</span><span class="Identifier">k</span><span class="Operator">-</span><span class="DecNumber">1</span><span class="Punctuation">)</span></span></tt>th and <tt class="docutils literal"><span class="pre"><span class="Identifier">k</span></span></tt>th Fibonacci numbers as a tuple, in that order.</p>
+<p>This is faster than calling <a class="reference internal nimdoc" title="proc fibonacci(k: AnyInteger): Integer" href="#fibonacci,AnyInteger">fibonacci</a> twice.</p>
+<p>Fibonacci numbers (and the closely related but less well known Lucas numbers) have a wide variety of applications, see <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_number">Wikipedia</a> for more. </p>
+
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">var</span> <span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Operator">=</span> <span class="Identifier">fibonacciPair</span><span class="Punctuation">(</span><span class="DecNumber">500</span><span class="Punctuation">)</span>
+
+<span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">500</span> <span class="Operator">..</span> <span class="DecNumber">510</span><span class="Punctuation">:</span>
+  <span class="Identifier">assert</span> <span class="Identifier">b</span> <span class="Operator">==</span> <span class="Identifier">fibonacci</span><span class="Punctuation">(</span><span class="Identifier">i</span><span class="Punctuation">)</span>
+  <span class="Identifier">swap</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">)</span>
+  <span class="Identifier">b</span> <span class="Operator">+=</span> <span class="Identifier">a</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L277" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L277" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -348,6 +422,48 @@
 </div>
 
 </div>
+<div id="lucas-procs-all">
+  <div id="lucas,AnyInteger">
+  <dt><pre><span class="Keyword">func</span> <a href="#lucas%2CAnyInteger"><span class="Identifier">lucas</span></a><span class="Other">(</span><span class="Identifier">k</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a></pre></dt>
+  <dd>
+    
+    <p>Returns the <tt class="docutils literal"><span class="pre"><span class="Identifier">k</span></span></tt>th Lucas number.</p>
+<p>See <a class="reference internal nimdoc" title="proc lucasPair(k: AnyInteger): (Integer, Integer)" href="#lucasPair,AnyInteger">lucasPair</a> for getting two consecutive Lucas numbers if you want to iterate to generate more. It is faster than calling <a class="reference internal nimdoc" title="proc lucas(k: AnyInteger): Integer" href="#lucas,AnyInteger">lucas</a> twice.</p>
+<p>Lucas numbers are closely related to the Fibonacci numbers, see <a class="reference external" href="https://en.wikipedia.org/wiki/Lucas_number">Wikipedia</a> for more. </p>
+
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">lucas</span><span class="Punctuation">(</span><span class="DecNumber">1000</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Identifier">fibonacci</span><span class="Punctuation">(</span><span class="DecNumber">999</span><span class="Punctuation">)</span> <span class="Operator">+</span> <span class="Identifier">fibonacci</span><span class="Punctuation">(</span><span class="DecNumber">1001</span><span class="Punctuation">)</span>
+<span class="Identifier">assert</span> <span class="Identifier">lucas</span><span class="Punctuation">(</span><span class="DecNumber">101</span><span class="Punctuation">)</span> <span class="Operator">+</span> <span class="Identifier">lucas</span><span class="Punctuation">(</span><span class="DecNumber">102</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Identifier">lucas</span><span class="Punctuation">(</span><span class="DecNumber">103</span><span class="Punctuation">)</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L300" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L300" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="lucasPair-procs-all">
+  <div id="lucasPair,AnyInteger">
+  <dt><pre><span class="Keyword">func</span> <a href="#lucasPair%2CAnyInteger"><span class="Identifier">lucasPair</span></a><span class="Other">(</span><span class="Identifier">k</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">)</span></pre></dt>
+  <dd>
+    
+    <p>Returns the <tt class="docutils literal"><span class="pre"><span class="Punctuation">(</span><span class="Identifier">k</span><span class="Operator">-</span><span class="DecNumber">1</span><span class="Punctuation">)</span></span></tt>th and <tt class="docutils literal"><span class="pre"><span class="Identifier">k</span></span></tt>th Lucas numbers as a tuple, in that order.</p>
+<p>This is faster than calling <a class="reference internal nimdoc" title="proc lucas(k: AnyInteger): Integer" href="#lucas,AnyInteger">lucas</a> twice.</p>
+<p>Lucas numbers are closely related to the Fibonacci numbers, see <a class="reference external" href="https://en.wikipedia.org/wiki/Lucas_number">Wikipedia</a> for more. </p>
+
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">var</span> <span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Operator">=</span> <span class="Identifier">lucasPair</span><span class="Punctuation">(</span><span class="DecNumber">500</span><span class="Punctuation">)</span>
+
+<span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">500</span> <span class="Operator">..</span> <span class="DecNumber">510</span><span class="Punctuation">:</span>
+  <span class="Identifier">assert</span> <span class="Identifier">b</span> <span class="Operator">==</span> <span class="Identifier">lucas</span><span class="Punctuation">(</span><span class="Identifier">i</span><span class="Punctuation">)</span>
+  <span class="Identifier">swap</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">)</span>
+  <span class="Identifier">b</span> <span class="Operator">+=</span> <span class="Identifier">a</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L319" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L319" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
 <div id="scaledTo-procs-all">
   <div id="scaledTo,mpz_struct,typedesc">
   <dt><pre><span class="Keyword">func</span> <a href="#scaledTo%2Cmpz_struct%2Ctypedesc"><span class="Identifier">scaledTo</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T:type</span></pre></dt>
@@ -376,6 +492,58 @@
     In-place version of <a class="reference internal nimdoc" title="proc divExp(n: sink Integer; s: AnyInteger | static[int]): (Integer, int)" href="#divExp,sinkmpz_struct,">divExp</a>.
     <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L81" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
 <a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L81" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="setFibonacci-procs-all">
+  <div id="setFibonacci,mpz_struct,AnyInteger">
+  <dt><pre><span class="Keyword">func</span> <a href="#setFibonacci%2Cmpz_struct%2CAnyInteger"><span class="Identifier">setFibonacci</span></a><span class="Other">(</span><span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">k</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span> {.<span class="Identifier">inline</span>.}</pre></dt>
+  <dd>
+    
+    In-place version of <a class="reference internal nimdoc" title="proc fibonacci(k: AnyInteger): Integer" href="#fibonacci,AnyInteger">fibonacci</a>.
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L252" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L252" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="setFibonacciPair-procs-all">
+  <div id="setFibonacciPair,mpz_struct,mpz_struct,AnyInteger">
+  <dt><pre><span class="Keyword">func</span> <a href="#setFibonacciPair%2Cmpz_struct%2Cmpz_struct%2CAnyInteger"><span class="Identifier">setFibonacciPair</span></a><span class="Other">(</span><span class="Identifier">prev</span><span class="Other">,</span> <span class="Identifier">this</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">k</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span> {.<span class="Identifier">inline</span>.}</pre></dt>
+  <dd>
+    
+    In-place version of <a class="reference internal nimdoc" title="proc fibonacciPair(k: AnyInteger): (Integer, Integer)" href="#fibonacciPair,AnyInteger">fibonacciPair</a>.
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L272" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L272" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="setLucas-procs-all">
+  <div id="setLucas,mpz_struct,AnyInteger">
+  <dt><pre><span class="Keyword">func</span> <a href="#setLucas%2Cmpz_struct%2CAnyInteger"><span class="Identifier">setLucas</span></a><span class="Other">(</span><span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">k</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span> {.<span class="Identifier">inline</span>.}</pre></dt>
+  <dd>
+    
+    In-place version of <a class="reference internal nimdoc" title="proc lucas(k: AnyInteger): Integer" href="#lucas,AnyInteger">lucas</a>.
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L295" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L295" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="setLucasPair-procs-all">
+  <div id="setLucasPair,mpz_struct,mpz_struct,AnyInteger">
+  <dt><pre><span class="Keyword">func</span> <a href="#setLucasPair%2Cmpz_struct%2Cmpz_struct%2CAnyInteger"><span class="Identifier">setLucasPair</span></a><span class="Other">(</span><span class="Identifier">prev</span><span class="Other">,</span> <span class="Identifier">this</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">k</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span> {.<span class="Identifier">inline</span>.}</pre></dt>
+  <dd>
+    
+    In-place version of <a class="reference internal nimdoc" title="proc lucasPair(k: AnyInteger): (Integer, Integer)" href="#lucasPair,AnyInteger">lucasPair</a>.
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L314" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L314" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -426,7 +594,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-17 17:03:58 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-17 20:57:03 UTC</small>
       </div>
     </div>
   </div>

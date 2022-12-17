@@ -14,3 +14,11 @@ jacobi	integers/math.html#jacobi,,	math: jacobi(a, b: distinct AnyInteger): int
 factorial	integers/math.html#factorial,AnyInteger	math: factorial(n: AnyInteger): Integer	
 factorial	integers/math.html#factorial,AnyInteger,SomeInteger	math: factorial(n: AnyInteger; m: SomeInteger): Integer	
 binomial	integers/math.html#binomial,,	math: binomial(n, k: distinct AnyInteger): Integer	
+setFibonacci	integers/math.html#setFibonacci,mpz_struct,AnyInteger	math: setFibonacci(res: var Integer; k: AnyInteger)	
+fibonacci	integers/math.html#fibonacci,AnyInteger	math: fibonacci(k: AnyInteger): Integer	
+setFibonacciPair	integers/math.html#setFibonacciPair,mpz_struct,mpz_struct,AnyInteger	math: setFibonacciPair(prev, this: var Integer; k: AnyInteger)	
+fibonacciPair	integers/math.html#fibonacciPair,AnyInteger	math: fibonacciPair(k: AnyInteger): (Integer, Integer)	
+setLucas	integers/math.html#setLucas,mpz_struct,AnyInteger	math: setLucas(res: var Integer; k: AnyInteger)	
+lucas	integers/math.html#lucas,AnyInteger	math: lucas(k: AnyInteger): Integer	
+setLucasPair	integers/math.html#setLucasPair,mpz_struct,mpz_struct,AnyInteger	math: setLucasPair(prev, this: var Integer; k: AnyInteger)	
+lucasPair	integers/math.html#lucasPair,AnyInteger	math: lucasPair(k: AnyInteger): (Integer, Integer)	
