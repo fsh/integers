@@ -45,9 +45,11 @@ proc formatInteger*(n: sink Integer, fmt: string): string =
                else: ""
   let p_alt = if spec.alternateForm and spec.typ != '\0': '0' & spec.typ
               else: ""
-  let p_pad = repeat('0', (spec.minimumWidth - s_num.len - p_sign.len - p_alt.len).max(0))
+  let p_pad = if spec.padWithZero: repeat('0', (spec.minimumWidth - s_num.len - p_sign.len - p_alt.len).max(0))
+              else: ""
+  let align = if spec.align == '\0': '>' else: spec.align
 
-  join([p_sign, p_alt, p_pad, s_num]).alignString(spec.minimumWidth, spec.align, spec.fill)
+  join([p_sign, p_alt, p_pad, s_num]).alignString(spec.minimumWidth, align, spec.fill)
 
 proc formatValue*(output: var string, n: sink Integer, fmt: string) =
   if fmt.len == 0:
