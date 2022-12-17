@@ -96,7 +96,7 @@ subMul	integers/core.html#subMul,mpz_struct,,	core: subMul(dest`gensym42: var In
 `^`	integers/core.html#^,,	core: `^`(val, exp: distinct AnyInteger): Integer	
 getUnsafe	integers/core.html#getUnsafe,mpz_struct,typedesc	core: getUnsafe(val: Integer; T: typedesc): T:type	
 getOr	integers/core.html#getOr,mpz_struct,T	core: getOr[T: AnyInteger](val: Integer; defval: T): T	
-getOrDo	integers/core.html#getOrDo.t,mpz_struct,typedesc,untyped	core: getOrDo(val: Integer; T: typedesc; excbody: untyped): T:type	
+getOrDo	integers/core.html#getOrDo.t,mpz_struct,typedesc,untyped	core: getOrDo(val: Integer; T: typedesc; excbody: untyped): untyped	
 setDivMod	integers/core.html#setDivMod,mpz_struct,mpz_struct,mpz_struct,mpz_struct	core: setDivMod(dest_q, dest_r: var Integer; src_q, src_r: Integer)	
 divMod	integers/core.html#divMod,sinkmpz_struct,sinkmpz_struct	core: divMod(a: sink Integer; b: sink Integer): (Integer, Integer)	
 Core Integer Functionality	integers/core.html#core-integer-functionality	 Core Integer Functionality	

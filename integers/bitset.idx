@@ -7,12 +7,12 @@
 `and`	integers/bitset.html#and,,	bitset: `and`(x`gensym15, y`gensym15: distinct AnyInteger): Integer	
 `or`	integers/bitset.html#or,,	bitset: `or`(x`gensym18, y`gensym18: distinct AnyInteger): Integer	
 `xor`	integers/bitset.html#xor,,	bitset: `xor`(x`gensym21, y`gensym21: distinct AnyInteger): Integer	
-`shr`	integers/bitset.html#shr,mpz_struct,SomeUnsignedInt	bitset: `shr`(val`gensym24: Integer; n`gensym24: SomeUnsignedInt): Integer	
-`&amp;&gt;&gt;`	integers/bitset.html#&>>,mpz_struct,SomeUnsignedInt	bitset: `&amp;&gt;&gt;`(val`gensym24: Integer; n`gensym24: SomeUnsignedInt): Integer	
-`&amp;&gt;&gt;=`	integers/bitset.html#&>>=,mpz_struct,SomeUnsignedInt	bitset: `&amp;&gt;&gt;=`(val`gensym24: var Integer; n`gensym24: SomeUnsignedInt)	
-`shl`	integers/bitset.html#shl,mpz_struct,SomeUnsignedInt	bitset: `shl`(val`gensym25: Integer; n`gensym25: SomeUnsignedInt): Integer	
-`&amp;&lt;&lt;`	integers/bitset.html#&<<,mpz_struct,SomeUnsignedInt	bitset: `&amp;&lt;&lt;`(val`gensym25: Integer; n`gensym25: SomeUnsignedInt): Integer	
-`&amp;&lt;&lt;=`	integers/bitset.html#&<<=,mpz_struct,SomeUnsignedInt	bitset: `&amp;&lt;&lt;=`(val`gensym25: var Integer; n`gensym25: SomeUnsignedInt)	
+`shr`	integers/bitset.html#shr,mpz_struct,AnyInteger	bitset: `shr`(val`gensym24: Integer; n`gensym24: AnyInteger): Integer	
+`&amp;&gt;&gt;`	integers/bitset.html#&>>,,	bitset: `&amp;&gt;&gt;`(val`gensym24, n`gensym24: distinct AnyInteger): Integer	
+`&amp;&gt;&gt;=`	integers/bitset.html#&>>=,mpz_struct,AnyInteger	bitset: `&amp;&gt;&gt;=`(val`gensym24: var Integer; n`gensym24: AnyInteger)	
+`shl`	integers/bitset.html#shl,mpz_struct,AnyInteger	bitset: `shl`(val`gensym26: Integer; n`gensym26: AnyInteger): Integer	
+`&amp;&lt;&lt;`	integers/bitset.html#&<<,,	bitset: `&amp;&lt;&lt;`(val`gensym26, n`gensym26: distinct AnyInteger): Integer	
+`&amp;&lt;&lt;=`	integers/bitset.html#&<<=,mpz_struct,AnyInteger	bitset: `&amp;&lt;&lt;=`(val`gensym26: var Integer; n`gensym26: AnyInteger)	
 nbits	integers/bitset.html#nbits,mpz_struct	bitset: nbits(val: Integer): int	
 size	integers/bitset.html#size,mpz_struct	bitset: size(val: Integer): int	
 count	integers/bitset.html#count,mpz_struct	bitset: count(val: Integer): int	
