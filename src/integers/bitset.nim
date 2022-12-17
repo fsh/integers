@@ -48,6 +48,8 @@ template op_bitshift(op1, op2, immop, opp, op_gmp: untyped): untyped =
     else:
       op_gmp(result, val, mp_bitcnt_t(n))
   func op2*(val, n: distinct AnyInteger): Integer {.inline.} =
+    when val isnot Integer:
+      let val = newInteger(val)
     op1(val, n)
   func immop*(val: var Integer, n: AnyInteger) {.inline.} =
     when n is Integer:
