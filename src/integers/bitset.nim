@@ -35,16 +35,34 @@ comm_op_promote(`and`, mpz_and)
 comm_op_promote(`or`, mpz_ior)
 comm_op_promote(`xor`, mpz_xor)
 
-template op_bitshift(op1, op2, immop, op_gmp: untyped): untyped =
-  func op1*(val: Integer, n: SomeUnsignedInt): Integer {.inline.} =
-    op_gmp(result, val, mp_bitcnt_t(n))
-  func op2*(val: Integer, n: SomeUnsignedInt): Integer {.inline.} =
-    op_gmp(result, val, mp_bitcnt_t(n))
-  func immop*(val: var Integer, n: SomeUnsignedInt) {.inline.} =
-    op_gmp(val, val, mp_bitcnt_t(n))
+template op_bitshift(op1, op2, immop, opp, op_gmp: untyped): untyped =
+  func op1*(val: Integer, n: AnyInteger): Integer {.inline.} =
+    when n is Integer:
+      let n = n.getOrDo(int):
+        raise newException(ValueError, "bitshift argument is too big")
+    when n is SomeSignedInt:
+      if n < 0:
+        return opp(val, n.unsignedAbs())
+      else:
+        op_gmp(result, val, mp_bitcnt_t(n.toUnsigned()))
+    else:
+      op_gmp(result, val, mp_bitcnt_t(n))
+  func op2*(val, n: distinct AnyInteger): Integer {.inline.} =
+    op1(val, n)
+  func immop*(val: var Integer, n: AnyInteger) {.inline.} =
+    when n is Integer:
+      let n = n.getOrDo(int):
+        raise newException(ValueError, "bitshift argument is too big")
+    when n is SomeSignedInt:
+      if n < 0:
+        immop(val, n)
+      else:
+        op_gmp(val, val, mp_bitcnt_t(n.toUnsigned()))
+    else:
+      op_gmp(val, val, mp_bitcnt_t(n))
 
-op_bitshift(`shr`, `&>>`, `&>>=`, mpz_tdiv_q_2exp)
-op_bitshift(`shl`, `&<<`, `&<<=`, mpz_mul_2exp)
+op_bitshift(`shr`, `&>>`, `&>>=`, `shl`, mpz_tdiv_q_2exp)
+op_bitshift(`shl`, `&<<`, `&<<=`, `shr`, mpz_mul_2exp)
 
 
 
