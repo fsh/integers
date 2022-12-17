@@ -13,3 +13,4 @@ legendre	integers/math.html#legendre,,	math: legendre(a, b: distinct AnyInteger)
 jacobi	integers/math.html#jacobi,,	math: jacobi(a, b: distinct AnyInteger): int	
 factorial	integers/math.html#factorial,AnyInteger	math: factorial(n: AnyInteger): Integer	
 factorial	integers/math.html#factorial,AnyInteger,SomeInteger	math: factorial(n: AnyInteger; m: SomeInteger): Integer	
+binomial	integers/math.html#binomial,,	math: binomial(n, k: distinct AnyInteger): Integer	

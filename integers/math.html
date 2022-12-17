@@ -54,7 +54,11 @@
   <details open>
     <summary><a class="reference reference-toplevel" href="#12" id="62">Procs</a></summary>
     <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">divExp
+      <ul class="simple nested-toc-section">binomial
+  <li><a class="reference" href="#binomial%2C%2C" title="binomial(n, k: distinct AnyInteger): Integer">binomial(n, k: distinct AnyInteger): Integer</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">divExp
   <li><a class="reference" href="#divExp%2Csinkmpz_struct%2C" title="divExp(n: sink Integer; s: AnyInteger | static[int]): (Integer, int)">divExp(n: sink Integer; s: AnyInteger | static[int]): (Integer, int)</a></li>
 
 </ul>
@@ -138,7 +142,26 @@
 <div class="section" id="12">
   <h1><a class="toc-backref" href="#12">Procs</a></h1>
   <dl class="item">
-    <div id="divExp-procs-all">
+    <div id="binomial-procs-all">
+  <div id="binomial,,">
+  <dt><pre><span class="Keyword">func</span> <a href="#binomial%2C%2C"><span class="Identifier">binomial</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">,</span> <span class="Identifier">k</span><span class="Other">:</span> <span class="Keyword">distinct</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a><span class="Other">)</span><span class="Other">:</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a></pre></dt>
+  <dd>
+    
+    <p>Returns the binomial coefficient <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt> over <tt class="docutils literal"><span class="pre"><span class="Identifier">k</span></span></tt>.</p>
+<p>Equivalent to <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span><span class="Operator">!</span> <span class="Operator">/</span> <span class="Punctuation">(</span><span class="Identifier">k</span><span class="Operator">!</span> <span class="Operator">*</span> <span class="Punctuation">(</span><span class="Identifier">n</span><span class="Operator">-</span><span class="Identifier">k</span><span class="Punctuation">)</span><span class="Operator">!</span><span class="Punctuation">)</span></span></tt>.</p>
+<p>Also called <tt class="docutils literal"><span class="pre"><span class="Identifier">comb</span></span></tt> or <tt class="docutils literal"><span class="pre"><span class="Identifier">combinations</span></span></tt> in some languages.</p>
+
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">binomial</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">45</span>
+<span class="Identifier">assert</span> <span class="Identifier">binomial</span><span class="Punctuation">(</span><span class="DecNumber">1000</span><span class="Punctuation">,</span> <span class="DecNumber">60</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">1000</span><span class="Punctuation">)</span> <span class="Keyword">div</span> <span class="Punctuation">(</span><span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">60</span><span class="Punctuation">)</span> <span class="Operator">*</span> <span class="Identifier">factorial</span><span class="Punctuation">(</span><span class="DecNumber">940</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
+    <a href="https://github.com/fsh/integers/tree/main/src/integers/math.nim#L227" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/fsh/integers/edit/main/src/integers/math.nim#L227" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="divExp-procs-all">
   <div id="divExp,sinkmpz_struct,">
   <dt><pre><span class="Keyword">func</span> <a href="#divExp%2Csinkmpz_struct%2C"><span class="Identifier">divExp</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">sink</span> <a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <a href="core.html#AnyInteger"><span class="Identifier">AnyInteger</span></a> <span class="Operator">|</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><a href="core.html#Integer"><span class="Identifier">Integer</span></a><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">)</span></pre></dt>
   <dd>
@@ -403,7 +426,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-17 08:13:45 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-17 17:03:58 UTC</small>
       </div>
     </div>
   </div>
