@@ -5,37 +5,40 @@ import std/[macros, strformat]
 
 import pkg/integers
 
+# Skip some tests below otherwise it takes too long and
+# Nim compiler seems to want to allocate many gigabytes of memory.
+# 
 template testSigned(op, a, b, ans: untyped): untyped =
-  when abs(a) < 128:
-    check op(int8(a), newInteger(b)) == ans
-  when a in int16.low .. int16.high:
-    check op(int16(a), newInteger(b)) == ans
+  # when abs(a) < 128:
+  #   check op(int8(a), newInteger(b)) == ans
+  # when a in int16.low .. int16.high:
+  #   check op(int16(a), newInteger(b)) == ans
   check op(int32(a), newInteger(b)) == ans
   check op(int64(a), newInteger(b)) == ans
   check op(int(a), newInteger(b)) == ans
   when b in int8.low .. int8.high:
     check op(newInteger(a), int8(b)) == ans
-  when b in int16.low .. int16.high:
-    check op(newInteger(a), int16(b)) == ans
-  check op(newInteger(a), int32(b)) == ans
-  check op(newInteger(a), int64(b)) == ans
+  # when b in int16.low .. int16.high:
+  #   check op(newInteger(a), int16(b)) == ans
+  # check op(newInteger(a), int32(b)) == ans
+  # check op(newInteger(a), int64(b)) == ans
   check op(newInteger(a), int(b)) == ans
   check op(newInteger(a), newInteger(b)) == ans
 
 template testUnsigned(op, a, b, ans: untyped): untyped =
-  when a < 256:
-    check op(uint8(a), newInteger(b)) == ans
-  when a <= uint16.high:
-    check op(uint16(a), newInteger(b)) == ans
+  # when a < 256:
+  #   check op(uint8(a), newInteger(b)) == ans
+  # when a <= uint16.high:
+  #   check op(uint16(a), newInteger(b)) == ans
   check op(uint32(a), newInteger(b)) == ans
   check op(uint64(a), newInteger(b)) == ans
   check op(uint(a), newInteger(b)) == ans
   when int(b) <= int(uint8.high):
     check op(newInteger(a), uint8(b)) == ans
-  when b <= uint16.high:
-    check op(newInteger(a), uint16(b)) == ans
-  check op(newInteger(a), uint32(b)) == ans
-  check op(newInteger(a), uint64(b)) == ans
+  # when b <= uint16.high:
+  #   check op(newInteger(a), uint16(b)) == ans
+  # check op(newInteger(a), uint32(b)) == ans
+  # check op(newInteger(a), uint64(b)) == ans
   check op(newInteger(a), uint(b)) == ans
 
 template testAllTypes(op, a, b, ans: untyped): untyped =
