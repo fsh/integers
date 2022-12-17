@@ -1,4 +1,4 @@
-import std/bitops
+import std/[bitops, strformat]
 
 import ./gmp
 import ./core
@@ -191,19 +191,28 @@ func jacobi*(a, b: distinct AnyInteger): int =
   ## Alias for `kronecker`_, as it is merely an extension of the Jacobi symbol.
   kronecker(a, b)
 
+
+template requireUiArg(k: untyped): untyped =
+  block:
+    let kk {.inject.} = k # work-around for &"format"
+    when kk is Integer:
+      k.getOrDo(uint64):
+        raise newException(ValueError, &"domain error: {kk} does not fit in an uint64")
+    elif kk isnot SomeUnsignedInt:
+      if kk < 0:
+        raise newException(ValueError, &"domain error: {kk} is negative")
+      else:
+        kk.toUnsigned()
+
+
+
 func factorial*(n: AnyInteger): Integer =
   ## Returns `n!` (= `n * (n-1) * (n-2) * ... * 2 * 1`).
   ##
   runnableExamples:
     assert factorial(6) == 6 * 5 * 4 * 3 * 2 * 1
 
-  when n is Integer:
-    let n = n.getOrDo(uint64):
-      raise newException(ValueError, "domain error for factorial() function")
-  elif n isnot SomeUnsignedInt:
-    doAssert n >= 0, "domain error for factorial() function: requires non-negative argument"
-    let n = n.toUnsigned()
-
+  let n = requireUiArg(n)
   mpz_fac_ui(result, n.culong())
 
 func factorial*(n: AnyInteger, m: SomeInteger): Integer =
@@ -212,12 +221,8 @@ func factorial*(n: AnyInteger, m: SomeInteger): Integer =
   runnableExamples:
     assert factorial(10, 3) == 10 * 7 * 4 * 1
     assert factorial(20, 5) == 20 * 15 * 10 * 5
-  when n is Integer:
-    let n = n.getOrDo(uint64):
-      raise newException(ValueError, "domain error for factorial() function")
-  elif n isnot SomeUnsignedInt:
-    doAssert n >= 0, "domain error for factorial() function: requires non-negative arguments"
-    let n = n.toUnsigned()
+
+  let n = requireUiArg(n)
   when m isnot SomeUnsignedInt:
     doAssert m >= 0, "domain error for factorial() function: requires non-negative arguments"
     let m = m.toUnsigned()
@@ -234,12 +239,7 @@ func binomial*(n, k: distinct AnyInteger): Integer =
     assert binomial(10, 2) == 45
     assert binomial(1000, 60) == factorial(1000) div (factorial(60) * factorial(940))
 
-  when k is Integer:
-    let k = k.getOrDo(uint64):
-      raise newException(ValueError, "domain error for `k` in `binomial(_, k)`")
-  elif k isnot SomeUnsignedInt:
-    doAssert k >= 0, "domain error for binomial() function: requires non-negative arguments"
-    let k = k.toUnsigned()
+  let k = requireUiArg(k)
 
   when n is Integer:
     mpz_bin_ui(result, n, culong(k))
@@ -247,3 +247,88 @@ func binomial*(n, k: distinct AnyInteger): Integer =
     doAssert n >= 0, "domain error for binomial() function: requires non-negative arguments"
     let n = n.toUnsigned()
     mpz_bin_uiui(result, culong(n), culong(k))
+
+
+func setFibonacci*(res: var Integer, k: AnyInteger) {.inline.} =
+  ## In-place version of `fibonacci`_.
+  let k = requireUiArg(k)
+  mpz_fib_ui(res, culong(k))
+
+func fibonacci*(k: AnyInteger): Integer =
+  ## Returns the `k`\th Fibonacci number.
+  ##
+  ## See `fibonacciPair`_ for getting two consecutive Fibonacci numbers if you want to
+  ## iterate to generate more. It is faster than calling `fibonacci`_ twice.
+  ##
+  ## Fibonacci numbers (and the closely related but less well known Lucas numbers) have a wide variety
+  ## of applications, see `Wikipedia <https://en.wikipedia.org/wiki/Fibonacci_number>`_ for more.
+  ##
+  runnableExamples:
+    assert fibonacci(210) + fibonacci(212) == lucas(211)
+    assert fibonacci(101) + fibonacci(102) == fibonacci(103)
+
+  result.setFibonacci(k)
+
+func setFibonacciPair*(prev, this: var Integer; k: AnyInteger) {.inline.} =
+  ## In-place version of `fibonacciPair`_.
+  let k = requireUiArg(k)
+  mpz_fib2_ui(this, prev, culong(k))
+
+func fibonacciPair*(k: AnyInteger): (Integer, Integer) =
+  ## Returns the `(k-1)`\th and `k`\th Fibonacci numbers as a tuple, in that order.
+  ##
+  ## This is faster than calling `fibonacci`_ twice.
+  ##
+  ## Fibonacci numbers (and the closely related but less well known Lucas numbers) have a wide variety
+  ## of applications, see `Wikipedia <https://en.wikipedia.org/wiki/Fibonacci_number>`_ for more.
+  ##
+  runnableExamples:
+    var (a, b) = fibonacciPair(500)
+
+    for i in 500 .. 510:
+      assert b == fibonacci(i)
+      swap(a, b)
+      b += a
+
+  setFibonacciPair(result[0], result[1], k)
+
+func setLucas*(res: var Integer, k: AnyInteger) {.inline.} =
+  ## In-place version of `lucas`_.
+  let k = requireUiArg(k)
+  mpz_lucnum_ui(res, culong(k))
+
+func lucas*(k: AnyInteger): Integer =
+  ## Returns the `k`\th Lucas number.
+  ##
+  ## See `lucasPair`_ for getting two consecutive Lucas numbers if you want to
+  ## iterate to generate more. It is faster than calling `lucas`_ twice.
+  ##
+  ## Lucas numbers are closely related to the Fibonacci numbers, see `Wikipedia <https://en.wikipedia.org/wiki/Lucas_number>`_ for more.
+  ##
+  runnableExamples:
+    assert lucas(1000) == fibonacci(999) + fibonacci(1001)
+    assert lucas(101) + lucas(102) == lucas(103)
+
+  result.setLucas(k)
+
+func setLucasPair*(prev, this: var Integer; k: AnyInteger) {.inline.} =
+  ## In-place version of `lucasPair`_.
+  let k = requireUiArg(k)
+  mpz_lucnum2_ui(this, prev, culong(k))
+
+func lucasPair*(k: AnyInteger): (Integer, Integer) =
+  ## Returns the `(k-1)`\th and `k`\th Lucas numbers as a tuple, in that order.
+  ##
+  ## This is faster than calling `lucas`_ twice.
+  ##
+  ## Lucas numbers are closely related to the Fibonacci numbers, see `Wikipedia <https://en.wikipedia.org/wiki/Lucas_number>`_ for more.
+  ##
+  runnableExamples:
+    var (a, b) = lucasPair(500)
+
+    for i in 500 .. 510:
+      assert b == lucas(i)
+      swap(a, b)
+      b += a
+
+  setLucasPair(result[0], result[1], k)
