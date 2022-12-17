@@ -198,7 +198,7 @@ func factorial*(n: AnyInteger): Integer =
     assert factorial(6) == 6 * 5 * 4 * 3 * 2 * 1
 
   when n is Integer:
-    let n = n.getOr(uint64):
+    let n = n.getOrDo(uint64):
       raise newException(ValueError, "domain error for factorial() function")
   elif n isnot SomeUnsignedInt:
     doAssert n >= 0, "domain error for factorial() function: requires non-negative argument"
@@ -213,7 +213,7 @@ func factorial*(n: AnyInteger, m: SomeInteger): Integer =
     assert factorial(10, 3) == 10 * 7 * 4 * 1
     assert factorial(20, 5) == 20 * 15 * 10 * 5
   when n is Integer:
-    let n = n.getOr(uint64):
+    let n = n.getOrDo(uint64):
       raise newException(ValueError, "domain error for factorial() function")
   elif n isnot SomeUnsignedInt:
     doAssert n >= 0, "domain error for factorial() function: requires non-negative arguments"
@@ -223,3 +223,27 @@ func factorial*(n: AnyInteger, m: SomeInteger): Integer =
     let m = m.toUnsigned()
 
   mpz_mfac_uiui(result, n.culong(), m.culong())
+
+func binomial*(n, k: distinct AnyInteger): Integer =
+  ## Returns the binomial coefficient `n` over `k`.
+  ##
+  ## Equivalent to `n! / (k! * (n-k)!)`.
+  ##
+  ## Also called `comb` or `combinations` in some languages.
+  runnableExamples:
+    assert binomial(10, 2) == 45
+    assert binomial(1000, 60) == factorial(1000) div (factorial(60) * factorial(940))
+
+  when k is Integer:
+    let k = n.getOrDo(uint64):
+      raise newException(ValueError, "domain error for `k` in `binomial(_, k)`")
+  elif k isnot SomeUnsignedInt:
+    doAssert k >= 0, "domain error for binomial() function: requires non-negative arguments"
+    let k = k.toUnsigned()
+
+  when n is Integer:
+    mpz_bin_ui(result, n, culong(k))
+  elif n isnot SomeUnsignedInt:
+    doAssert n >= 0, "domain error for binomial() function: requires non-negative arguments"
+    let n = n.toUnsigned()
+    mpz_bin_uiui(result, culong(n), culong(k))

@@ -307,12 +307,13 @@ runnableExamples:
 ##
 ## - `kronecker`, `jacobi`, `legendre`: number-theoretical calculations related to quadratic residues. See `Wikipedia <https://en.wikipedia.org/wiki/Kronecker_symbol>`_.
 ##
-## - `toOdd`, `setOdd`: divide out factors of `2`
-## - `divExp`, `setDivExp`: divide out arbitrary factors
+## - `toOdd`, `setOdd`: divide out factors of `2`.
+## - `divExp`, `setDivExp`: divide out arbitrary factors.
 ##
 ## - `factorial`
+## - `binomial`: binomial numbers, also known as `comb` in some languages.
 ##
-## TODO: `comb` `primorial` `lucas`, ...
+## TODO: `primorial`, `lucas`, ...
 ##
 ## Primes and Factors
 ## ------------------
@@ -322,12 +323,15 @@ runnableExamples:
 ## - `isPrime`: primality testing
 ## - `nextPrime`, `setNextPrime`, `prevPrime`: finding primes
 ##
-## Modular Numbers
-## ---------------
+## TODO: simple factoring? (squfof, p-rho, fermat for special forms, etc)
 ##
-## TODO
+## Modular Arithmetic
+## ------------------
 ##
-## `invMod`, `powMod`, ...
+## - `powMod`, `setPowMod`: modular exponentiation (powermod).
+## - `invMod`: modular inverse.
+##
+## TODO: pohlig-hellman?
 ##
 ## Other Goodies
 ## =============
