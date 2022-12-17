@@ -445,7 +445,7 @@ proc getOr*[T: AnyInteger](val: Integer, defval: T): T {.inline.} =
     {. error "logic error" .}
 
 
-template getOrDo*(val: Integer, T: typedesc, excbody: untyped): T =
+template getOrDo*(val: Integer, T: typedesc, excbody: untyped): untyped =
   ## Tries to convert the `Integer`_ `val` to the given type `T`. If successful, it
   ## evaluates to this value.
   ##
