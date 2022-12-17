@@ -298,35 +298,40 @@ runnableExamples:
 ## Math and Number Theory
 ## ======================
 ##
-## See `integers/math <integers/math.html>`_.
+## See `integers/math <integers/math.html>`_
+## and `integers/primes <integers/primes.html>`_ for overview.
 ##
 ## - `isqrt`, `isqrtRem`: integer square roots.
 ## - `iroot`, `irootRem`: integer k-roots.
 ##
 ## The ``...Rem`` versions return `(result, remainder)`.
 ##
-## - `kronecker`, `jacobi`, `legendre`: number-theoretical calculations related to quadratic residues. See `Wikipedia <https://en.wikipedia.org/wiki/Kronecker_symbol>`_.
+## - `kronecker`, `jacobi`, `legendre`: number-theoretical functions related to quadratic residues. See `Wikipedia <https://en.wikipedia.org/wiki/Kronecker_symbol>`_.
 ##
 ## - `toOdd`, `setOdd`: divide out factors of `2`.
 ## - `divExp`, `setDivExp`: divide out arbitrary factors.
 ##
-## - `factorial`
-## - `binomial`: binomial numbers, also known as `comb` in some languages.
+## - `factorial`: calculating factorials (and multifactorial).
+## - `binomial`: calculating binomial numbers, also known as `comb` in some languages.
 ##
-## TODO: `primorial`, `lucas`, ...
+## - `lucas`, `setLucas`, `lucasPair`, `setLucasPair`: working with Lucas numbers.
+## - `fibonacci`, `setFibonacci`, `fibonacciPair`, `setFibonacciPair`: working with Fibonacci numbers.
 ##
 ## Primes and Factors
 ## ------------------
 ##
-## - `gcd`, `extGcd`: greatest common divisors
-## - `lcm`: least common multiplier
-## - `isPrime`: primality testing
-## - `nextPrime`, `setNextPrime`, `prevPrime`: finding primes
+## - `gcd`, `extGcd`: greatest common divisors.
+## - `lcm`: least common multiplier.
+## - `isPrime`: primality testing.
+## - `nextPrime`, `setNextPrime`, `prevPrime`: finding primes.
+## - `primorial`, `setPrimorial`: primorial numbers (product of primes).
 ##
 ## TODO: simple factoring? (squfof, p-rho, fermat for special forms, etc)
 ##
 ## Modular Arithmetic
 ## ------------------
+##
+## See `integers/modular <integers/modular.html>`_ for overview.
 ##
 ## - `powMod`, `setPowMod`: modular exponentiation (powermod).
 ## - `invMod`: modular inverse.

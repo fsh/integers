@@ -9,7 +9,7 @@ func invMod*(a, m: distinct AnyInteger): Integer {.inline.} =
   ##
   ## If returns `0'gmp` if the inverse does not exist.
   ##
-  ## See `setInvMod`_ for in-place version.
+  ## See `setInvMod <#setInvMod,mpz_struct,mpz_struct>`_ for in-place version.
   ##
   runnableExamples:
     let x = 1000'gmp.invMod(1999)
@@ -29,7 +29,7 @@ func setInvMod*(a: var Integer, m: Integer) {.inline.} =
   ##
   ## If returns `0'gmp` if the inverse does not exist.
   ##
-  ## See `invMod`_ for functional version.
+  ## See `invMod <#invMod,,>`_ for functional version.
   ##
   if mpz_invert(a, a, m) == 0:
     # Failed to invert.
@@ -42,7 +42,7 @@ func powMod*(a, exp, m: distinct AnyInteger): Integer {.inline.} =
   ##
   ## `exp` can be negative if `a` is invertible (i.e. `gcd(a, m) == 1`).
   ##
-  ## See `setPowMod`_ for in-place version.
+  ## See `setPowMod <#setPowMod,mpz_struct,AnyInteger,mpz_struct>`_ for in-place version.
   ##
   runnableExamples:
     assert powMod(10, 10_000_000_000_000_000_000'gmp, 99) == 1
@@ -68,7 +68,7 @@ func setPowMod*(result: var Integer, exp: AnyInteger, m: Integer) {.inline.} =
   ##
   ## `exp` can be negative if `a` is invertible (i.e. `gcd(a, m) == 1`).
   ##
-  ## See `powMod`_ for functional version.
+  ## See `powMod <#powMod,,,>`_ for functional version.
   ##
   runnableExamples:
     assert powMod(10, 10_000_000_000_000_000_000'gmp, 99) == 1

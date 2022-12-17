@@ -332,3 +332,18 @@ func lucasPair*(k: AnyInteger): (Integer, Integer) =
       b += a
 
   setLucasPair(result[0], result[1], k)
+
+func setPrimorial*(res: var Integer, n: AnyInteger) {.inline.} =
+  ## In-place version of `primorial`_
+  let n = requireUiArg(n)
+  mpz_primorial_ui(res, culong(n))
+
+
+func primorial*(n: AnyInteger): Integer =
+  ## Returns the primorial of `n`. That is, the product of all primes less than
+  ## or equal to `n`.
+  ##
+  runnableExamples:
+    assert primorial(30) == 2 * 3 * 5 * 7 * 11 * 13 * 17 * 19 * 23 * 29
+
+  result.setPrimorial(n)
