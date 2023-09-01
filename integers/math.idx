@@ -1,26 +1,28 @@
-scaledTo	integers/math.html#scaledTo,mpz_struct,typedesc	math: scaledTo(val: Integer; T: typedesc): T:type	
-setOdd	integers/math.html#setOdd,mpz_struct	math: setOdd(n: var Integer): int	
-toOdd	integers/math.html#toOdd,sinkmpz_struct	math: toOdd(n: sink Integer): (Integer, int)	
-divisible	integers/math.html#divisible,mpz_struct,AnyInteger	math: divisible(val: Integer; n: AnyInteger): bool	
-setDivExp	integers/math.html#setDivExp,mpz_struct,	math: setDivExp(n: var Integer; s: AnyInteger | static[int]): int	
-divExp	integers/math.html#divExp,sinkmpz_struct,	math: divExp(n: sink Integer; s: AnyInteger | static[int]): (Integer, int)	
-isqrt	integers/math.html#isqrt,mpz_struct	math: isqrt(val: Integer): Integer	
-iroot	integers/math.html#iroot,mpz_struct,SomeUnsignedInt	math: iroot(n: Integer; k: SomeUnsignedInt): Integer	
-isqrtRem	integers/math.html#isqrtRem,mpz_struct	math: isqrtRem(val: Integer): (Integer, Integer)	
-irootRem	integers/math.html#irootRem,mpz_struct,SomeUnsignedInt	math: irootRem(n: Integer; k: SomeUnsignedInt): (Integer, Integer)	
-kronecker	integers/math.html#kronecker,,	math: kronecker(a, b: distinct AnyInteger): int	
-legendre	integers/math.html#legendre,,	math: legendre(a, b: distinct AnyInteger): int	
-jacobi	integers/math.html#jacobi,,	math: jacobi(a, b: distinct AnyInteger): int	
-factorial	integers/math.html#factorial,AnyInteger	math: factorial(n: AnyInteger): Integer	
-factorial	integers/math.html#factorial,AnyInteger,SomeInteger	math: factorial(n: AnyInteger; m: SomeInteger): Integer	
-binomial	integers/math.html#binomial,,	math: binomial(n, k: distinct AnyInteger): Integer	
-setFibonacci	integers/math.html#setFibonacci,mpz_struct,AnyInteger	math: setFibonacci(res: var Integer; k: AnyInteger)	
-fibonacci	integers/math.html#fibonacci,AnyInteger	math: fibonacci(k: AnyInteger): Integer	
-setFibonacciPair	integers/math.html#setFibonacciPair,mpz_struct,mpz_struct,AnyInteger	math: setFibonacciPair(prev, this: var Integer; k: AnyInteger)	
-fibonacciPair	integers/math.html#fibonacciPair,AnyInteger	math: fibonacciPair(k: AnyInteger): (Integer, Integer)	
-setLucas	integers/math.html#setLucas,mpz_struct,AnyInteger	math: setLucas(res: var Integer; k: AnyInteger)	
-lucas	integers/math.html#lucas,AnyInteger	math: lucas(k: AnyInteger): Integer	
-setLucasPair	integers/math.html#setLucasPair,mpz_struct,mpz_struct,AnyInteger	math: setLucasPair(prev, this: var Integer; k: AnyInteger)	
-lucasPair	integers/math.html#lucasPair,AnyInteger	math: lucasPair(k: AnyInteger): (Integer, Integer)	
-setPrimorial	integers/math.html#setPrimorial,mpz_struct,AnyInteger	math: setPrimorial(res: var Integer; n: AnyInteger)	
-primorial	integers/math.html#primorial,AnyInteger	math: primorial(n: AnyInteger): Integer	
+nimTitle	math	integers/math.html	module src/integers/math		0
+nim	scaledTo	integers/math.html#scaledTo,mpz_struct,typedesc	proc scaledTo(val: Integer; T: typedesc): T:type		10
+nim	setOdd	integers/math.html#setOdd,mpz_struct	proc setOdd(n: var Integer): int		49
+nim	toOdd	integers/math.html#toOdd,sinkmpz_struct	proc toOdd(n: sink Integer): (Integer, int)		58
+nim	divisible	integers/math.html#divisible,mpz_struct,AnyInteger	proc divisible(val: Integer; n: AnyInteger): bool		68
+nim	setDivExp	integers/math.html#setDivExp,mpz_struct,	proc setDivExp(n: var Integer; s: AnyInteger | static[int]): int		81
+nim	divExp	integers/math.html#divExp,sinkmpz_struct,	proc divExp(n: sink Integer; s: AnyInteger | static[int]): (Integer, int)		96
+nim	isqrt	integers/math.html#isqrt,mpz_struct	proc isqrt(val: Integer): Integer		117
+nim	iroot	integers/math.html#iroot,mpz_struct,SomeUnsignedInt	proc iroot(n: Integer; k: SomeUnsignedInt): Integer		123
+nim	isqrtRem	integers/math.html#isqrtRem,mpz_struct	proc isqrtRem(val: Integer): (Integer, Integer)		129
+nim	irootRem	integers/math.html#irootRem,mpz_struct,SomeUnsignedInt	proc irootRem(n: Integer; k: SomeUnsignedInt): (Integer, Integer)		138
+nim	kronecker	integers/math.html#kronecker,,	proc kronecker(a, b: distinct AnyInteger): int		148
+nim	legendre	integers/math.html#legendre,,	proc legendre(a, b: distinct AnyInteger): int		186
+nim	jacobi	integers/math.html#jacobi,,	proc jacobi(a, b: distinct AnyInteger): int		190
+nim	factorial	integers/math.html#factorial,AnyInteger	proc factorial(n: AnyInteger): Integer		209
+nim	factorial	integers/math.html#factorial,AnyInteger,SomeInteger	proc factorial(n: AnyInteger; m: SomeInteger): Integer		218
+nim	binomial	integers/math.html#binomial,,	proc binomial(n, k: distinct AnyInteger): Integer		232
+nim	setFibonacci	integers/math.html#setFibonacci,mpz_struct,AnyInteger	proc setFibonacci(res: var Integer; k: AnyInteger)		252
+nim	fibonacci	integers/math.html#fibonacci,AnyInteger	proc fibonacci(k: AnyInteger): Integer		257
+nim	setFibonacciPair	integers/math.html#setFibonacciPair,mpz_struct,mpz_struct,AnyInteger	proc setFibonacciPair(prev, this: var Integer; k: AnyInteger)		272
+nim	fibonacciPair	integers/math.html#fibonacciPair,AnyInteger	proc fibonacciPair(k: AnyInteger): (Integer, Integer)		277
+nim	setLucas	integers/math.html#setLucas,mpz_struct,AnyInteger	proc setLucas(res: var Integer; k: AnyInteger)		295
+nim	lucas	integers/math.html#lucas,AnyInteger	proc lucas(k: AnyInteger): Integer		300
+nim	setLucasPair	integers/math.html#setLucasPair,mpz_struct,mpz_struct,AnyInteger	proc setLucasPair(prev, this: var Integer; k: AnyInteger)		314
+nim	lucasPair	integers/math.html#lucasPair,AnyInteger	proc lucasPair(k: AnyInteger): (Integer, Integer)		319
+nim	setPrimorial	integers/math.html#setPrimorial,mpz_struct,AnyInteger	proc setPrimorial(res: var Integer; n: AnyInteger)		336
+nim	primorial	integers/math.html#primorial,AnyInteger	proc primorial(n: AnyInteger): Integer		342
+nimgrp	factorial	integers/math.html#factorial-procs-all	proc		209

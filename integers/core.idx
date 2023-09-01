@@ -1,102 +1,129 @@
-Integer	integers/core.html#Integer	core: Integer	
-AnyInteger	integers/core.html#AnyInteger	core: AnyInteger	
-initInteger	integers/core.html#initInteger,mpz_struct	core: initInteger(res: var Integer)	
-newInteger	integers/core.html#newInteger	core: newInteger(): Integer	
-newInteger	integers/core.html#newInteger,SomeInteger	core: newInteger(val: SomeInteger): Integer	
-newInteger	integers/core.html#newInteger,string,int	core: newInteger(str: string; base: int = 0): Integer	
-newInteger	integers/core.html#newInteger,mpz_struct	core: newInteger(val: Integer): Integer	
-toInteger	integers/core.html#toInteger.c,SomeInteger	core: toInteger(x: SomeInteger): Integer	
-`'gmp`	integers/core.html#'gmp,string	core: `&apos;gmp`(nstr: string): Integer	
-isZero	integers/core.html#isZero,AnyInteger	core: isZero(val: AnyInteger): bool	
-isNonZero	integers/core.html#isNonZero,AnyInteger	core: isNonZero(val: AnyInteger): bool	
-isNatural	integers/core.html#isNatural,AnyInteger	core: isNatural(val: AnyInteger): bool	
-isPositive	integers/core.html#isPositive,AnyInteger	core: isPositive(val: AnyInteger): bool	
-isNegative	integers/core.html#isNegative,AnyInteger	core: isNegative(val: AnyInteger): bool	
-assign	integers/core.html#assign,mpz_struct,AnyInteger	core: assign(result: var Integer; src: AnyInteger)	
-inc	integers/core.html#inc,mpz_struct	core: inc(n: var Integer)	
-dec	integers/core.html#dec,mpz_struct	core: dec(n: var Integer)	
-succ	integers/core.html#succ,mpz_struct	core: succ(n: Integer): Integer	
-pred	integers/core.html#pred,mpz_struct	core: pred(n: Integer): Integer	
-cmp	integers/core.html#cmp,mpz_struct,AnyInteger	core: cmp(a: Integer; b: AnyInteger): int	
-cmp	integers/core.html#cmp,SomeInteger,mpz_struct	core: cmp(a: SomeInteger; b: Integer): int	
-cmpAbs	integers/core.html#cmpAbs,,	core: cmpAbs(a, b: distinct AnyInteger): int	
-`==`	integers/core.html#==,SomeInteger,mpz_struct	core: `==`(a`gensym6: SomeInteger; b`gensym6: Integer): bool	
-`==%`	integers/core.html#==%,SomeInteger,mpz_struct	core: `==%`(a`gensym6: SomeInteger; b`gensym6: Integer): bool	
-`==`	integers/core.html#==,mpz_struct,SomeInteger	core: `==`(a`gensym6: Integer; b`gensym6: SomeInteger): bool	
-`==%`	integers/core.html#==%,mpz_struct,SomeInteger	core: `==%`(a`gensym6: Integer; b`gensym6: SomeInteger): bool	
-`==`	integers/core.html#==,mpz_struct,mpz_struct	core: `==`(a`gensym6: Integer; b`gensym6: Integer): bool	
-`==%`	integers/core.html#==%,mpz_struct,mpz_struct	core: `==%`(a`gensym6: Integer; b`gensym6: Integer): bool	
-`!=`	integers/core.html#!=,SomeInteger,mpz_struct	core: `!=`(a`gensym7: SomeInteger; b`gensym7: Integer): bool	
-`!=%`	integers/core.html#!=%,SomeInteger,mpz_struct	core: `!=%`(a`gensym7: SomeInteger; b`gensym7: Integer): bool	
-`!=`	integers/core.html#!=,mpz_struct,SomeInteger	core: `!=`(a`gensym7: Integer; b`gensym7: SomeInteger): bool	
-`!=%`	integers/core.html#!=%,mpz_struct,SomeInteger	core: `!=%`(a`gensym7: Integer; b`gensym7: SomeInteger): bool	
-`!=`	integers/core.html#!=,mpz_struct,mpz_struct	core: `!=`(a`gensym7: Integer; b`gensym7: Integer): bool	
-`!=%`	integers/core.html#!=%,mpz_struct,mpz_struct	core: `!=%`(a`gensym7: Integer; b`gensym7: Integer): bool	
-`&lt;`	integers/core.html#<,SomeInteger,mpz_struct	core: `&lt;`(a`gensym10: SomeInteger; b`gensym10: Integer): bool	
-`&lt;%`	integers/core.html#<%,SomeInteger,mpz_struct	core: `&lt;%`(a`gensym10: SomeInteger; b`gensym10: Integer): bool	
-`&lt;`	integers/core.html#<,mpz_struct,SomeInteger	core: `&lt;`(a`gensym10: Integer; b`gensym10: SomeInteger): bool	
-`&lt;%`	integers/core.html#<%,mpz_struct,SomeInteger	core: `&lt;%`(a`gensym10: Integer; b`gensym10: SomeInteger): bool	
-`&lt;`	integers/core.html#<,mpz_struct,mpz_struct	core: `&lt;`(a`gensym10: Integer; b`gensym10: Integer): bool	
-`&lt;%`	integers/core.html#<%,mpz_struct,mpz_struct	core: `&lt;%`(a`gensym10: Integer; b`gensym10: Integer): bool	
-`&lt;=`	integers/core.html#<=,SomeInteger,mpz_struct	core: `&lt;=`(a`gensym11: SomeInteger; b`gensym11: Integer): bool	
-`&lt;=%`	integers/core.html#<=%,SomeInteger,mpz_struct	core: `&lt;=%`(a`gensym11: SomeInteger; b`gensym11: Integer): bool	
-`&lt;=`	integers/core.html#<=,mpz_struct,SomeInteger	core: `&lt;=`(a`gensym11: Integer; b`gensym11: SomeInteger): bool	
-`&lt;=%`	integers/core.html#<=%,mpz_struct,SomeInteger	core: `&lt;=%`(a`gensym11: Integer; b`gensym11: SomeInteger): bool	
-`&lt;=`	integers/core.html#<=,mpz_struct,mpz_struct	core: `&lt;=`(a`gensym11: Integer; b`gensym11: Integer): bool	
-`&lt;=%`	integers/core.html#<=%,mpz_struct,mpz_struct	core: `&lt;=%`(a`gensym11: Integer; b`gensym11: Integer): bool	
-`&gt;`	integers/core.html#>,SomeInteger,mpz_struct	core: `&gt;`(a`gensym12: SomeInteger; b`gensym12: Integer): bool	
-`&gt;%`	integers/core.html#>%,SomeInteger,mpz_struct	core: `&gt;%`(a`gensym12: SomeInteger; b`gensym12: Integer): bool	
-`&gt;`	integers/core.html#>,mpz_struct,SomeInteger	core: `&gt;`(a`gensym12: Integer; b`gensym12: SomeInteger): bool	
-`&gt;%`	integers/core.html#>%,mpz_struct,SomeInteger	core: `&gt;%`(a`gensym12: Integer; b`gensym12: SomeInteger): bool	
-`&gt;`	integers/core.html#>,mpz_struct,mpz_struct	core: `&gt;`(a`gensym12: Integer; b`gensym12: Integer): bool	
-`&gt;%`	integers/core.html#>%,mpz_struct,mpz_struct	core: `&gt;%`(a`gensym12: Integer; b`gensym12: Integer): bool	
-`&gt;=`	integers/core.html#>=,SomeInteger,mpz_struct	core: `&gt;=`(a`gensym15: SomeInteger; b`gensym15: Integer): bool	
-`&gt;=%`	integers/core.html#>=%,SomeInteger,mpz_struct	core: `&gt;=%`(a`gensym15: SomeInteger; b`gensym15: Integer): bool	
-`&gt;=`	integers/core.html#>=,mpz_struct,SomeInteger	core: `&gt;=`(a`gensym15: Integer; b`gensym15: SomeInteger): bool	
-`&gt;=%`	integers/core.html#>=%,mpz_struct,SomeInteger	core: `&gt;=%`(a`gensym15: Integer; b`gensym15: SomeInteger): bool	
-`&gt;=`	integers/core.html#>=,mpz_struct,mpz_struct	core: `&gt;=`(a`gensym15: Integer; b`gensym15: Integer): bool	
-`&gt;=%`	integers/core.html#>=%,mpz_struct,mpz_struct	core: `&gt;=%`(a`gensym15: Integer; b`gensym15: Integer): bool	
-`-`	integers/core.html#-,sinkmpz_struct	core: `-`(a: sink Integer): Integer	
-setNegative	integers/core.html#setNegative,mpz_struct	core: setNegative(val: var Integer)	
-setAbs	integers/core.html#setAbs,mpz_struct	core: setAbs(n: var Integer)	
-abs	integers/core.html#abs,sinkmpz_struct	core: abs(n: sink Integer): Integer	
-`+=`	integers/core.html#+=,mpz_struct,mpz_struct	core: `+=`(x`gensym19: var Integer; y`gensym19: Integer)	
-`+=`	integers/core.html#+=,mpz_struct,SomeInteger	core: `+=`(x`gensym18: var Integer; i`gensym18: SomeInteger)	
-`-=`	integers/core.html#-=,mpz_struct,mpz_struct	core: `-=`(x`gensym21: var Integer; y`gensym21: Integer)	
-`-=`	integers/core.html#-=,mpz_struct,SomeInteger	core: `-=`(x`gensym20: var Integer; i`gensym20: SomeInteger)	
-`*=`	integers/core.html#*=,mpz_struct,mpz_struct	core: `*=`(x`gensym23: var Integer; y`gensym23: Integer)	
-`*=`	integers/core.html#*=,mpz_struct,SomeInteger	core: `*=`(x`gensym22: var Integer; i`gensym22: SomeInteger)	
-`//=`	integers/core.html#//=,mpz_struct,mpz_struct	core: `//=`(x`gensym25: var Integer; y`gensym25: Integer)	
-`//=`	integers/core.html#//=,mpz_struct,SomeInteger	core: `//=`(result`gensym24: var Integer; i`gensym24: SomeInteger)	
-`%=`	integers/core.html#%=,mpz_struct,mpz_struct	core: `%=`(x`gensym27: var Integer; y`gensym27: Integer)	
-`%=`	integers/core.html#%=,mpz_struct,SomeInteger	core: `%=`(result`gensym26: var Integer; i`gensym26: SomeInteger)	
-`+`	integers/core.html#+,mpz_struct,mpz_struct	core: `+`(x`gensym28, y`gensym28: Integer): Integer	
-`*`	integers/core.html#*,mpz_struct,mpz_struct	core: `*`(x`gensym29, y`gensym29: Integer): Integer	
-`-`	integers/core.html#-,mpz_struct,mpz_struct	core: `-`(x`gensym30, y`gensym30: Integer): Integer	
-`//`	integers/core.html#//,mpz_struct,mpz_struct	core: `//`(x`gensym31, y`gensym31: Integer): Integer	
-`div`	integers/core.html#div,mpz_struct,mpz_struct	core: `div`(x`gensym32, y`gensym32: Integer): Integer	
-`%`	integers/core.html#%,mpz_struct,mpz_struct	core: `%`(x`gensym33, y`gensym33: Integer): Integer	
-`mod`	integers/core.html#mod,mpz_struct,mpz_struct	core: `mod`(x`gensym34, y`gensym34: Integer): Integer	
-`+`	integers/core.html#+,SomeInteger,mpz_struct	core: `+`(i: SomeInteger; x: Integer): Integer	
-`+`	integers/core.html#+,mpz_struct,SomeInteger	core: `+`(x: Integer; i: SomeInteger): Integer	
-`*`	integers/core.html#*,SomeInteger,mpz_struct	core: `*`(i: SomeInteger; x: Integer): Integer	
-`*`	integers/core.html#*,mpz_struct,SomeInteger	core: `*`(x: Integer; i: SomeInteger): Integer	
-`-`	integers/core.html#-,mpz_struct,SomeInteger	core: `-`(x: Integer; i: SomeInteger): Integer	
-`-`	integers/core.html#-,SomeInteger,mpz_struct	core: `-`(i: SomeInteger; x: Integer): Integer	
-`//`	integers/core.html#//,mpz_struct,SomeInteger	core: `//`(x`gensym37: Integer; i`gensym37: SomeInteger): Integer	
-`//`	integers/core.html#//,SomeInteger,mpz_struct	core: `//`(i`gensym37: SomeInteger; x`gensym37: Integer): Integer	
-`div`	integers/core.html#div,mpz_struct,SomeInteger	core: `div`(x`gensym38: Integer; i`gensym38: SomeInteger): Integer	
-`div`	integers/core.html#div,SomeInteger,mpz_struct	core: `div`(i`gensym38: SomeInteger; x`gensym38: Integer): Integer	
-`%`	integers/core.html#%,mpz_struct,SomeInteger	core: `%`(x`gensym39: Integer; i`gensym39: SomeInteger): Integer	
-`%`	integers/core.html#%,SomeInteger,mpz_struct	core: `%`(i`gensym39: SomeInteger; x`gensym39: Integer): Integer	
-`mod`	integers/core.html#mod,mpz_struct,SomeInteger	core: `mod`(x`gensym40: Integer; i`gensym40: SomeInteger): Integer	
-`mod`	integers/core.html#mod,SomeInteger,mpz_struct	core: `mod`(i`gensym40: SomeInteger; x`gensym40: Integer): Integer	
-addMul	integers/core.html#addMul,mpz_struct,,	core: addMul(dest`gensym41: var Integer; x`gensym41, y`gensym41: distinct AnyInteger)	
-subMul	integers/core.html#subMul,mpz_struct,,	core: subMul(dest`gensym42: var Integer; x`gensym42, y`gensym42: distinct AnyInteger)	
-`^`	integers/core.html#^,,	core: `^`(val, exp: distinct AnyInteger): Integer	
-getUnsafe	integers/core.html#getUnsafe,mpz_struct,typedesc	core: getUnsafe(val: Integer; T: typedesc): T:type	
-getOr	integers/core.html#getOr,mpz_struct,T	core: getOr[T: AnyInteger](val: Integer; defval: T): T	
-getOrDo	integers/core.html#getOrDo.t,mpz_struct,typedesc,untyped	core: getOrDo(val: Integer; T: typedesc; excbody: untyped): untyped	
-setDivMod	integers/core.html#setDivMod,mpz_struct,mpz_struct,mpz_struct,mpz_struct	core: setDivMod(dest_q, dest_r: var Integer; src_q, src_r: Integer)	
-divMod	integers/core.html#divMod,sinkmpz_struct,sinkmpz_struct	core: divMod(a: sink Integer; b: sink Integer): (Integer, Integer)	
-Core Integer Functionality	integers/core.html#core-integer-functionality	 Core Integer Functionality	
+nimTitle	core	integers/core.html	module src/integers/core		0
+nim	Integer	integers/core.html#Integer	type Integer		18
+nim	AnyInteger	integers/core.html#AnyInteger	type AnyInteger		30
+nim	initInteger	integers/core.html#initInteger,mpz_struct	proc initInteger(res: var Integer)		35
+nim	newInteger	integers/core.html#newInteger	proc newInteger(): Integer		39
+nim	newInteger	integers/core.html#newInteger,SomeInteger	proc newInteger(val: SomeInteger): Integer		43
+nim	newInteger	integers/core.html#newInteger,string,int	proc newInteger(str: string; base: int = 0): Integer		50
+nim	newInteger	integers/core.html#newInteger,mpz_struct	proc newInteger(val: Integer): Integer		59
+nim	toInteger	integers/core.html#toInteger.c,SomeInteger	converter toInteger(x: SomeInteger): Integer		65
+nim	`'gmp`	integers/core.html#'gmp,string	proc `'gmp`(nstr: string): Integer		71
+nim	isZero	integers/core.html#isZero,AnyInteger	proc isZero(val: AnyInteger): bool		79
+nim	isNonZero	integers/core.html#isNonZero,AnyInteger	proc isNonZero(val: AnyInteger): bool		86
+nim	isNatural	integers/core.html#isNatural,AnyInteger	proc isNatural(val: AnyInteger): bool		93
+nim	isPositive	integers/core.html#isPositive,AnyInteger	proc isPositive(val: AnyInteger): bool		102
+nim	isNegative	integers/core.html#isNegative,AnyInteger	proc isNegative(val: AnyInteger): bool		109
+nim	assign	integers/core.html#assign,mpz_struct,AnyInteger	proc assign(result: var Integer; src: AnyInteger)		120
+nim	inc	integers/core.html#inc,mpz_struct	proc inc(n: var Integer)		132
+nim	dec	integers/core.html#dec,mpz_struct	proc dec(n: var Integer)		136
+nim	succ	integers/core.html#succ,mpz_struct	proc succ(n: Integer): Integer		140
+nim	pred	integers/core.html#pred,mpz_struct	proc pred(n: Integer): Integer		146
+nim	cmp	integers/core.html#cmp,mpz_struct,AnyInteger	proc cmp(a: Integer; b: AnyInteger): int		163
+nim	cmp	integers/core.html#cmp,SomeInteger,mpz_struct	proc cmp(a: SomeInteger; b: Integer): int		170
+nim	cmpAbs	integers/core.html#cmpAbs,,	proc cmpAbs(a, b: distinct AnyInteger): int		173
+nim	`==`	integers/core.html#==,SomeInteger,mpz_struct	proc `==`(a`gensym6: SomeInteger; b`gensym6: Integer): bool		189
+nim	`==%`	integers/core.html#==%,SomeInteger,mpz_struct	proc `==%`(a`gensym6: SomeInteger; b`gensym6: Integer): bool		190
+nim	`==`	integers/core.html#==,mpz_struct,SomeInteger	proc `==`(a`gensym6: Integer; b`gensym6: SomeInteger): bool		191
+nim	`==%`	integers/core.html#==%,mpz_struct,SomeInteger	proc `==%`(a`gensym6: Integer; b`gensym6: SomeInteger): bool		192
+nim	`==`	integers/core.html#==,mpz_struct,mpz_struct	proc `==`(a`gensym6: Integer; b`gensym6: Integer): bool		193
+nim	`==%`	integers/core.html#==%,mpz_struct,mpz_struct	proc `==%`(a`gensym6: Integer; b`gensym6: Integer): bool		196
+nim	`!=`	integers/core.html#!=,SomeInteger,mpz_struct	proc `!=`(a`gensym7: SomeInteger; b`gensym7: Integer): bool		189
+nim	`!=%`	integers/core.html#!=%,SomeInteger,mpz_struct	proc `!=%`(a`gensym7: SomeInteger; b`gensym7: Integer): bool		190
+nim	`!=`	integers/core.html#!=,mpz_struct,SomeInteger	proc `!=`(a`gensym7: Integer; b`gensym7: SomeInteger): bool		191
+nim	`!=%`	integers/core.html#!=%,mpz_struct,SomeInteger	proc `!=%`(a`gensym7: Integer; b`gensym7: SomeInteger): bool		192
+nim	`!=`	integers/core.html#!=,mpz_struct,mpz_struct	proc `!=`(a`gensym7: Integer; b`gensym7: Integer): bool		193
+nim	`!=%`	integers/core.html#!=%,mpz_struct,mpz_struct	proc `!=%`(a`gensym7: Integer; b`gensym7: Integer): bool		197
+nim	`<`	integers/core.html#<,SomeInteger,mpz_struct	proc `<`(a`gensym10: SomeInteger; b`gensym10: Integer): bool		189
+nim	`<%`	integers/core.html#<%,SomeInteger,mpz_struct	proc `<%`(a`gensym10: SomeInteger; b`gensym10: Integer): bool		190
+nim	`<`	integers/core.html#<,mpz_struct,SomeInteger	proc `<`(a`gensym10: Integer; b`gensym10: SomeInteger): bool		191
+nim	`<%`	integers/core.html#<%,mpz_struct,SomeInteger	proc `<%`(a`gensym10: Integer; b`gensym10: SomeInteger): bool		192
+nim	`<`	integers/core.html#<,mpz_struct,mpz_struct	proc `<`(a`gensym10: Integer; b`gensym10: Integer): bool		193
+nim	`<%`	integers/core.html#<%,mpz_struct,mpz_struct	proc `<%`(a`gensym10: Integer; b`gensym10: Integer): bool		198
+nim	`<=`	integers/core.html#<=,SomeInteger,mpz_struct	proc `<=`(a`gensym11: SomeInteger; b`gensym11: Integer): bool		189
+nim	`<=%`	integers/core.html#<=%,SomeInteger,mpz_struct	proc `<=%`(a`gensym11: SomeInteger; b`gensym11: Integer): bool		190
+nim	`<=`	integers/core.html#<=,mpz_struct,SomeInteger	proc `<=`(a`gensym11: Integer; b`gensym11: SomeInteger): bool		191
+nim	`<=%`	integers/core.html#<=%,mpz_struct,SomeInteger	proc `<=%`(a`gensym11: Integer; b`gensym11: SomeInteger): bool		192
+nim	`<=`	integers/core.html#<=,mpz_struct,mpz_struct	proc `<=`(a`gensym11: Integer; b`gensym11: Integer): bool		193
+nim	`<=%`	integers/core.html#<=%,mpz_struct,mpz_struct	proc `<=%`(a`gensym11: Integer; b`gensym11: Integer): bool		199
+nim	`>`	integers/core.html#>,SomeInteger,mpz_struct	proc `>`(a`gensym12: SomeInteger; b`gensym12: Integer): bool		189
+nim	`>%`	integers/core.html#>%,SomeInteger,mpz_struct	proc `>%`(a`gensym12: SomeInteger; b`gensym12: Integer): bool		190
+nim	`>`	integers/core.html#>,mpz_struct,SomeInteger	proc `>`(a`gensym12: Integer; b`gensym12: SomeInteger): bool		191
+nim	`>%`	integers/core.html#>%,mpz_struct,SomeInteger	proc `>%`(a`gensym12: Integer; b`gensym12: SomeInteger): bool		192
+nim	`>`	integers/core.html#>,mpz_struct,mpz_struct	proc `>`(a`gensym12: Integer; b`gensym12: Integer): bool		193
+nim	`>%`	integers/core.html#>%,mpz_struct,mpz_struct	proc `>%`(a`gensym12: Integer; b`gensym12: Integer): bool		200
+nim	`>=`	integers/core.html#>=,SomeInteger,mpz_struct	proc `>=`(a`gensym15: SomeInteger; b`gensym15: Integer): bool		189
+nim	`>=%`	integers/core.html#>=%,SomeInteger,mpz_struct	proc `>=%`(a`gensym15: SomeInteger; b`gensym15: Integer): bool		190
+nim	`>=`	integers/core.html#>=,mpz_struct,SomeInteger	proc `>=`(a`gensym15: Integer; b`gensym15: SomeInteger): bool		191
+nim	`>=%`	integers/core.html#>=%,mpz_struct,SomeInteger	proc `>=%`(a`gensym15: Integer; b`gensym15: SomeInteger): bool		192
+nim	`>=`	integers/core.html#>=,mpz_struct,mpz_struct	proc `>=`(a`gensym15: Integer; b`gensym15: Integer): bool		193
+nim	`>=%`	integers/core.html#>=%,mpz_struct,mpz_struct	proc `>=%`(a`gensym15: Integer; b`gensym15: Integer): bool		201
+nim	`-`	integers/core.html#-,sinkmpz_struct	proc `-`(a: sink Integer): Integer		206
+nim	setNegative	integers/core.html#setNegative,mpz_struct	proc setNegative(val: var Integer)		211
+nim	setAbs	integers/core.html#setAbs,mpz_struct	proc setAbs(n: var Integer)		215
+nim	abs	integers/core.html#abs,sinkmpz_struct	proc abs(n: sink Integer): Integer		219
+nim	`+=`	integers/core.html#+=,mpz_struct,mpz_struct	proc `+=`(x`gensym19: var Integer; y`gensym19: Integer)		238
+nim	`+=`	integers/core.html#+=,mpz_struct,SomeInteger	proc `+=`(x`gensym18: var Integer; i`gensym18: SomeInteger)		266
+nim	`-=`	integers/core.html#-=,mpz_struct,mpz_struct	proc `-=`(x`gensym21: var Integer; y`gensym21: Integer)		238
+nim	`-=`	integers/core.html#-=,mpz_struct,SomeInteger	proc `-=`(x`gensym20: var Integer; i`gensym20: SomeInteger)		267
+nim	`*=`	integers/core.html#*=,mpz_struct,mpz_struct	proc `*=`(x`gensym23: var Integer; y`gensym23: Integer)		246
+nim	`*=`	integers/core.html#*=,mpz_struct,SomeInteger	proc `*=`(x`gensym22: var Integer; i`gensym22: SomeInteger)		268
+nim	`//=`	integers/core.html#//=,mpz_struct,mpz_struct	proc `//=`(x`gensym25: var Integer; y`gensym25: Integer)		254
+nim	`//=`	integers/core.html#//=,mpz_struct,SomeInteger	proc `//=`(result`gensym24: var Integer; i`gensym24: SomeInteger)		269
+nim	`%=`	integers/core.html#%=,mpz_struct,mpz_struct	proc `%=`(x`gensym27: var Integer; y`gensym27: Integer)		254
+nim	`%=`	integers/core.html#%=,mpz_struct,SomeInteger	proc `%=`(result`gensym26: var Integer; i`gensym26: SomeInteger)		270
+nim	`+`	integers/core.html#+,mpz_struct,mpz_struct	proc `+`(x`gensym28, y`gensym28: Integer): Integer		276
+nim	`*`	integers/core.html#*,mpz_struct,mpz_struct	proc `*`(x`gensym29, y`gensym29: Integer): Integer		277
+nim	`-`	integers/core.html#-,mpz_struct,mpz_struct	proc `-`(x`gensym30, y`gensym30: Integer): Integer		278
+nim	`//`	integers/core.html#//,mpz_struct,mpz_struct	proc `//`(x`gensym31, y`gensym31: Integer): Integer		279
+nim	`div`	integers/core.html#div,mpz_struct,mpz_struct	proc `div`(x`gensym32, y`gensym32: Integer): Integer		280
+nim	`%`	integers/core.html#%,mpz_struct,mpz_struct	proc `%`(x`gensym33, y`gensym33: Integer): Integer		281
+nim	`mod`	integers/core.html#mod,mpz_struct,mpz_struct	proc `mod`(x`gensym34, y`gensym34: Integer): Integer		282
+nim	`+`	integers/core.html#+,SomeInteger,mpz_struct	proc `+`(i: SomeInteger; x: Integer): Integer		288
+nim	`+`	integers/core.html#+,mpz_struct,SomeInteger	proc `+`(x: Integer; i: SomeInteger): Integer		293
+nim	`*`	integers/core.html#*,SomeInteger,mpz_struct	proc `*`(i: SomeInteger; x: Integer): Integer		288
+nim	`*`	integers/core.html#*,mpz_struct,SomeInteger	proc `*`(x: Integer; i: SomeInteger): Integer		299
+nim	`-`	integers/core.html#-,mpz_struct,SomeInteger	proc `-`(x: Integer; i: SomeInteger): Integer		305
+nim	`-`	integers/core.html#-,SomeInteger,mpz_struct	proc `-`(i: SomeInteger; x: Integer): Integer		311
+nim	`//`	integers/core.html#//,mpz_struct,SomeInteger	proc `//`(x`gensym37: Integer; i`gensym37: SomeInteger): Integer		319
+nim	`//`	integers/core.html#//,SomeInteger,mpz_struct	proc `//`(i`gensym37: SomeInteger; x`gensym37: Integer): Integer		336
+nim	`div`	integers/core.html#div,mpz_struct,SomeInteger	proc `div`(x`gensym38: Integer; i`gensym38: SomeInteger): Integer		319
+nim	`div`	integers/core.html#div,SomeInteger,mpz_struct	proc `div`(i`gensym38: SomeInteger; x`gensym38: Integer): Integer		337
+nim	`%`	integers/core.html#%,mpz_struct,SomeInteger	proc `%`(x`gensym39: Integer; i`gensym39: SomeInteger): Integer		319
+nim	`%`	integers/core.html#%,SomeInteger,mpz_struct	proc `%`(i`gensym39: SomeInteger; x`gensym39: Integer): Integer		338
+nim	`mod`	integers/core.html#mod,mpz_struct,SomeInteger	proc `mod`(x`gensym40: Integer; i`gensym40: SomeInteger): Integer		319
+nim	`mod`	integers/core.html#mod,SomeInteger,mpz_struct	proc `mod`(i`gensym40: SomeInteger; x`gensym40: Integer): Integer		339
+nim	addMul	integers/core.html#addMul,mpz_struct,,	proc addMul(dest`gensym41: var Integer; x`gensym41, y`gensym41: distinct AnyInteger)		360
+nim	subMul	integers/core.html#subMul,mpz_struct,,	proc subMul(dest`gensym42: var Integer; x`gensym42, y`gensym42: distinct AnyInteger)		361
+nim	`^`	integers/core.html#^,,	proc `^`(val, exp: distinct AnyInteger): Integer		365
+nim	getUnsafe	integers/core.html#getUnsafe,mpz_struct,typedesc	proc getUnsafe(val: Integer; T: typedesc): T:type		391
+nim	getOr	integers/core.html#getOr,mpz_struct,T	proc getOr[T: AnyInteger](val: Integer; defval: T): T		405
+nim	getOrDo	integers/core.html#getOrDo.t,mpz_struct,typedesc,untyped	template getOrDo(val: Integer; T: typedesc; excbody: untyped): untyped		448
+nim	setDivMod	integers/core.html#setDivMod,mpz_struct,mpz_struct,mpz_struct,mpz_struct	proc setDivMod(dest_q, dest_r: var Integer; src_q, src_r: Integer)		492
+nim	divMod	integers/core.html#divMod,sinkmpz_struct,sinkmpz_struct	proc divMod(a: sink Integer; b: sink Integer): (Integer, Integer)		496
+nimgrp	+=	integers/core.html#+=-procs-all	proc		266
+nimgrp	>%	integers/core.html#>%-procs-all	proc		200
+nimgrp	>=%	integers/core.html#>=%-procs-all	proc		201
+nimgrp	<	integers/core.html#<-procs-all	proc		198
+nimgrp	*	integers/core.html#*-procs-all	proc		277
+nimgrp	-	integers/core.html#--procs-all	proc		206
+nimgrp	!=%	integers/core.html#!=%-procs-all	proc		197
+nimgrp	-=	integers/core.html#-=-procs-all	proc		267
+nimgrp	<%	integers/core.html#<%-procs-all	proc		198
+nimgrp	//=	integers/core.html#//=-procs-all	proc		269
+nimgrp	<=%	integers/core.html#<=%-procs-all	proc		199
+nimgrp	newinteger	integers/core.html#newInteger-procs-all	proc		39
+nimgrp	*=	integers/core.html#*=-procs-all	proc		268
+nimgrp	+	integers/core.html#+-procs-all	proc		276
+nimgrp	mod	integers/core.html#mod-procs-all	proc		282
+nimgrp	>=	integers/core.html#>=-procs-all	proc		201
+nimgrp	<=	integers/core.html#<=-procs-all	proc		199
+nimgrp	div	integers/core.html#div-procs-all	proc		280
+nimgrp	cmp	integers/core.html#cmp-procs-all	proc		163
+nimgrp	>	integers/core.html#>-procs-all	proc		200
+nimgrp	%=	integers/core.html#%=-procs-all	proc		270
+nimgrp	==%	integers/core.html#==%-procs-all	proc		196
+nimgrp	!=	integers/core.html#!=-procs-all	proc		197
+nimgrp	==	integers/core.html#==-procs-all	proc		196
+nimgrp	//	integers/core.html#//-procs-all	proc		279
+nimgrp	%	integers/core.html#%-procs-all	proc		281
+heading	Core Integer Functionality	integers/core.html#core-integer-functionality	 Core Integer Functionality		0

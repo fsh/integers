@@ -1,4 +1,5 @@
-invMod	integers/modular.html#invMod,,	modular: invMod(a, m: distinct AnyInteger): Integer	
-setInvMod	integers/modular.html#setInvMod,mpz_struct,mpz_struct	modular: setInvMod(a: var Integer; m: Integer)	
-powMod	integers/modular.html#powMod,,,	modular: powMod(a, exp, m: distinct AnyInteger): Integer	
-setPowMod	integers/modular.html#setPowMod,mpz_struct,AnyInteger,mpz_struct	modular: setPowMod(result: var Integer; exp: AnyInteger; m: Integer)	
+nimTitle	modular	integers/modular.html	module src/integers/modular		0
+nim	invMod	integers/modular.html#invMod,,	proc invMod(a, m: distinct AnyInteger): Integer		7
+nim	setInvMod	integers/modular.html#setInvMod,mpz_struct,mpz_struct	proc setInvMod(a: var Integer; m: Integer)		27
+nim	powMod	integers/modular.html#powMod,,,	proc powMod(a, exp, m: distinct AnyInteger): Integer		38
+nim	setPowMod	integers/modular.html#setPowMod,mpz_struct,AnyInteger,mpz_struct	proc setPowMod(result: var Integer; exp: AnyInteger; m: Integer)		64

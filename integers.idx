@@ -1,13 +1,13 @@
-Integers	integers.html
-Basics	integers.html#basics	 Basics	
-Arithmetic	integers.html#basics-arithmetic	  Arithmetic	
-Comparisons	integers.html#basics-comparisons	  Comparisons	
-Mutability	integers.html#mutability	 Mutability	
-Bit Operations	integers.html#bit-operations	 Bit Operations	
-Bit Sets	integers.html#bit-operations-bit-sets	  Bit Sets	
-Random Numbers	integers.html#random-numbers	 Random Numbers	
-Math and Number Theory	integers.html#math-and-number-theory	 Math and Number Theory	
-Primes and Factors	integers.html#math-and-number-theory-primes-and-factors	  Primes and Factors	
-Modular Arithmetic	integers.html#math-and-number-theory-modular-arithmetic	  Modular Arithmetic	
-Other Goodies	integers.html#other-goodies	 Other Goodies	
-Additional Notes	integers.html#additional-notes	 Additional Notes	
+nimTitle	integers	integers.html	module src/integers		0
+heading	Basics	integers.html#basics	 Basics		0
+heading	Arithmetic	integers.html#basics-arithmetic	  Arithmetic		0
+heading	Comparisons	integers.html#basics-comparisons	  Comparisons		0
+heading	Mutability	integers.html#mutability	 Mutability		0
+heading	Bit Operations	integers.html#bit-operations	 Bit Operations		0
+heading	Bit Sets	integers.html#bit-operations-bit-sets	  Bit Sets		0
+heading	Random Numbers	integers.html#random-numbers	 Random Numbers		0
+heading	Math and Number Theory	integers.html#math-and-number-theory	 Math and Number Theory		0
+heading	Primes and Factors	integers.html#math-and-number-theory-primes-and-factors	  Primes and Factors		0
+heading	Modular Arithmetic	integers.html#math-and-number-theory-modular-arithmetic	  Modular Arithmetic		0
+heading	Other Goodies	integers.html#other-goodies	 Other Goodies		0
+heading	Additional Notes	integers.html#additional-notes	 Additional Notes		0

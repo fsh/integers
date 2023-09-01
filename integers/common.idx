@@ -1,2 +1,3 @@
-zero	integers/common.html#zero,typedesc[T]	common: zero[T: AnyInteger](_: typedesc[T]): auto	
-one	integers/common.html#one,typedesc[T]	common: one[T: AnyInteger](_: typedesc[T]): auto	
+nimTitle	common	integers/common.html	module src/integers/common		0
+nim	zero	integers/common.html#zero,typedesc[T]	proc zero[T: AnyInteger](_: typedesc[T]): auto		6
+nim	one	integers/common.html#one,typedesc[T]	proc one[T: AnyInteger](_: typedesc[T]): auto		13

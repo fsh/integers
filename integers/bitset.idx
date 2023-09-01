@@ -1,28 +1,30 @@
-`&amp;&amp;=`	integers/bitset.html#&&=,mpz_struct,AnyInteger	bitset: `&amp;&amp;=`(x`gensym0: var Integer; y`gensym0: AnyInteger)	
-`&amp;|=`	integers/bitset.html#&|=,mpz_struct,AnyInteger	bitset: `&amp;|=`(x`gensym2: var Integer; y`gensym2: AnyInteger)	
-`&amp;^=`	integers/bitset.html#&^=,mpz_struct,AnyInteger	bitset: `&amp;^=`(x`gensym4: var Integer; y`gensym4: AnyInteger)	
-`&amp;&amp;`	integers/bitset.html#&&,,	bitset: `&amp;&amp;`(x`gensym6, y`gensym6: distinct AnyInteger): Integer	
-`&amp;|`	integers/bitset.html#&|,,	bitset: `&amp;|`(x`gensym9, y`gensym9: distinct AnyInteger): Integer	
-`&amp;^`	integers/bitset.html#&^,,	bitset: `&amp;^`(x`gensym12, y`gensym12: distinct AnyInteger): Integer	
-`and`	integers/bitset.html#and,,	bitset: `and`(x`gensym15, y`gensym15: distinct AnyInteger): Integer	
-`or`	integers/bitset.html#or,,	bitset: `or`(x`gensym18, y`gensym18: distinct AnyInteger): Integer	
-`xor`	integers/bitset.html#xor,,	bitset: `xor`(x`gensym21, y`gensym21: distinct AnyInteger): Integer	
-`shr`	integers/bitset.html#shr,mpz_struct,AnyInteger	bitset: `shr`(val`gensym24: Integer; n`gensym24: AnyInteger): Integer	
-`&amp;&gt;&gt;`	integers/bitset.html#&>>,,	bitset: `&amp;&gt;&gt;`(val`gensym24, n`gensym24: distinct AnyInteger): Integer	
-`&amp;&gt;&gt;=`	integers/bitset.html#&>>=,mpz_struct,AnyInteger	bitset: `&amp;&gt;&gt;=`(val`gensym24: var Integer; n`gensym24: AnyInteger)	
-`shl`	integers/bitset.html#shl,mpz_struct,AnyInteger	bitset: `shl`(val`gensym26: Integer; n`gensym26: AnyInteger): Integer	
-`&amp;&lt;&lt;`	integers/bitset.html#&<<,,	bitset: `&amp;&lt;&lt;`(val`gensym26, n`gensym26: distinct AnyInteger): Integer	
-`&amp;&lt;&lt;=`	integers/bitset.html#&<<=,mpz_struct,AnyInteger	bitset: `&amp;&lt;&lt;=`(val`gensym26: var Integer; n`gensym26: AnyInteger)	
-nbits	integers/bitset.html#nbits,mpz_struct	bitset: nbits(val: Integer): int	
-size	integers/bitset.html#size,mpz_struct	bitset: size(val: Integer): int	
-count	integers/bitset.html#count,mpz_struct	bitset: count(val: Integer): int	
-bit	integers/bitset.html#bit,typedesc[mpz_struct],SomeInteger	bitset: bit(_: typedesc[Integer]; idx: SomeInteger): Integer	
-`~`	integers/bitset.html#~,mpz_struct	bitset: `~`(val: Integer): Integer	
-`not`	integers/bitset.html#not,mpz_struct	bitset: `not`(n: Integer): Integer	
-setNot	integers/bitset.html#setNot,mpz_struct	bitset: setNot(n: var Integer)	
-scanOne	integers/bitset.html#scanOne,mpz_struct,int	bitset: scanOne(val: Integer; start: int = 0): int	
-scanZero	integers/bitset.html#scanZero,mpz_struct,int	bitset: scanZero(val: Integer; start: int = 0): int	
-`[]`	integers/bitset.html#[],mpz_struct,int	bitset: `[]`(val: Integer; idx: int): bool	
-`[]=`	integers/bitset.html#[]=,mpz_struct,int,bool	bitset: `[]=`(n: var Integer; idx: int; bit: bool)	
-`[]=`	integers/bitset.html#[]=,mpz_struct,int,static[bool]	bitset: `[]=`(n: var Integer; idx: int; bit: static[bool])	
-items	integers/bitset.html#items.i,mpz_struct	bitset: items(n: Integer): int	
+nimTitle	bitset	integers/bitset.html	module src/integers/bitset		0
+nim	`&&=`	integers/bitset.html#&&=,mpz_struct,AnyInteger	proc `&&=`(x`gensym0: var Integer; y`gensym0: AnyInteger)		16
+nim	`&|=`	integers/bitset.html#&|=,mpz_struct,AnyInteger	proc `&|=`(x`gensym2: var Integer; y`gensym2: AnyInteger)		17
+nim	`&^=`	integers/bitset.html#&^=,mpz_struct,AnyInteger	proc `&^=`(x`gensym4: var Integer; y`gensym4: AnyInteger)		18
+nim	`&&`	integers/bitset.html#&&,,	proc `&&`(x`gensym6, y`gensym6: distinct AnyInteger): Integer		30
+nim	`&|`	integers/bitset.html#&|,,	proc `&|`(x`gensym9, y`gensym9: distinct AnyInteger): Integer		31
+nim	`&^`	integers/bitset.html#&^,,	proc `&^`(x`gensym12, y`gensym12: distinct AnyInteger): Integer		32
+nim	`and`	integers/bitset.html#and,,	proc `and`(x`gensym15, y`gensym15: distinct AnyInteger): Integer		34
+nim	`or`	integers/bitset.html#or,,	proc `or`(x`gensym18, y`gensym18: distinct AnyInteger): Integer		35
+nim	`xor`	integers/bitset.html#xor,,	proc `xor`(x`gensym21, y`gensym21: distinct AnyInteger): Integer		36
+nim	`shr`	integers/bitset.html#shr,mpz_struct,AnyInteger	proc `shr`(val`gensym24: Integer; n`gensym24: AnyInteger): Integer		39
+nim	`&>>`	integers/bitset.html#&>>,,	proc `&>>`(val`gensym24, n`gensym24: distinct AnyInteger): Integer		50
+nim	`&>>=`	integers/bitset.html#&>>=,mpz_struct,AnyInteger	proc `&>>=`(val`gensym24: var Integer; n`gensym24: AnyInteger)		66
+nim	`shl`	integers/bitset.html#shl,mpz_struct,AnyInteger	proc `shl`(val`gensym26: Integer; n`gensym26: AnyInteger): Integer		39
+nim	`&<<`	integers/bitset.html#&<<,,	proc `&<<`(val`gensym26, n`gensym26: distinct AnyInteger): Integer		50
+nim	`&<<=`	integers/bitset.html#&<<=,mpz_struct,AnyInteger	proc `&<<=`(val`gensym26: var Integer; n`gensym26: AnyInteger)		67
+nim	nbits	integers/bitset.html#nbits,mpz_struct	proc nbits(val: Integer): int		71
+nim	size	integers/bitset.html#size,mpz_struct	proc size(val: Integer): int		91
+nim	count	integers/bitset.html#count,mpz_struct	proc count(val: Integer): int		96
+nim	bit	integers/bitset.html#bit,typedesc[mpz_struct],SomeInteger	proc bit(_: typedesc[Integer]; idx: SomeInteger): Integer		108
+nim	`~`	integers/bitset.html#~,mpz_struct	proc `~`(val: Integer): Integer		113
+nim	`not`	integers/bitset.html#not,mpz_struct	proc `not`(n: Integer): Integer		121
+nim	setNot	integers/bitset.html#setNot,mpz_struct	proc setNot(n: var Integer)		125
+nim	scanOne	integers/bitset.html#scanOne,mpz_struct,int	proc scanOne(val: Integer; start: int = 0): int		130
+nim	scanZero	integers/bitset.html#scanZero,mpz_struct,int	proc scanZero(val: Integer; start: int = 0): int		148
+nim	`[]`	integers/bitset.html#[],mpz_struct,int	proc `[]`(val: Integer; idx: int): bool		164
+nim	`[]=`	integers/bitset.html#[]=,mpz_struct,int,bool	proc `[]=`(n: var Integer; idx: int; bit: bool)		172
+nim	`[]=`	integers/bitset.html#[]=,mpz_struct,int,static[bool]	proc `[]=`(n: var Integer; idx: int; bit: static[bool])		180
+nim	items	integers/bitset.html#items.i,mpz_struct	iterator items(n: Integer): int		189
+nimgrp	[]=	integers/bitset.html#[]=-procs-all	proc		172

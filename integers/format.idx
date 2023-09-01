@@ -1,3 +1,4 @@
-`$`	integers/format.html#$,mpz_struct,int	format: `$`(n: Integer; base: int = 10): string	
-formatInteger	integers/format.html#formatInteger,sinkmpz_struct,string	format: formatInteger(n: sink Integer; fmt: string): string	
-formatValue	integers/format.html#formatValue,string,sinkmpz_struct,string	format: formatValue(output: var string; n: sink Integer; fmt: string)	
+nimTitle	format	integers/format.html	module src/integers/format		0
+nim	`$`	integers/format.html#$,mpz_struct,int	proc `$`(n: Integer; base: int = 10): string		9
+nim	formatInteger	integers/format.html#formatInteger,sinkmpz_struct,string	proc formatInteger(n: sink Integer; fmt: string): string		29
+nim	formatValue	integers/format.html#formatValue,string,sinkmpz_struct,string	proc formatValue(output: var string; n: sink Integer; fmt: string)		53

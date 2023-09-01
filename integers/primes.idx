@@ -1,8 +1,9 @@
-gcd	integers/primes.html#gcd,mpz_struct,mpz_struct	primes: gcd(a, b: Integer): Integer	
-extGcd	integers/primes.html#extGcd,mpz_struct,mpz_struct	primes: extGcd(a, b: Integer): (Integer, Integer, Integer)	
-lcm	integers/primes.html#lcm,mpz_struct,mpz_struct	primes: lcm(a, b: Integer): Integer	
-isPrime	integers/primes.html#isPrime,AnyInteger,int	primes: isPrime(val: AnyInteger; reps: int = 1): bool	
-nextPrime	integers/primes.html#nextPrime,T	primes: nextPrime[T: AnyInteger](val: T): T	
-setNextPrime	integers/primes.html#setNextPrime,mpz_struct	primes: setNextPrime(val: var Integer)	
-prevPrime	integers/primes.html#prevPrime,T	primes: prevPrime[T: AnyInteger](n: T): T	
-Primes: Soul of the Integers	integers/primes.html#primescolon-soul-of-the-integers	 Primes: Soul of the Integers	
+nimTitle	primes	integers/primes.html	module src/integers/primes		0
+nim	gcd	integers/primes.html#gcd,mpz_struct,mpz_struct	proc gcd(a, b: Integer): Integer		36
+nim	extGcd	integers/primes.html#extGcd,mpz_struct,mpz_struct	proc extGcd(a, b: Integer): (Integer, Integer, Integer)		44
+nim	lcm	integers/primes.html#lcm,mpz_struct,mpz_struct	proc lcm(a, b: Integer): Integer		56
+nim	isPrime	integers/primes.html#isPrime,AnyInteger,int	proc isPrime(val: AnyInteger; reps: int = 1): bool		65
+nim	nextPrime	integers/primes.html#nextPrime,T	proc nextPrime[T: AnyInteger](val: T): T		81
+nim	setNextPrime	integers/primes.html#setNextPrime,mpz_struct	proc setNextPrime(val: var Integer)		98
+nim	prevPrime	integers/primes.html#prevPrime,T	proc prevPrime[T: AnyInteger](n: T): T		103
+heading	Primes: Soul of the Integers	integers/primes.html#primescolon-soul-of-the-integers	 Primes: Soul of the Integers		0

@@ -1,22 +1,27 @@
-remove	integers/misc.html#remove,sinkstring,char	misc: remove(str: sink string; ch: char): string	
-shrinkToC	integers/misc.html#shrinkToC,string	misc: shrinkToC(str: var string)	
-permutations	integers/misc.html#permutations.i,HSlice[T,U]	misc: permutations[T, U](v: HSlice[T, U]): seq[T]	
-permutations	integers/misc.html#permutations.i,string	misc: permutations(v: string): string	
-permutations	integers/misc.html#permutations.i,openArray[T]	misc: permutations[T](v: openArray[T]): seq[T]	
-toUnsigned	integers/misc.html#toUnsigned.t,int8	misc: toUnsigned(x`gensym12: int8): uint8	
-toSigned	integers/misc.html#toSigned.t,uint8	misc: toSigned(x`gensym12: uint8): int8	
-unsignedAbs	integers/misc.html#unsignedAbs,int8	misc: unsignedAbs(x`gensym12: int8): uint8	
-toUnsigned	integers/misc.html#toUnsigned.t,int16	misc: toUnsigned(x`gensym16: int16): uint16	
-toSigned	integers/misc.html#toSigned.t,uint16	misc: toSigned(x`gensym16: uint16): int16	
-unsignedAbs	integers/misc.html#unsignedAbs,int16	misc: unsignedAbs(x`gensym16: int16): uint16	
-toUnsigned	integers/misc.html#toUnsigned.t,int32	misc: toUnsigned(x`gensym20: int32): uint32	
-toSigned	integers/misc.html#toSigned.t,uint32	misc: toSigned(x`gensym20: uint32): int32	
-unsignedAbs	integers/misc.html#unsignedAbs,int32	misc: unsignedAbs(x`gensym20: int32): uint32	
-toUnsigned	integers/misc.html#toUnsigned.t,int64	misc: toUnsigned(x`gensym24: int64): uint64	
-toSigned	integers/misc.html#toSigned.t,uint64	misc: toSigned(x`gensym24: uint64): int64	
-unsignedAbs	integers/misc.html#unsignedAbs,int64	misc: unsignedAbs(x`gensym24: int64): uint64	
-toUnsigned	integers/misc.html#toUnsigned.t,int	misc: toUnsigned(x`gensym28: int): uint	
-toSigned	integers/misc.html#toSigned.t,uint	misc: toSigned(x`gensym28: uint): int	
-unsignedAbs	integers/misc.html#unsignedAbs,int	misc: unsignedAbs(x`gensym28: int): uint	
-unsignedAbs	integers/misc.html#unsignedAbs,T	misc: unsignedAbs[T: SomeUnsignedInt](x: T): T	
-bitsof	integers/misc.html#bitsof.t,typedesc	misc: bitsof(ty: typedesc): auto	
+nimTitle	misc	integers/misc.html	module src/integers/misc		0
+nim	remove	integers/misc.html#remove,sinkstring,char	proc remove(str: sink string; ch: char): string		6
+nim	shrinkToC	integers/misc.html#shrinkToC,string	proc shrinkToC(str: var string)		25
+nim	permutations	integers/misc.html#permutations.i,HSlice[T,U]	iterator permutations[T, U](v: HSlice[T, U]): seq[T]		34
+nim	permutations	integers/misc.html#permutations.i,string	iterator permutations(v: string): string		56
+nim	permutations	integers/misc.html#permutations.i,openArray[T]	iterator permutations[T](v: openArray[T]): seq[T]		79
+nim	toUnsigned	integers/misc.html#toUnsigned.t,int8	template toUnsigned(x`gensym12: int8): uint8		106
+nim	toSigned	integers/misc.html#toSigned.t,uint8	template toSigned(x`gensym12: uint8): int8		111
+nim	unsignedAbs	integers/misc.html#unsignedAbs,int8	proc unsignedAbs(x`gensym12: int8): uint8		121
+nim	toUnsigned	integers/misc.html#toUnsigned.t,int16	template toUnsigned(x`gensym16: int16): uint16		106
+nim	toSigned	integers/misc.html#toSigned.t,uint16	template toSigned(x`gensym16: uint16): int16		111
+nim	unsignedAbs	integers/misc.html#unsignedAbs,int16	proc unsignedAbs(x`gensym16: int16): uint16		122
+nim	toUnsigned	integers/misc.html#toUnsigned.t,int32	template toUnsigned(x`gensym20: int32): uint32		106
+nim	toSigned	integers/misc.html#toSigned.t,uint32	template toSigned(x`gensym20: uint32): int32		111
+nim	unsignedAbs	integers/misc.html#unsignedAbs,int32	proc unsignedAbs(x`gensym20: int32): uint32		123
+nim	toUnsigned	integers/misc.html#toUnsigned.t,int64	template toUnsigned(x`gensym24: int64): uint64		106
+nim	toSigned	integers/misc.html#toSigned.t,uint64	template toSigned(x`gensym24: uint64): int64		111
+nim	unsignedAbs	integers/misc.html#unsignedAbs,int64	proc unsignedAbs(x`gensym24: int64): uint64		124
+nim	toUnsigned	integers/misc.html#toUnsigned.t,int	template toUnsigned(x`gensym28: int): uint		106
+nim	toSigned	integers/misc.html#toSigned.t,uint	template toSigned(x`gensym28: uint): int		111
+nim	unsignedAbs	integers/misc.html#unsignedAbs,int	proc unsignedAbs(x`gensym28: int): uint		125
+nim	unsignedAbs	integers/misc.html#unsignedAbs,T	proc unsignedAbs[T: SomeUnsignedInt](x: T): T		127
+nim	bitsof	integers/misc.html#bitsof.t,typedesc	template bitsof(ty: typedesc): auto		131
+nimgrp	unsignedabs	integers/misc.html#unsignedAbs-procs-all	proc		114
+nimgrp	permutations	integers/misc.html#permutations-iterators-all	iterator		34
+nimgrp	tosigned	integers/misc.html#toSigned-templates-all	template		111
+nimgrp	tounsigned	integers/misc.html#toUnsigned-templates-all	template		106
