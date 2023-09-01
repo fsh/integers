@@ -461,5 +461,3 @@ export primes
 # import ./integers/random
 # export random
 
-import ./integers/modular
-export modular
