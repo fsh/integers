@@ -31,7 +31,6 @@ proc formatInteger*(n: sink Integer, fmt: string): string =
   let base = charToBase(spec.typ)
 
   let negative = n.isNegative()
-  let has_sign = negative or spec.sign != '-'
 
   n.setAbs()
   var s_num = newString(mpz_sizeinbase(n, base.cint) + 1)
