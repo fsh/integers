@@ -1154,16 +1154,32 @@ const
 
 
 func st_str(d: mpz_struct): string =
-  "[" & $d.mp_size & "]" & $mpz_get_ui(d)
+  $mpz_get_ui(d) & " #:" & $d.mp_size & " [ptr:" & $cast[uint64](d.mp_d) & "]"
 
-proc `=destroy`*(dest: var mpz_struct) {.inline.} =
-  # debugEcho "destroy: ", dest.st_str, " ptr:", cast[uint64](dest.mp_d)
-  mpz_clear(dest)
+when NimMajor >= 2:
+  proc `=destroy`*(dest: mpz_struct) {.inline.} =
+    # debugEcho "destroy: ", dest.st_str
+    mpz_clear(dest.addr)
+else:
+  proc `=destroy`*(dest: var mpz_struct) {.inline.} =
+    # debugEcho "destroy: ", dest.st_str
+    mpz_clear(dest)
+
+proc `=dup`*(src: mpz_struct): mpz_struct {.nodestroy.} =
+  # debugEcho "dup: ", src.st_str
+  mpz_init(result)
+  mpz_set(result, src)
+proc `=wasMoved`*(dest: var mpz_struct) {.inline.} =
+  # debugEcho "wasMoved: ", dest.st_str
+  mpz_init(dest)
 proc `=copy`*(dest: var mpz_struct, src: mpz_struct) {.inline.} =
-  # debugEcho "copy: ", mpz_get_ui(dest), " <-- ", mpz_get_ui(src)
-  mpz_set(dest, src)
+  # debugEcho "copy: ", dest.st_str, " --> ", src.st_str
+  if dest.mp_d != src.mp_d:
+    mpz_set(dest, src)
 proc `=sink`*(dest: var mpz_struct, src: mpz_struct) {.inline.} =
-  # debugEcho "sink: ", mpz_get_ui(dest), " <-- ", mpz_get_ui(src)
+  # debugEcho "sink: ", dest.st_str, " --> ", src.st_str
+  if dest.mp_d == src.mp_d:
+    return
   `=destroy`(dest)
   dest.wasMoved
   dest.mp_alloc = src.mp_alloc

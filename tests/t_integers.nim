@@ -64,11 +64,10 @@ suite "integer basics":
     check 3.toInteger is Integer
 
   test "sanity":
-    let
-      zero = Integer.zero
-      one = Integer.one
-      two = one + one
-      three = two + one
+    let zero = Integer.zero
+    let one = Integer.one
+    let two = one + one
+    let three = two + one
 
     check one + one == two
     check -one + one == zero
